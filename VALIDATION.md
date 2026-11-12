@@ -12,4 +12,6 @@ Validated on 12 November 2026 against published version 55, source commit `14f65
 
 The complete application is static. Public badge images and external destination sites remain external dependencies, as on the original. Browser checks establish the exercised UI paths, not availability of external sites or exact rendering on every browser. Hosting-provider security injection, owner credentials, original deployment identity and private editing history are intentionally not reproduced.
 
+A fresh local Git clone containing only the 115 exported files passed `npm ci --ignore-scripts`, build, both test suites and the real Chromium browser checks. No source editor checkout, private archive or outside application data was used by that recreation. Python development packages and Chromium were installed system tools as documented.
+
 No live deployment was changed. The public export preserves existing third-party notices and does not introduce a blanket license over third-party or personal content.
