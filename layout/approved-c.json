@@ -1,0 +1,2477 @@
+{
+  "schema": "approved-c-layout-v1",
+  "approvedImageSHA256": "d39282f5891e94cec33993df8f4d43125b1ff1c8eb27303342ce0af4758441d3",
+  "sourceGeometrySHA256": "7effad4a90f1bd3d3607a1450beb4bfd32f41f8a581a296044904e2dd0eb7096",
+  "viewBox": [
+    0,
+    0,
+    2720,
+    2340
+  ],
+  "nodeSize": [
+    400,
+    200
+  ],
+  "displayGutter": 120,
+  "displayMargin": 120,
+  "slots": {
+    "request": 0,
+    "linear": 1,
+    "coordinator": 3,
+    "pool": 8,
+    "tools": 7,
+    "models": 5,
+    "supervisor": 9,
+    "code": 10,
+    "workspace": 11,
+    "coding": 6,
+    "delivery": 19,
+    "workflow": 14,
+    "journal": 18,
+    "checkpoints": 13,
+    "adapter": 16,
+    "windmill": 15,
+    "policy": 23,
+    "review": 22,
+    "engine": 21,
+    "bridge": 20,
+    "pr": 28,
+    "publisher": 29,
+    "integration": 27,
+    "github": 26,
+    "release": 30,
+    "releasechecks": 31,
+    "outcome": 34,
+    "main": 33,
+    "selection": 2,
+    "admission-step": 4,
+    "capture": 12,
+    "profiles": 17,
+    "evidence": 24,
+    "readback-step": 25,
+    "tag": 32
+  },
+  "boxes": {
+    "request": [
+      120,
+      120,
+      400,
+      200
+    ],
+    "linear": [
+      640,
+      120,
+      400,
+      200
+    ],
+    "coordinator": [
+      1680,
+      120,
+      400,
+      200
+    ],
+    "pool": [
+      1680,
+      440,
+      400,
+      200
+    ],
+    "tools": [
+      1160,
+      440,
+      400,
+      200
+    ],
+    "models": [
+      120,
+      440,
+      400,
+      200
+    ],
+    "supervisor": [
+      2200,
+      440,
+      400,
+      200
+    ],
+    "code": [
+      120,
+      760,
+      400,
+      200
+    ],
+    "workspace": [
+      640,
+      760,
+      400,
+      200
+    ],
+    "coding": [
+      640,
+      440,
+      400,
+      200
+    ],
+    "delivery": [
+      2200,
+      1080,
+      400,
+      200
+    ],
+    "workflow": [
+      2200,
+      760,
+      400,
+      200
+    ],
+    "journal": [
+      1680,
+      1080,
+      400,
+      200
+    ],
+    "checkpoints": [
+      1680,
+      760,
+      400,
+      200
+    ],
+    "adapter": [
+      640,
+      1080,
+      400,
+      200
+    ],
+    "windmill": [
+      120,
+      1080,
+      400,
+      200
+    ],
+    "policy": [
+      1680,
+      1400,
+      400,
+      200
+    ],
+    "review": [
+      1160,
+      1400,
+      400,
+      200
+    ],
+    "engine": [
+      640,
+      1400,
+      400,
+      200
+    ],
+    "bridge": [
+      120,
+      1400,
+      400,
+      200
+    ],
+    "pr": [
+      1680,
+      1720,
+      400,
+      200
+    ],
+    "publisher": [
+      2200,
+      1720,
+      400,
+      200
+    ],
+    "integration": [
+      1160,
+      1720,
+      400,
+      200
+    ],
+    "github": [
+      640,
+      1720,
+      400,
+      200
+    ],
+    "release": [
+      120,
+      2040,
+      400,
+      200
+    ],
+    "releasechecks": [
+      640,
+      2040,
+      400,
+      200
+    ],
+    "outcome": [
+      2200,
+      2040,
+      400,
+      200
+    ],
+    "main": [
+      1680,
+      2040,
+      400,
+      200
+    ],
+    "selection": [
+      1160,
+      120,
+      400,
+      200
+    ],
+    "admission-step": [
+      2200,
+      120,
+      400,
+      200
+    ],
+    "capture": [
+      1160,
+      760,
+      400,
+      200
+    ],
+    "profiles": [
+      1160,
+      1080,
+      400,
+      200
+    ],
+    "evidence": [
+      2200,
+      1400,
+      400,
+      200
+    ],
+    "readback-step": [
+      120,
+      1720,
+      400,
+      200
+    ],
+    "tag": [
+      1160,
+      2040,
+      400,
+      200
+    ]
+  },
+  "routes": {
+    "request-intake": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          520,
+          205.714286
+        ],
+        [
+          640,
+          205.714286
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "0:1",
+      "sourceSlot": 0,
+      "targetSlot": 1,
+      "initialPoints": [
+        [
+          600,
+          336.0
+        ],
+        [
+          800,
+          336.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "admission": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          1760.0,
+          320
+        ],
+        [
+          1760.0,
+          440
+        ]
+      ],
+      "sourceFace": "b",
+      "targetFace": "t",
+      "meshPair": "3:8",
+      "sourceSlot": 3,
+      "targetSlot": 8,
+      "initialPoints": [
+        [
+          2168.0,
+          400
+        ],
+        [
+          2168.0,
+          600
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "capacity": {
+      "corners": 2,
+      "length": 1512.380952,
+      "points": [
+        [
+          1840.0,
+          640
+        ],
+        [
+          1840.0,
+          720.0
+        ],
+        [
+          754.285714,
+          720.0
+        ],
+        [
+          754.285714,
+          640
+        ]
+      ],
+      "sourceFace": "b",
+      "targetFace": "b",
+      "meshPair": "6:8",
+      "sourceSlot": 8,
+      "targetSlot": 6,
+      "initialPoints": [
+        [
+          2176.0,
+          800
+        ],
+        [
+          2176.0,
+          888.0
+        ],
+        [
+          976.0,
+          888.0
+        ],
+        [
+          976.0,
+          800
+        ]
+      ],
+      "initialLength": 1376.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "supervised-coding": {
+      "corners": 2,
+      "length": 1920.634921,
+      "points": [
+        [
+          2244.444444,
+          640
+        ],
+        [
+          2244.444444,
+          680.0
+        ],
+        [
+          697.142857,
+          680.0
+        ],
+        [
+          697.142857,
+          640
+        ]
+      ],
+      "sourceFace": "b",
+      "targetFace": "b",
+      "meshPair": "6:9",
+      "sourceSlot": 9,
+      "targetSlot": 6,
+      "initialPoints": [
+        [
+          2648.0,
+          800
+        ],
+        [
+          2648.0,
+          824.0
+        ],
+        [
+          848.0,
+          824.0
+        ],
+        [
+          848.0,
+          800
+        ]
+      ],
+      "initialLength": 1848.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "model-session": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          640,
+          506.666667
+        ],
+        [
+          520,
+          506.666667
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "5:6",
+      "sourceSlot": 6,
+      "targetSlot": 5,
+      "initialPoints": [
+        [
+          800,
+          684.0
+        ],
+        [
+          600,
+          684.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "scoped-tools": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          1040,
+          573.333333
+        ],
+        [
+          1160,
+          573.333333
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "6:7",
+      "sourceSlot": 6,
+      "targetSlot": 7,
+      "initialPoints": [
+        [
+          1200,
+          752.0
+        ],
+        [
+          1400,
+          752.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "source-output": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          811.428571,
+          640
+        ],
+        [
+          811.428571,
+          760
+        ]
+      ],
+      "sourceFace": "b",
+      "targetFace": "t",
+      "meshPair": "6:11",
+      "sourceSlot": 6,
+      "targetSlot": 11,
+      "initialPoints": [
+        [
+          984.0,
+          800
+        ],
+        [
+          984.0,
+          1000
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "candidate-code": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          640,
+          788.571429
+        ],
+        [
+          520,
+          788.571429
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "10:11",
+      "sourceSlot": 11,
+      "targetSlot": 10,
+      "initialPoints": [
+        [
+          800,
+          1032.0
+        ],
+        [
+          600,
+          1032.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "workflow-state": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          2288.888889,
+          1080
+        ],
+        [
+          2288.888889,
+          960
+        ]
+      ],
+      "sourceFace": "t",
+      "targetFace": "b",
+      "meshPair": "14:19",
+      "sourceSlot": 19,
+      "targetSlot": 14,
+      "initialPoints": [
+        [
+          2696.0,
+          1400
+        ],
+        [
+          2696.0,
+          1200
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "saved-progress": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          2200,
+          817.142857
+        ],
+        [
+          2080,
+          817.142857
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "13:14",
+      "sourceSlot": 14,
+      "targetSlot": 13,
+      "initialPoints": [
+        [
+          2600,
+          1040.0
+        ],
+        [
+          2400,
+          1040.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "operation-history": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          2200,
+          1240.0
+        ],
+        [
+          2080,
+          1240.0
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "18:19",
+      "sourceSlot": 19,
+      "targetSlot": 18,
+      "initialPoints": [
+        [
+          2600,
+          1584.0
+        ],
+        [
+          2400,
+          1584.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "adapter-history": {
+      "corners": 2,
+      "length": 1310.476191,
+      "points": [
+        [
+          982.857143,
+          1080
+        ],
+        [
+          982.857143,
+          1040.0
+        ],
+        [
+          2000.0,
+          1040.0
+        ],
+        [
+          2000.0,
+          1080
+        ]
+      ],
+      "sourceFace": "t",
+      "targetFace": "t",
+      "meshPair": "16:18",
+      "sourceSlot": 16,
+      "targetSlot": 18,
+      "initialPoints": [
+        [
+          1160.0,
+          1400
+        ],
+        [
+          1160.0,
+          1380.0
+        ],
+        [
+          2360.0,
+          1380.0
+        ],
+        [
+          2360.0,
+          1400
+        ]
+      ],
+      "initialLength": 1240.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "job-dispatch": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          640,
+          1200.0
+        ],
+        [
+          520,
+          1200.0
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "15:16",
+      "sourceSlot": 16,
+      "targetSlot": 15,
+      "initialPoints": [
+        [
+          800,
+          1576.0
+        ],
+        [
+          600,
+          1576.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "remote-execution": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          320.0,
+          1280
+        ],
+        [
+          320.0,
+          1400
+        ]
+      ],
+      "sourceFace": "b",
+      "targetFace": "t",
+      "meshPair": "15:20",
+      "sourceSlot": 15,
+      "targetSlot": 20,
+      "initialPoints": [
+        [
+          432.0,
+          1600
+        ],
+        [
+          432.0,
+          1800
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "engine-execution": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          520,
+          1485.714286
+        ],
+        [
+          640,
+          1485.714286
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "20:21",
+      "sourceSlot": 20,
+      "targetSlot": 21,
+      "initialPoints": [
+        [
+          600,
+          1924.0
+        ],
+        [
+          800,
+          1924.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "execute-source": {
+      "corners": 2,
+      "length": 1000.0,
+      "points": [
+        [
+          640,
+          1542.857143
+        ],
+        [
+          580.0,
+          1542.857143
+        ],
+        [
+          580.0,
+          902.857143
+        ],
+        [
+          520,
+          902.857143
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "10:21",
+      "sourceSlot": 21,
+      "targetSlot": 10,
+      "initialPoints": [
+        [
+          800,
+          1976.0
+        ],
+        [
+          776.0,
+          1976.0
+        ],
+        [
+          776.0,
+          1176.0
+        ],
+        [
+          600,
+          1176.0
+        ]
+      ],
+      "initialLength": 1000.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "source-review": {
+      "corners": 2,
+      "length": 942.857143,
+      "points": [
+        [
+          1040,
+          845.714286
+        ],
+        [
+          1100.0,
+          845.714286
+        ],
+        [
+          1100.0,
+          1428.571429
+        ],
+        [
+          1160,
+          1428.571429
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "11:22",
+      "sourceSlot": 11,
+      "targetSlot": 22,
+      "initialPoints": [
+        [
+          1200,
+          1048.0
+        ],
+        [
+          1248.0,
+          1048.0
+        ],
+        [
+          1248.0,
+          1848.0
+        ],
+        [
+          1400,
+          1848.0
+        ]
+      ],
+      "initialLength": 1000.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "validation-evidence": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          1040,
+          1571.428571
+        ],
+        [
+          1160,
+          1571.428571
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "21:22",
+      "sourceSlot": 21,
+      "targetSlot": 22,
+      "initialPoints": [
+        [
+          1200,
+          1992.0
+        ],
+        [
+          1400,
+          1992.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "acceptance-criteria": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          1680,
+          1457.142857
+        ],
+        [
+          1560,
+          1457.142857
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "22:23",
+      "sourceSlot": 23,
+      "targetSlot": 22,
+      "initialPoints": [
+        [
+          2000,
+          1864.0
+        ],
+        [
+          1800,
+          1864.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "review-repair": {
+      "corners": 2,
+      "length": 1771.428571,
+      "points": [
+        [
+          1560,
+          1514.285714
+        ],
+        [
+          1600.0,
+          1514.285714
+        ],
+        [
+          1600.0,
+          262.857143
+        ],
+        [
+          1680,
+          262.857143
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "3:22",
+      "sourceSlot": 22,
+      "targetSlot": 3,
+      "initialPoints": [
+        [
+          1800,
+          1968.0
+        ],
+        [
+          1968.0,
+          1968.0
+        ],
+        [
+          1968.0,
+          368.0
+        ],
+        [
+          2000,
+          368.0
+        ]
+      ],
+      "initialLength": 1800.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "qualified-publication": {
+      "corners": 2,
+      "length": 1422.222222,
+      "points": [
+        [
+          1360.0,
+          1600
+        ],
+        [
+          1360.0,
+          1640.0
+        ],
+        [
+          2422.222222,
+          1640.0
+        ],
+        [
+          2422.222222,
+          1720
+        ]
+      ],
+      "sourceFace": "b",
+      "targetFace": "t",
+      "meshPair": "22:29",
+      "sourceSlot": 22,
+      "targetSlot": 29,
+      "initialPoints": [
+        [
+          1544.0,
+          2000
+        ],
+        [
+          1544.0,
+          2072.0
+        ],
+        [
+          2744.0,
+          2072.0
+        ],
+        [
+          2744.0,
+          2200
+        ]
+      ],
+      "initialLength": 1400.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "publication-control": {
+      "corners": 2,
+      "length": 970.0,
+      "points": [
+        [
+          2600,
+          1160.0
+        ],
+        [
+          2660.0,
+          1160.0
+        ],
+        [
+          2660.0,
+          1770.0
+        ],
+        [
+          2600,
+          1770.0
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "r",
+      "meshPair": "19:29",
+      "sourceSlot": 19,
+      "targetSlot": 29,
+      "initialPoints": [
+        [
+          3000,
+          1468.0
+        ],
+        [
+          3068.0,
+          1468.0
+        ],
+        [
+          3068.0,
+          2268.0
+        ],
+        [
+          3000,
+          2268.0
+        ]
+      ],
+      "initialLength": 936.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "github-app": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          2200,
+          1820.0
+        ],
+        [
+          2080,
+          1820.0
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "28:29",
+      "sourceSlot": 29,
+      "targetSlot": 28,
+      "initialPoints": [
+        [
+          2600,
+          2280.0
+        ],
+        [
+          2400,
+          2280.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "integration-handoff": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          1680,
+          1745.0
+        ],
+        [
+          1560,
+          1745.0
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "27:28",
+      "sourceSlot": 28,
+      "targetSlot": 27,
+      "initialPoints": [
+        [
+          2000,
+          2212.0
+        ],
+        [
+          1800,
+          2212.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "accepted-merge": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          1160,
+          1845.0
+        ],
+        [
+          1040,
+          1845.0
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "26:27",
+      "sourceSlot": 27,
+      "targetSlot": 26,
+      "initialPoints": [
+        [
+          1400,
+          2340.0
+        ],
+        [
+          1200,
+          2340.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "release-freeze": {
+      "corners": 2,
+      "length": 592.857143,
+      "points": [
+        [
+          640,
+          1870.0
+        ],
+        [
+          550.0,
+          1870.0
+        ],
+        [
+          550.0,
+          2182.857143
+        ],
+        [
+          520,
+          2182.857143
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "26:30",
+      "sourceSlot": 26,
+      "targetSlot": 30,
+      "initialPoints": [
+        [
+          800,
+          2344.0
+        ],
+        [
+          744.0,
+          2344.0
+        ],
+        [
+          744.0,
+          2744.0
+        ],
+        [
+          600,
+          2744.0
+        ]
+      ],
+      "initialLength": 600.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "release-validation": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          520,
+          2068.571429
+        ],
+        [
+          640,
+          2068.571429
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "30:31",
+      "sourceSlot": 30,
+      "targetSlot": 31,
+      "initialPoints": [
+        [
+          600,
+          2620.0
+        ],
+        [
+          800,
+          2620.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "release-outcome": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          2080,
+          2097.142857
+        ],
+        [
+          2200,
+          2097.142857
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "33:34",
+      "sourceSlot": 33,
+      "targetSlot": 34,
+      "initialPoints": [
+        [
+          2400,
+          2628.0
+        ],
+        [
+          2600,
+          2628.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "task-outcome": {
+      "corners": 3,
+      "length": 3885.714285,
+      "points": [
+        [
+          868.571429,
+          320
+        ],
+        [
+          868.571429,
+          380.0
+        ],
+        [
+          2140.0,
+          380.0
+        ],
+        [
+          2140.0,
+          2154.285714
+        ],
+        [
+          2200,
+          2154.285714
+        ]
+      ],
+      "sourceFace": "b",
+      "targetFace": "l",
+      "meshPair": "1:34",
+      "sourceSlot": 1,
+      "targetSlot": 34,
+      "initialPoints": [
+        [
+          1032.0,
+          400
+        ],
+        [
+          1032.0,
+          516.0
+        ],
+        [
+          2516.0,
+          516.0
+        ],
+        [
+          2516.0,
+          2716.0
+        ],
+        [
+          2600,
+          2716.0
+        ]
+      ],
+      "initialLength": 3884.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "work-outcome-a": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          1040,
+          148.571429
+        ],
+        [
+          1160,
+          148.571429
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "1:2",
+      "sourceSlot": 1,
+      "targetSlot": 2,
+      "initialPoints": [
+        [
+          1200,
+          208.0
+        ],
+        [
+          1400,
+          208.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "work-outcome-b": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          1560,
+          177.142857
+        ],
+        [
+          1680,
+          177.142857
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "2:3",
+      "sourceSlot": 2,
+      "targetSlot": 3,
+      "initialPoints": [
+        [
+          1800,
+          276.0
+        ],
+        [
+          2000,
+          276.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "outcome-return": {
+      "corners": 2,
+      "length": 1354.285714,
+      "points": [
+        [
+          1920.0,
+          120.0
+        ],
+        [
+          1920.0,
+          60.0
+        ],
+        [
+          925.714286,
+          60.0
+        ],
+        [
+          925.714286,
+          120.0
+        ]
+      ],
+      "sourceFace": "t",
+      "targetFace": "t",
+      "meshPair": "1:3",
+      "sourceSlot": 3,
+      "targetSlot": 1,
+      "initialPoints": [
+        [
+          2280.0,
+          200
+        ],
+        [
+          2280.0,
+          140.0
+        ],
+        [
+          1080.0,
+          140.0
+        ],
+        [
+          1080.0,
+          200
+        ]
+      ],
+      "initialLength": 1320.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "coding-dispatch-a": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          2080,
+          234.285714
+        ],
+        [
+          2200,
+          234.285714
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "3:4",
+      "sourceSlot": 3,
+      "targetSlot": 4,
+      "initialPoints": [
+        [
+          2400,
+          344.0
+        ],
+        [
+          2600,
+          344.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "coding-dispatch-b": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          2466.666667,
+          320
+        ],
+        [
+          2466.666667,
+          440
+        ]
+      ],
+      "sourceFace": "b",
+      "targetFace": "t",
+      "meshPair": "4:9",
+      "sourceSlot": 4,
+      "targetSlot": 9,
+      "initialPoints": [
+        [
+          2904.0,
+          400
+        ],
+        [
+          2904.0,
+          600
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "candidate-handoff-a": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          1040,
+          874.285714
+        ],
+        [
+          1160,
+          874.285714
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "11:12",
+      "sourceSlot": 11,
+      "targetSlot": 12,
+      "initialPoints": [
+        [
+          1200,
+          1100.0
+        ],
+        [
+          1400,
+          1100.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "candidate-handoff-b": {
+      "corners": 2,
+      "length": 1411.111111,
+      "points": [
+        [
+          1460.0,
+          960
+        ],
+        [
+          1460.0,
+          1000.0
+        ],
+        [
+          2511.111111,
+          1000.0
+        ],
+        [
+          2511.111111,
+          1080
+        ]
+      ],
+      "sourceFace": "b",
+      "targetFace": "t",
+      "meshPair": "12:19",
+      "sourceSlot": 12,
+      "targetSlot": 19,
+      "initialPoints": [
+        [
+          1752.0,
+          1200
+        ],
+        [
+          1752.0,
+          1376.0
+        ],
+        [
+          2952.0,
+          1376.0
+        ],
+        [
+          2952.0,
+          1400
+        ]
+      ],
+      "initialLength": 1400.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "bounded-job-a": {
+      "corners": 2,
+      "length": 1366.666667,
+      "points": [
+        [
+          2333.333333,
+          1280
+        ],
+        [
+          2333.333333,
+          1320.0
+        ],
+        [
+          1260.0,
+          1320.0
+        ],
+        [
+          1260.0,
+          1280
+        ]
+      ],
+      "sourceFace": "b",
+      "targetFace": "b",
+      "meshPair": "17:19",
+      "sourceSlot": 19,
+      "targetSlot": 17,
+      "initialPoints": [
+        [
+          2704.0,
+          1600
+        ],
+        [
+          2704.0,
+          1652.0
+        ],
+        [
+          1504.0,
+          1652.0
+        ],
+        [
+          1504.0,
+          1600
+        ]
+      ],
+      "initialLength": 1304.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "bounded-job-b": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          1160,
+          1120.0
+        ],
+        [
+          1040,
+          1120.0
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "16:17",
+      "sourceSlot": 17,
+      "targetSlot": 16,
+      "initialPoints": [
+        [
+          1400,
+          1448.0
+        ],
+        [
+          1200,
+          1448.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "validation-return-a": {
+      "corners": 2,
+      "length": 2677.777778,
+      "points": [
+        [
+          220.0,
+          1280
+        ],
+        [
+          220.0,
+          1360.0
+        ],
+        [
+          2377.777778,
+          1360.0
+        ],
+        [
+          2377.777778,
+          1400
+        ]
+      ],
+      "sourceFace": "b",
+      "targetFace": "t",
+      "meshPair": "15:24",
+      "sourceSlot": 15,
+      "targetSlot": 24,
+      "initialPoints": [
+        [
+          312.0,
+          1600
+        ],
+        [
+          312.0,
+          1656.0
+        ],
+        [
+          2712.0,
+          1656.0
+        ],
+        [
+          2712.0,
+          1800
+        ]
+      ],
+      "initialLength": 2600.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "validation-return-b": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          2555.555556,
+          1400
+        ],
+        [
+          2555.555556,
+          1280
+        ]
+      ],
+      "sourceFace": "t",
+      "targetFace": "b",
+      "meshPair": "19:24",
+      "sourceSlot": 24,
+      "targetSlot": 19,
+      "initialPoints": [
+        [
+          2984.0,
+          1800
+        ],
+        [
+          2984.0,
+          1600
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "readback-a": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          640,
+          1795.0
+        ],
+        [
+          520,
+          1795.0
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "r",
+      "meshPair": "25:26",
+      "sourceSlot": 26,
+      "targetSlot": 25,
+      "initialPoints": [
+        [
+          800,
+          2272.0
+        ],
+        [
+          600,
+          2272.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "readback-b": {
+      "corners": 3,
+      "length": 3328.571429,
+      "points": [
+        [
+          420.0,
+          1720
+        ],
+        [
+          420.0,
+          1680.0
+        ],
+        [
+          1640.0,
+          1680.0
+        ],
+        [
+          1640.0,
+          291.428571
+        ],
+        [
+          1680,
+          291.428571
+        ]
+      ],
+      "sourceFace": "t",
+      "targetFace": "l",
+      "meshPair": "3:25",
+      "sourceSlot": 25,
+      "targetSlot": 3,
+      "initialPoints": [
+        [
+          544.0,
+          2200
+        ],
+        [
+          544.0,
+          2172.0
+        ],
+        [
+          1972.0,
+          2172.0
+        ],
+        [
+          1972.0,
+          372.0
+        ],
+        [
+          2000,
+          372.0
+        ]
+      ],
+      "initialLength": 3284.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "release-promotion-a": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          1040,
+          2125.714286
+        ],
+        [
+          1160,
+          2125.714286
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "31:32",
+      "sourceSlot": 31,
+      "targetSlot": 32,
+      "initialPoints": [
+        [
+          1200,
+          2688.0
+        ],
+        [
+          1400,
+          2688.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "release-promotion-b": {
+      "corners": 0,
+      "length": 200.0,
+      "points": [
+        [
+          1560,
+          2211.428571
+        ],
+        [
+          1680,
+          2211.428571
+        ]
+      ],
+      "sourceFace": "r",
+      "targetFace": "l",
+      "meshPair": "32:33",
+      "sourceSlot": 32,
+      "targetSlot": 33,
+      "initialPoints": [
+        [
+          1800,
+          2756.0
+        ],
+        [
+          2000,
+          2756.0
+        ]
+      ],
+      "initialLength": 200.0,
+      "refinement": "centered-selected-corridors-v1"
+    },
+    "workspace-github": {
+      "corners": 2,
+      "length": 1303.571429,
+      "points": [
+        [
+          640,
+          931.428571
+        ],
+        [
+          610.0,
+          931.428571
+        ],
+        [
+          610.0,
+          1895.0
+        ],
+        [
+          640,
+          1895.0
+        ]
+      ],
+      "sourceFace": "l",
+      "targetFace": "l",
+      "meshPair": "11:26",
+      "sourceSlot": 11,
+      "targetSlot": 26,
+      "initialPoints": [
+        [
+          800,
+          1184.0
+        ],
+        [
+          784.0,
+          1184.0
+        ],
+        [
+          784.0,
+          2384.0
+        ],
+        [
+          800,
+          2384.0
+        ]
+      ],
+      "initialLength": 1232.0,
+      "refinement": "centered-selected-corridors-v1"
+    }
+  },
+  "labels": {
+    "release-validation": {
+      "box": [
+        560.86328125,
+        1988.571429,
+        135.7734375,
+        32
+      ],
+      "lines": [
+        "Required profiles"
+      ]
+    },
+    "release-outcome": {
+      "box": [
+        2098.46484375,
+        2159.142857,
+        83.0703125,
+        52
+      ],
+      "lines": [
+        "Release",
+        "reference"
+      ]
+    },
+    "qualified-publication": {
+      "box": [
+        1821.04470475,
+        1624.0,
+        140.1328125,
+        32
+      ],
+      "lines": [
+        "Accept candidate"
+      ]
+    },
+    "accepted-merge": {
+      "box": [
+        1059.171875,
+        1819.0,
+        81.65625,
+        52
+      ],
+      "lines": [
+        "Merge /",
+        "readback"
+      ]
+    },
+    "coding-dispatch-b": {
+      "box": [
+        2396.0494795,
+        364.0,
+        141.234375,
+        32
+      ],
+      "lines": [
+        "Admitted attempt"
+      ]
+    },
+    "candidate-handoff-b": {
+      "box": [
+        1915.8524305,
+        984.0,
+        139.40625,
+        32
+      ],
+      "lines": [
+        "Pinned candidate"
+      ]
+    },
+    "bounded-job-a": {
+      "box": [
+        1730.1354165,
+        1304.0,
+        133.0625,
+        32
+      ],
+      "lines": [
+        "Submit / inspect"
+      ]
+    },
+    "release-promotion-b": {
+      "box": [
+        1584.9921875,
+        2185.428571,
+        70.015625,
+        52
+      ],
+      "lines": [
+        "Verified",
+        "release"
+      ]
+    },
+    "review-repair": {
+      "box": [
+        1579.23046875,
+        236.857143,
+        81.5390625,
+        52
+      ],
+      "lines": [
+        "Repair",
+        "feedback"
+      ]
+    },
+    "integration-handoff": {
+      "box": [
+        1578.05078125,
+        1719.0,
+        83.8984375,
+        52
+      ],
+      "lines": [
+        "Reviewed",
+        "change"
+      ]
+    },
+    "task-outcome": {
+      "box": [
+        802.633929,
+        334.0,
+        131.875,
+        32
+      ],
+      "lines": [
+        "Accepted status"
+      ]
+    },
+    "bounded-job-b": {
+      "box": [
+        1105.53515625,
+        982.0,
+        78.9296875,
+        52
+      ],
+      "lines": [
+        "Required",
+        "checks"
+      ]
+    },
+    "supervised-coding": {
+      "box": [
+        1418.3014630000002,
+        664.0,
+        104.984375,
+        32
+      ],
+      "lines": [
+        "Start / result"
+      ]
+    },
+    "source-output": {
+      "box": [
+        761.96372725,
+        684.0,
+        98.9296875,
+        32
+      ],
+      "lines": [
+        "Private files"
+      ]
+    },
+    "validation-evidence": {
+      "box": [
+        1067.890625,
+        1545.428571,
+        64.21875,
+        52
+      ],
+      "lines": [
+        "Check",
+        "results"
+      ]
+    },
+    "release-freeze": {
+      "box": [
+        492.2578125,
+        1948.285714,
+        115.484375,
+        32
+      ],
+      "lines": [
+        "Freeze source"
+      ]
+    },
+    "work-outcome-b": {
+      "box": [
+        1586.4453125,
+        151.142857,
+        67.109375,
+        52
+      ],
+      "lines": [
+        "Eligible",
+        "task"
+      ]
+    },
+    "coding-dispatch-a": {
+      "box": [
+        2107.66796875,
+        208.285714,
+        64.6640625,
+        52
+      ],
+      "lines": [
+        "Assign",
+        "coding"
+      ]
+    },
+    "release-promotion-a": {
+      "box": [
+        1056.03515625,
+        2099.714286,
+        87.9296875,
+        52
+      ],
+      "lines": [
+        "Promote /",
+        "tag"
+      ]
+    },
+    "remote-execution": {
+      "box": [
+        258.74609375,
+        1324.0,
+        122.5078125,
+        32
+      ],
+      "lines": [
+        "SSH command"
+      ]
+    },
+    "github-app": {
+      "box": [
+        2146.1640625,
+        1938.285714,
+        92.671875,
+        32
+      ],
+      "lines": [
+        "Publish PR"
+      ]
+    },
+    "job-dispatch": {
+      "box": [
+        506.60546875,
+        1296.0,
+        71.7890625,
+        32
+      ],
+      "lines": [
+        "Job API"
+      ]
+    },
+    "outcome-return": {
+      "box": [
+        1879.4609375,
+        74.0,
+        81.078125,
+        32
+      ],
+      "lines": [
+        "Outcome"
+      ]
+    },
+    "work-outcome-a": {
+      "box": [
+        1075.1328125,
+        132.571429,
+        49.734375,
+        32
+      ],
+      "lines": [
+        "Task"
+      ]
+    },
+    "workflow-state": {
+      "box": [
+        2224.97092025,
+        1006.0,
+        127.8359375,
+        28
+      ],
+      "lines": [
+        "State / decisions"
+      ]
+    },
+    "acceptance-criteria": {
+      "box": [
+        1566.38671875,
+        1521.142857,
+        71.2265625,
+        48
+      ],
+      "lines": [
+        "Required",
+        "evidence"
+      ]
+    },
+    "validation-return-a": {
+      "box": [
+        1237.36154525,
+        1346.0,
+        123.0546875,
+        28
+      ],
+      "lines": [
+        "Validation result"
+      ]
+    },
+    "admission": {
+      "box": [
+        1698.91796875,
+        382.0,
+        122.1640625,
+        28
+      ],
+      "lines": [
+        "Worker capacity"
+      ]
+    },
+    "publication-control": {
+      "box": [
+        2622.0234375,
+        1444.5714285,
+        75.953125,
+        48
+      ],
+      "lines": [
+        "Authorize",
+        "stage"
+      ]
+    },
+    "readback-b": {
+      "box": [
+        964.28515625,
+        1666.0,
+        131.4296875,
+        28
+      ],
+      "lines": [
+        "Confirmed merge"
+      ]
+    },
+    "operation-history": {
+      "box": [
+        2142.8359375,
+        1290.0,
+        110.328125,
+        28
+      ],
+      "lines": [
+        "Record results"
+      ]
+    },
+    "validation-return-b": {
+      "box": [
+        2502.93446225,
+        1326.0,
+        105.2421875,
+        28
+      ],
+      "lines": [
+        "Result receipt"
+      ]
+    },
+    "readback-a": {
+      "box": [
+        527.30078125,
+        1771.0,
+        75.3984375,
+        48
+      ],
+      "lines": [
+        "Accepted",
+        "merge"
+      ]
+    },
+    "capacity": {
+      "box": [
+        1241.89676325,
+        706.0,
+        110.4921875,
+        28
+      ],
+      "lines": [
+        "Admit attempt"
+      ]
+    },
+    "model-session": {
+      "box": [
+        533.4453125,
+        482.666667,
+        63.109375,
+        48
+      ],
+      "lines": [
+        "Model",
+        "session"
+      ]
+    },
+    "saved-progress": {
+      "box": [
+        2142.9453125,
+        724.666667,
+        110.109375,
+        28
+      ],
+      "lines": [
+        "Save / resume"
+      ]
+    },
+    "adapter-history": {
+      "box": [
+        1439.81529025,
+        1026.0,
+        103.2265625,
+        28
+      ],
+      "lines": [
+        "Reconcile job"
+      ]
+    },
+    "scoped-tools": {
+      "box": [
+        1049.53125,
+        559.333333,
+        100.9375,
+        28
+      ],
+      "lines": [
+        "Scoped tools"
+      ]
+    },
+    "source-review": {
+      "box": [
+        1050.17578125,
+        1130.2857145,
+        99.6484375,
+        28
+      ],
+      "lines": [
+        "Exact source"
+      ]
+    },
+    "engine-execution": {
+      "box": [
+        463.28515625,
+        1607.714286,
+        145.4296875,
+        28
+      ],
+      "lines": [
+        "Command / receipt"
+      ]
+    },
+    "candidate-handoff-a": {
+      "box": [
+        1060.86328125,
+        794.285714,
+        78.2734375,
+        48
+      ],
+      "lines": [
+        "Capture",
+        "candidate"
+      ]
+    },
+    "workspace-github": {
+      "box": [
+        544.1640625,
+        1640.6079595010397,
+        131.671875,
+        28
+      ],
+      "lines": [
+        "Versioned source"
+      ]
+    },
+    "execute-source": {
+      "box": [
+        527.86328125,
+        878.857143,
+        64.2734375,
+        48
+      ],
+      "lines": [
+        "Execute",
+        "source"
+      ]
+    },
+    "candidate-code": {
+      "box": [
+        534.4765625,
+        774.571429,
+        91.046875,
+        28
+      ],
+      "lines": [
+        "Source files"
+      ]
+    },
+    "request-intake": {
+      "box": [
+        536.27734375,
+        191.714286,
+        87.4453125,
+        28
+      ],
+      "lines": [
+        "Define task"
+      ]
+    }
+  },
+  "flow": [
+    "request",
+    "linear",
+    "selection",
+    "coordinator",
+    "admission-step",
+    "supervisor",
+    "coding",
+    "workspace",
+    "capture",
+    "delivery",
+    "profiles",
+    "adapter",
+    "windmill",
+    "bridge",
+    "engine",
+    "review",
+    "publisher",
+    "pr",
+    "integration",
+    "github",
+    "release",
+    "releasechecks",
+    "tag",
+    "main",
+    "outcome"
+  ],
+  "reservedPositions": 50,
+  "qualification": "Initial complete-mesh face/corner selection,then selected-track centering and corridor compression. Approved C placement;not a global optimum proof."
+}

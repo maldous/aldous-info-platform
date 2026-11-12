@@ -1,0 +1,147 @@
+{
+  "source": "Existing 24-resource catalog plus maintained native-platform-harness source contract; existing 13-node end-state map",
+  "nodes": 35,
+  "edges": 45,
+  "primaryNodes": [
+    "coordinator",
+    "engine",
+    "github",
+    "linear",
+    "windmill",
+    "workflow"
+  ],
+  "catalogDisposition": {
+    "node-isolated": {
+      "disposition": "explicit",
+      "fullNode": "coding"
+    },
+    "node-runner": {
+      "disposition": "explicit",
+      "fullNode": "engine"
+    },
+    "node-code": {
+      "disposition": "explicit",
+      "fullNode": "code"
+    },
+    "node-windmill": {
+      "disposition": "explicit",
+      "fullNode": "windmill"
+    },
+    "node-stokowski": {
+      "disposition": "explicit",
+      "fullNode": "coordinator"
+    },
+    "node-supervisor": {
+      "disposition": "explicit",
+      "fullNode": "supervisor"
+    },
+    "node-workspace": {
+      "disposition": "explicit",
+      "fullNode": "workspace"
+    },
+    "node-bridge": {
+      "disposition": "explicit",
+      "fullNode": "bridge"
+    },
+    "node-delivery": {
+      "disposition": "explicit",
+      "fullNode": "delivery"
+    },
+    "node-langgraph": {
+      "disposition": "explicit",
+      "fullNode": "workflow"
+    },
+    "node-sqlite": {
+      "disposition": "explicit",
+      "fullNode": "checkpoints"
+    },
+    "node-journal": {
+      "disposition": "explicit",
+      "fullNode": "journal"
+    },
+    "node-adapter": {
+      "disposition": "explicit",
+      "fullNode": "adapter"
+    },
+    "node-integration": {
+      "disposition": "explicit",
+      "fullNode": "integration"
+    },
+    "node-wm_mcp": {
+      "disposition": "superseded in end-state",
+      "reason": "Historical cloud/durable or separate MCP wrapper; retained only in earlier capability walkthrough, not an additional end-state execution owner"
+    },
+    "node-tools": {
+      "disposition": "explicit",
+      "fullNode": "tools"
+    },
+    "node-policy": {
+      "disposition": "explicit",
+      "fullNode": "policy"
+    },
+    "node-durable": {
+      "disposition": "superseded in end-state",
+      "reason": "Historical cloud/durable or separate MCP wrapper; retained only in earlier capability walkthrough, not an additional end-state execution owner"
+    },
+    "node-threads": {
+      "disposition": "superseded in end-state",
+      "reason": "Historical cloud/durable or separate MCP wrapper; retained only in earlier capability walkthrough, not an additional end-state execution owner"
+    },
+    "node-linear": {
+      "disposition": "explicit",
+      "fullNode": "linear"
+    },
+    "node-github": {
+      "disposition": "explicit",
+      "fullNode": "github"
+    },
+    "node-provider": {
+      "disposition": "explicit",
+      "fullNode": "models"
+    },
+    "node-review": {
+      "disposition": "explicit",
+      "fullNode": "review"
+    },
+    "node-pr": {
+      "disposition": "explicit",
+      "fullNode": "pr"
+    }
+  },
+  "flow": [
+    "request",
+    "linear",
+    "selection",
+    "coordinator",
+    "admission-step",
+    "supervisor",
+    "coding",
+    "workspace",
+    "capture",
+    "delivery",
+    "profiles",
+    "adapter",
+    "windmill",
+    "bridge",
+    "engine",
+    "review",
+    "publisher",
+    "pr",
+    "integration",
+    "github",
+    "release",
+    "releasechecks",
+    "tag",
+    "main",
+    "outcome"
+  ],
+  "feedback": [
+    "review-repair",
+    "readback",
+    "work-outcome",
+    "task-outcome"
+  ],
+  "boundary": "Released source and reported acceptance; product deployment and BAU acceptance remain separate",
+  "ownershipQualification": "Coordinator reports LangChain/LangGraph/Sokolovski ownership split undecided until BAU validation; map depicts component flow, not an agreed final ownership partition.",
+  "approvedLayout": "layout/approved-c.json"
+}

@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const css=fs.readFileSync('dist/portfolio.css','utf8');
+assert(css.includes('animation:ambient-light-sweep 24s ease-in-out infinite alternate'));
+assert(css.includes('@keyframes ambient-light-sweep'));
+assert(css.includes('mask-position:10% 15%'));
+assert(css.includes('mask-position:90% 85%'));
+assert(css.includes('@media(prefers-reduced-motion:reduce){.page-backdrop::after{display:none;animation:none}}'));
+assert(css.includes('@media print{.page-backdrop{display:none}}'));
+const js=fs.readFileSync('dist/portfolio.js','utf8');
+assert(!/setTimeout|setInterval|requestAnimationFrame|fetch\(|WebSocket/.test(js));
+console.log('PASS continuously drifting decorative brightness, unchanged fixed base, reduced-motion/static print and no polling or timers.');

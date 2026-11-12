@@ -1,0 +1,2 @@
+// Apply the saved/system palette before paint; failure safely falls back to light.
+(()=>{let preference='system',dark=false;try{const saved=localStorage.getItem('offmenu-color-theme');if(['light','dark','system'].includes(saved))preference=saved;}catch{}try{dark=matchMedia('(prefers-color-scheme: dark)').matches;}catch{}const theme=preference==='dark'||(preference==='system'&&dark)?'dark':'light';document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme;})();

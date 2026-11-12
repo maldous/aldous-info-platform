@@ -1,0 +1,21 @@
+{
+  "name": "aldous-info-platform",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Matthew Aldous's static portfolio, architecture explorer and browser-local recruiter evidence search",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "start": "python3 -m http.server 8080 --bind 127.0.0.1 --directory build",
+    "test": "python3 test-portfolio.py && node test-portfolio.mjs && node test-ambient-activity.mjs && node --test test-recruiters.mjs && python3 test-recruiters-static.py && node test-recruiters-ui.mjs && node test-morgan-signals.mjs && python3 scripts/check-export.py",
+    "test:architecture": "python3 test-complete-mesh.py && node test-operating-runtime.mjs && node test-graph-navigation.mjs && python3 test-current-layout.py && python3 test-route-spacing.py && python3 test-end-to-end.py && python3 test-morgan-screenshot.py",
+    "regenerate": "python3 scripts/regenerate.py",
+    "test:browser": "node scripts/browser-test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

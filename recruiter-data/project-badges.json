@@ -1,0 +1,596 @@
+[
+  {
+    "id": "offmenu",
+    "name": "OffMenu",
+    "badges": [
+      {
+        "name": "Python",
+        "url": "https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white",
+        "evidence": {
+          "url": "https://github.com/maldous/offmenu/blob/main/README.md",
+          "reason": "README explicitly specifies Python 3.10+ tooling.",
+          "source_blob_sha": "6bf2d0ea977a47df6a5ca2bdc862dfa04277a393"
+        }
+      },
+      {
+        "name": "SQL",
+        "url": "https://img.shields.io/badge/SQL-336791?style=flat-square",
+        "evidence": {
+          "url": "https://github.com/maldous/offmenu/blob/main/README.md",
+          "reason": "README explicitly specifies SQLite storage; SQL is the existing-profile general badge.",
+          "source_blob_sha": "6bf2d0ea977a47df6a5ca2bdc862dfa04277a393"
+        }
+      },
+      {
+        "name": "REST",
+        "url": "https://img.shields.io/badge/REST-4338CA?style=flat-square",
+        "evidence": {
+          "url": "https://github.com/maldous/offmenu/blob/main/README.md",
+          "reason": "README documents the third-party REST API and scopes.",
+          "source_blob_sha": "6bf2d0ea977a47df6a5ca2bdc862dfa04277a393"
+        }
+      }
+    ]
+  },
+  {
+    "id": "anqr",
+    "name": "ANQR",
+    "badges": [
+      {
+        "name": "TypeScript",
+        "url": "https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white",
+        "evidence": {
+          "url": "https://github.com/maldous/anqr-v3/blob/main/README.md",
+          "reason": "ANQR V3 README explicitly calls this a TypeScript repository.",
+          "source_blob_sha": "6733babe3339e9c998e8b6df6df8bc25f5e17062"
+        }
+      },
+      {
+        "name": "Node.js",
+        "url": "https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white",
+        "evidence": {
+          "url": "https://github.com/maldous/anqr-v3/blob/main/README.md",
+          "reason": "README requires Node.js 22 or later.",
+          "source_blob_sha": "6733babe3339e9c998e8b6df6df8bc25f5e17062"
+        }
+      },
+      {
+        "name": "MCP",
+        "url": "https://img.shields.io/badge/MCP-333333?style=flat-square&logo=modelcontextprotocol&logoColor=white",
+        "evidence": {
+          "url": "https://aldous.info/#anqr",
+          "reason": "Published portfolio description explicitly includes MCP; this describes the combined ANQR project, not proof that the V3 repository deploys the live site.",
+          "source_blob_sha": "6733babe3339e9c998e8b6df6df8bc25f5e17062"
+        }
+      }
+    ]
+  },
+  {
+    "id": "circular-quay",
+    "name": "Circular Quay",
+    "badges": [
+      {
+        "name": "Platform architecture",
+        "url": "https://img.shields.io/badge/Platform%20architecture-1D4ED8?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#circular-quay",
+          "reason": "Published description identifies an application configuration platform.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "API integration",
+        "url": "https://img.shields.io/badge/API%20integration-BE123C?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#circular-quay",
+          "reason": "Published description identifies integrations with authentication providers.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Secrets management",
+        "url": "https://img.shields.io/badge/Secrets%20management-1D4ED8?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#circular-quay",
+          "reason": "Published description identifies delivery of application secrets and encrypted storage.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "morgan-project",
+    "name": "Morgan monitoring",
+    "badges": [
+      {
+        "name": "Agentic systems",
+        "url": "https://img.shields.io/badge/Agentic%20systems-4D7C0F?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#morgan-project",
+          "reason": "Published description identifies multi-agent AI work.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "JavaScript",
+        "url": "https://img.shields.io/badge/JavaScript-B89B00?style=flat-square&logo=javascript&logoColor=white",
+        "evidence": {
+          "url": "https://aldous.info/#morgan-project",
+          "reason": "Morgan implementation source uses JavaScript ES modules, with worker.mjs and browser app.js/render.js modules.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Telemetry analytics",
+        "url": "https://img.shields.io/badge/Telemetry%20analytics-BE123C?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#morgan-project",
+          "reason": "Published monitoring section describes current, missing and stale observations and worker activity; this badge describes monitoring purpose, not an installed telemetry vendor.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "four-tone-swarm",
+    "name": "Four-Tone Swarm",
+    "badges": [
+      {
+        "name": "Simulation",
+        "url": "https://img.shields.io/badge/Simulation-0F766E?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#four-tone-swarm",
+          "reason": "Published description describes a pixel swarm reacting to touch and motion; purpose-level particle simulation, with no framework/language assertion.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Interactive artwork",
+        "url": "https://img.shields.io/badge/Interactive%20artwork-7E22CE?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#four-tone-swarm",
+          "reason": "Published description explicitly identifies an interactive portrait, without calling it a prototype.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Animation",
+        "url": "https://img.shields.io/badge/Animation-B45309?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#four-tone-swarm",
+          "reason": "Published description says pixels swarm in response to touch and motion.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "cix-chronicle",
+    "name": "CIX Chronicle",
+    "badges": [
+      {
+        "name": "Research tooling",
+        "url": "https://img.shields.io/badge/Research%20tooling-BE123C?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#cix-chronicle",
+          "reason": "Published description identifies an illustrated record for inspecting research experiments and dated tested outcomes.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Illustrated journal",
+        "url": "https://img.shields.io/badge/Illustrated%20journal-0369A1?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#cix-chronicle",
+          "reason": "Published tagline explicitly identifies Illustrated journal; unlike a prototype label this accurately describes the finished presentation.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Lossless compression",
+        "url": "https://img.shields.io/badge/Lossless%20compression-4D7C0F?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#cix-chronicle",
+          "reason": "The journal covers Colour Index Compression research; the linked public research README defines lossless compression.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "cix-design",
+    "name": "CIX design preview",
+    "badges": [
+      {
+        "name": "Design prototype",
+        "url": "https://img.shields.io/badge/Design%20prototype-A21CAF?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#cix-design",
+          "reason": "Published description explicitly calls it a design prototype.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Lossless compression",
+        "url": "https://img.shields.io/badge/Lossless%20compression-4D7C0F?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#cix-design",
+          "reason": "Published description explicitly says lossless compression.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Research documentation",
+        "url": "https://img.shields.io/badge/Research%20documentation-4338CA?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#cix-design",
+          "reason": "Published description says the prototype explains lossless compression and its technical ideas.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "cix-benchmarks",
+    "name": "CIX Compression Benchmarks",
+    "badges": [
+      {
+        "name": "Python",
+        "url": "https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white",
+        "evidence": {
+          "url": "https://github.com/maldous/colour-index-compression/blob/main/README.md",
+          "reason": "The research README supplies Python installation and pytest commands.",
+          "source_blob_sha": "2405b6de943ed6e08a0176c4fdbfe925a5eb0896"
+        }
+      },
+      {
+        "name": "Automated testing",
+        "url": "https://img.shields.io/badge/Automated%20testing-7E22CE?style=flat-square",
+        "evidence": {
+          "url": "https://github.com/maldous/colour-index-compression/blob/main/README.md",
+          "reason": "The research README requires exact round-trip verification and reproducible tests.",
+          "source_blob_sha": "2405b6de943ed6e08a0176c4fdbfe925a5eb0896"
+        }
+      },
+      {
+        "name": "Performance optimisation",
+        "url": "https://img.shields.io/badge/Performance%20optimisation-BE123C?style=flat-square",
+        "evidence": {
+          "url": "https://github.com/maldous/colour-index-compression/blob/main/README.md",
+          "reason": "The research README documents benchmark tiers, full physical size accounting and optimisation constraints. Badge describes research purpose, not a universal performance advantage.",
+          "source_blob_sha": "2405b6de943ed6e08a0176c4fdbfe925a5eb0896"
+        }
+      }
+    ]
+  },
+  {
+    "id": "uif",
+    "name": "UIF / USF",
+    "badges": [
+      {
+        "name": "Shell scripting",
+        "url": "https://img.shields.io/badge/Shell%20scripting-1D4ED8?style=flat-square",
+        "evidence": {
+          "url": "https://github.com/maldous/usf-v3/blob/main/README.md",
+          "reason": "USF bootstrap requires a POSIX shell and invokes scripts/verify-contained.sh.",
+          "source_blob_sha": "d6fab49192689300e02975a7e6a03cf26fc4c01b"
+        }
+      },
+      {
+        "name": "Release governance",
+        "url": "https://img.shields.io/badge/Release%20governance-0F766E?style=flat-square",
+        "evidence": {
+          "url": "https://github.com/maldous/usf-v3/blob/main/README.md",
+          "reason": "USF README distinguishes candidate changes, admitted evidence, proof and coherent source checkpoints.",
+          "source_blob_sha": "d6fab49192689300e02975a7e6a03cf26fc4c01b"
+        }
+      },
+      {
+        "name": "Model evaluation",
+        "url": "https://img.shields.io/badge/Model%20evaluation-C2410C?style=flat-square",
+        "evidence": {
+          "url": "https://github.com/maldous/usf-v3/blob/main/README.md",
+          "reason": "USF README explicitly describes provider evaluation and qualification; not a claim that live provider contributions are complete.",
+          "source_blob_sha": "d6fab49192689300e02975a7e6a03cf26fc4c01b"
+        }
+      }
+    ]
+  },
+  {
+    "id": "lixit",
+    "name": "Lixit",
+    "badges": [
+      {
+        "name": "React",
+        "url": "https://img.shields.io/badge/React-149ECA?style=flat-square&logo=react&logoColor=white",
+        "evidence": {
+          "url": "https://github.com/maldous/lixit/blob/main/docs/content/architecture.md",
+          "reason": "Public architecture guide lists React in the active web application.",
+          "source_blob_sha": "390187d0eff24ff6ba7e159fb00ca8d073994e6c"
+        }
+      },
+      {
+        "name": "PostgreSQL",
+        "url": "https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white",
+        "evidence": {
+          "url": "https://github.com/maldous/lixit/blob/main/docs/content/architecture.md",
+          "reason": "Public architecture guide lists PostgreSQL as primary database.",
+          "source_blob_sha": "390187d0eff24ff6ba7e159fb00ca8d073994e6c"
+        }
+      },
+      {
+        "name": "GraphQL",
+        "url": "https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white",
+        "evidence": {
+          "url": "https://github.com/maldous/lixit/blob/main/docs/content/architecture.md",
+          "reason": "Public architecture guide lists Hasura/PostGraphile GraphQL interfaces. All describe the archived prototype, not validated production lending integrations.",
+          "source_blob_sha": "390187d0eff24ff6ba7e159fb00ca8d073994e6c"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cadle",
+    "name": "CADLE",
+    "badges": [
+      {
+        "name": "Interactive learning",
+        "url": "https://img.shields.io/badge/Interactive%20learning-C2410C?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#cadle",
+          "reason": "Historical project description and profile describes a mechanical-engineering learning environment.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Simulation",
+        "url": "https://img.shields.io/badge/Simulation-0F766E?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#cadle",
+          "reason": "Historical project description and profile describes exploring effects of changing standard engineering components.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Animation",
+        "url": "https://img.shields.io/badge/Animation-B45309?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#cadle",
+          "reason": "Historical project description and profile explicitly describes animation and feedback; this is not modern AI deep learning.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "neeg",
+    "name": "NEEG",
+    "badges": [
+      {
+        "name": "Neural networks",
+        "url": "https://img.shields.io/badge/Neural%20networks-0369A1?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#neeg",
+          "reason": "Historical project description and profile describes neural EEG classification.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Data modelling",
+        "url": "https://img.shields.io/badge/Data%20modelling-B45309?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#neeg",
+          "reason": "Experimental neural classification models EEG signal patterns; purpose-level association, not clinical validation.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Research tooling",
+        "url": "https://img.shields.io/badge/Research%20tooling-BE123C?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#neeg",
+          "reason": "Historical project description and profile identifies experimental neural EEG research and explicitly says further clinical trials were required.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "bayesian-bot",
+    "name": "Bayesian Bot",
+    "badges": [
+      {
+        "name": "Bayesian methods",
+        "url": "https://img.shields.io/badge/Bayesian%20methods-A21CAF?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#bayesian-bot",
+          "reason": "Historical project description and profile explicitly describes Bayesian filtering.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Neural networks",
+        "url": "https://img.shields.io/badge/Neural%20networks-0369A1?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#bayesian-bot",
+          "reason": "Historical project description and profile explicitly describes feedforward neural networks.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Data modelling",
+        "url": "https://img.shields.io/badge/Data%20modelling-B45309?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#bayesian-bot",
+          "reason": "Historical project description and profile describes statistical methods and feedforward neural networks applied to conversational responses.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "gann",
+    "name": "GANN",
+    "badges": [
+      {
+        "name": "Genetic algorithms",
+        "url": "https://img.shields.io/badge/Genetic%20algorithms-4D7C0F?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#gann",
+          "reason": "Historical project description and profile explicitly identifies genetic algorithms.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Neural networks",
+        "url": "https://img.shields.io/badge/Neural%20networks-0369A1?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#gann",
+          "reason": "Historical project description and profile explicitly identifies neural networks.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Parallel computing",
+        "url": "https://img.shields.io/badge/Parallel%20computing-1D4ED8?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#gann",
+          "reason": "Historical project description and profile explicitly calls GANN a parallel neural-network engine. Does not imply distributed/cloud deployment.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "annyway",
+    "name": "ANNYWAY",
+    "badges": [
+      {
+        "name": "SMS",
+        "url": "https://img.shields.io/badge/SMS-C2410C?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#annyway",
+          "reason": "Historical project description and profile describes the Benelux SMS portal.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "WML",
+        "url": "https://img.shields.io/badge/WML-7E22CE?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#annyway",
+          "reason": "Historical project description and profile explicitly lists WML integration.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "SMTP",
+        "url": "https://img.shields.io/badge/SMTP-A21CAF?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#annyway",
+          "reason": "Historical project description and profile explicitly lists SMTP integration.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "milc",
+    "name": "MILC",
+    "badges": [
+      {
+        "name": "SILC",
+        "url": "https://img.shields.io/badge/SILC-C2410C?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#milc",
+          "reason": "Historical project description and profile calls MILC an open-source SILC client.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "XSL",
+        "url": "https://img.shields.io/badge/XSL-C2410C?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#milc",
+          "reason": "Historical project description and profile explicitly identifies dynamic web-based XSL rendering.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "XML",
+        "url": "https://img.shields.io/badge/XML-005FAD?style=flat-square&logo=xml&logoColor=white",
+        "evidence": {
+          "url": "https://aldous.info/#milc",
+          "reason": "XSL is an XML-based stylesheet language; the historical CV explicitly identifies dynamic XSL rendering. This badge identifies the markup of that implementation, not an inferred framework.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "solution-leaflet",
+    "name": "Solution Leaflet",
+    "badges": [
+      {
+        "name": "PHP",
+        "url": "https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white",
+        "evidence": {
+          "url": "https://aldous.info/#solution-leaflet",
+          "reason": "Historical project description and profile explicitly lists PHP.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "XML",
+        "url": "https://img.shields.io/badge/XML-005FAD?style=flat-square&logo=xml&logoColor=white",
+        "evidence": {
+          "url": "https://aldous.info/#solution-leaflet",
+          "reason": "Historical project description and profile explicitly lists XML.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "XSL-FO",
+        "url": "https://img.shields.io/badge/XSL--FO-0F766E?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#solution-leaflet",
+          "reason": "Historical project description and profile explicitly lists XSL/XSL-FO.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "robox-gaming",
+    "name": "Robox Gaming",
+    "badges": [
+      {
+        "name": "Roblox",
+        "url": "https://img.shields.io/badge/Roblox-0F766E?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#robox-gaming",
+          "reason": "Published description explicitly identifies Roblox.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Simulation",
+        "url": "https://img.shields.io/badge/Simulation-0F766E?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#robox-gaming",
+          "reason": "Adventure-world games built in Roblox are represented as interactive world simulations; no unverified Luau/Lua language assertion.",
+          "source_blob_sha": null
+        }
+      },
+      {
+        "name": "Design prototype",
+        "url": "https://img.shields.io/badge/Design%20prototype-A21CAF?style=flat-square",
+        "evidence": {
+          "url": "https://aldous.info/#robox-gaming",
+          "reason": "Published description explicitly says proof of concept. No Luau/Lua badge is asserted without source inspection.",
+          "source_blob_sha": null
+        }
+      }
+    ]
+  }
+]

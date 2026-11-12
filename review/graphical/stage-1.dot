@@ -1,0 +1,8 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.35", nodesep="0.4", ranksep="0.6", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="Roboto", fontsize=20, margin="0.22,0.17", color="#637366", fillcolor="#fffdf7", fontcolor="#214638", penwidth=1.5];
+edge [fontname="Roboto", fontsize=14, color="#637366", fontcolor="#637366", arrowsize=0.8, penwidth=1.5];
+"node-runner" [id="node-runner",label="Compute runner",color="#b34c31",penwidth="2.5"];
+"node-code" [id="node-code",label="Application /\nworker code",color="#b34c31",penwidth="2.5"];
+"node-runner" -> "node-code" [id="edge-runner->code",label="Local subprocess"];
+}

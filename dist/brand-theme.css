@@ -1,0 +1,34 @@
+/* Branding traced to https://offmenu.aldous.info/ preview.css final overrides. */
+@font-face{font-family:OffMenuRoboto;src:url('fonts/OffMenuRoboto-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:OffMenuRoboto;src:url('fonts/OffMenuRoboto-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+/* User direction: blue finish, Roboto consistently. Original icon asset retained. */
+
+ :root,[data-theme=light]{color-scheme:light;--ink:#172536;--muted:#40576d;--surface:#fff;--page:#fff;--line:#5e7388;--focus:#174e9e;--accent:#175b84;--bg:var(--page);--panel:var(--surface);--panel-alt:var(--page);--text:var(--ink);--subtle:var(--muted);--control:var(--surface);--control-hover:var(--page);--control-border:var(--line);--primary:var(--accent);--on-primary:var(--page);--active:var(--focus);--diagram-bg:var(--page);--node-fill:var(--surface);--node-stroke:var(--line);--diagram-text:var(--ink);--diagram-muted:var(--muted);--edge:var(--line);--group-fill:var(--surface);--group-border:var(--line);--group-title:var(--ink);--glow:var(--focus);--error:var(--focus)}
+[data-theme=dark]{color-scheme:dark;--ink:#f1f6ff;--muted:#b8c9dc;--surface:#080808;--page:#000;--line:#60758c;--focus:#a9dcff;--accent:#8bc9f2}
+html,body{font-family:OffMenuRoboto,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}button,input,textarea,select{font-family:OffMenuRoboto,Roboto,Arial,sans-serif}header,footer,#mobile-tabs{background:var(--bg);border-color:var(--line)}h1,h2,h3,h4{color:var(--text)}.eyebrow,#counter,.hint,.progress p,aside p,#read-time{color:var(--subtle)}button,select,input:not([type=checkbox]),textarea{background:var(--control);border-color:var(--control-border);color:var(--text);border-radius:10px}button{font-weight:700}button:hover{background:var(--control-hover)}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,section:focus-visible,a:focus-visible{outline:3px solid var(--active);outline-offset:3px}.primary{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}.primary:hover{background:var(--primary);filter:brightness(.96)}#stage,#canvas svg{background:var(--diagram-bg)!important}#loading{color:var(--subtle)}.story-panel,#editor{background:var(--panel-alt);border-color:var(--line)}#script-panel{background:var(--panel);border-color:var(--line)}#summary-panel{border-color:var(--line)}.story-panel p,.story-panel li,.story-panel h4,#script-content p{color:var(--text)}#script-content p{font-family:OffMenuRoboto,Roboto,Arial,sans-serif;font-size:16px;line-height:1.8}.protocol{font-family:OffMenuRoboto,Roboto,Arial,sans-serif;background:var(--group-fill);color:var(--diagram-text)}.link-item,.divider{border-color:var(--line)}.context-box{border-color:var(--active)}.scope-note{color:var(--subtle)!important;border-color:var(--line)}#objects{background:var(--panel);border-color:var(--line)}#objects label{border-color:var(--line)}#objects small{color:var(--subtle)}#error{color:var(--error)}a{color:var(--active)}input[type=checkbox]{accent-color:var(--active)}.story-panel::-webkit-scrollbar-thumb{background:var(--line)}#theme-select{width:auto;max-width:135px;flex:none;font-size:12px}
+#canvas svg,#canvas foreignObject div{font-family:OffMenuRoboto,Roboto,Arial,sans-serif!important}#canvas .unrevealed{opacity:var(--dim-opacity);filter:none}#canvas .current{filter:drop-shadow(0 0 4px var(--glow))}#canvas .current .diagram-edge{stroke:var(--active)!important}#canvas .current .diagram-arrow{fill:var(--active)!important}#canvas .current .diagram-node-shape{stroke:var(--active)!important}#canvas .current .diagram-capsule{border-color:var(--active)!important}#canvas .current .fallback-capsule{stroke:var(--active)!important}#canvas .persistent-group-border{stroke:var(--group-border)!important;stroke-width:6.4px!important;fill:var(--group-fill)!important}#canvas .persistent-group-title,#canvas .persistent-group-title div{font-weight:700!important;color:var(--group-title)!important}#canvas .persistent-group-title text{fill:var(--group-title)!important}
+
+@media(max-width:800px){header .row{flex-wrap:wrap}#step-select{flex:1 1 100%;max-width:none}#theme-select{flex:1;max-width:160px}#mobile-tabs [aria-pressed=true]{background:var(--primary);color:var(--on-primary);border-color:var(--primary)}#script-content p{font-size:17px}}
+/* Match native draw.io HTML layout; explicit native border-box capsules retain their inline setting. */
+#canvas foreignObject div{box-sizing:content-box}
+
+[data-theme=dark] a{color:var(--mint)}#error{font-weight:700}
+
+/* OffMenu header component copied from the app source; body/diagram Roboto remains separate. */
+.brand{font-size:28px;font-weight:900;letter-spacing:-1.4px;text-decoration:none;display:inline-flex;align-items:center}.brand-mark{font-size:29px;display:inline-flex;margin-inline-end:10px;width:36px;height:36px;align-items:center;justify-content:center;border:2px solid var(--ink);border-radius:10px}.brand-dot{color:var(--coral)}
+header .brand{font-family:OffMenuRoboto,Roboto,Arial,sans-serif;color:var(--text);direction:ltr;unicode-bidi:isolate;flex:none}header .brand-mark{font-family:OffMenuRoboto,Roboto,Arial,sans-serif;border-color:currentColor}header{height:64px} @media(max-width:620px){header{height:60px;padding:8px 20px}header .brand{font-size:26px}header .brand-mark{width:31px;height:31px;font-size:24px}}
+
+header .brand{font-family:OffMenuRoboto,Roboto,Arial,sans-serif;gap:10px}header .brand-icon{display:block;width:36px;height:36px;flex:none}header .brand-dot{margin-left:-10px} @media(max-width:620px){header .brand-icon{width:31px;height:31px}}
+
+/* Exact live header identity; use theme-specific approved artwork. */
+header .brand{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-family:OffMenuRoboto,Roboto,Arial,sans-serif;font-size:20px;font-weight:700;letter-spacing:normal;color:var(--ink)}
+header .brand img{width:38px;height:38px;object-fit:contain;background:transparent;mix-blend-mode:normal;content:url('scanner-balanced-final.svg')}
+[data-theme=dark] header .brand img{content:url('scanner-balanced-final-dark.svg')}
+
+:root,[data-theme=light]{--primary-node-fill:#f0f6ff;--step-node-fill:#f5f8fc}[data-theme=dark]{--primary-node-fill:#0c1624;--step-node-fill:#10151e}
+
+/* Highlight only the nodes introduced by the chapter being viewed. */
+body[data-view=stage] #scene [data-current-node][data-new="true"]>rect{fill:#e2e5e9;stroke:#174e9e}
+body[data-view=stage] #scene [data-current-node][data-new="true"]>text{fill:#172536}
+body[data-view=stage] #scene [data-current-node][data-new="true"]>text:not(:first-of-type){fill:#40576d}
+body[data-view=stage] #scene [data-current-node][data-new="true"][data-primary="true"]>text:first-of-type{fill:#174e9e}

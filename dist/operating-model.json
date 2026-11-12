@@ -1,0 +1,159 @@
+[
+  {
+    "title": "Compute",
+    "caption": "Start with local compute: a place to write code, try ideas and run checks. This is the foundation that every later layer builds on.",
+    "pain": "An idea only becomes useful when you can run it and see what happens.",
+    "worksNow": "You write the code and use local compute to build, test and run it. Fast feedback helps you improve the result before adding more moving parts.",
+    "delegatedResponsibility": "Compute does the hands-on work of running commands. You choose what to try and decide whether the result is right.",
+    "stateArtifact": "Your code, test results and generated files stay in the local workspace.",
+    "remainingLimitation": "You still plan the work, remember the next step and check the result yourself.",
+    "example": {
+      "title": "Try an idea locally",
+      "body": "You want a meal-plan CSV export. You write a small change, run it on local compute and open the sample file. You can quickly see whether the columns look right and try again. GitHub, AI workers and job automation can build on this foundation later."
+    },
+    "added": [
+      "local"
+    ],
+    "protocols": [
+      "edge-runner->code"
+    ]
+  },
+  {
+    "title": "Review",
+    "caption": "Add GitHub so your work has a shared history. Local compute runs the code; GitHub keeps each version, gives reviewers a place to discuss it and records which changes are accepted.",
+    "pain": "A working file on one machine is hard to share, review or return to later.",
+    "worksNow": "You save changes in GitHub and open a pull request. Reviewers can comment on the same version that you tested on local compute.",
+    "delegatedResponsibility": "GitHub keeps the source history and review conversation together. Codex review can help spot issues, while review and checks guide the decision to accept a change.",
+    "stateArtifact": "A source version, pull request, review comments and test results explain what changed and why.",
+    "remainingLimitation": "You still turn feedback into code changes and decide when the proposal is ready.",
+    "example": {
+      "title": "Share a change for review",
+      "body": "You put the CSV export in a GitHub pull request. A reviewer notices that values containing commas need better handling. Local compute lets you test the fix, and GitHub keeps the discussion tied to the version being reviewed."
+    },
+    "added": [
+      "engineering"
+    ],
+    "protocols": [
+      "edge-workspace->github",
+      "edge-github->pr",
+      "edge-pr->review"
+    ]
+  },
+  {
+    "title": "Coding",
+    "caption": "Add AI coding workers to help turn requests into changes. Codex or Claude works in a separate workspace, local compute runs the code, and GitHub keeps the proposal ready for review.",
+    "pain": "Every fix and feature still depends on you making each edit.",
+    "worksNow": "You give an AI worker a clear task and a known starting version. It prepares a change that you can run locally and review through GitHub.",
+    "delegatedResponsibility": "AI workers take on focused coding and repair tasks. Compute provides their working environment, while GitHub provides the shared history and review path. Their API and MCP tool access is scoped to the task.",
+    "stateArtifact": "Each coding attempt produces a proposed source version and the results of its checks.",
+    "remainingLimitation": "AI output still needs checking and review. A completed coding attempt does not automatically mean the change should be accepted.",
+    "example": {
+      "title": "Let an AI worker prepare a fix",
+      "body": "You ask a coding worker to fix the CSV escaping issue. It edits the known workspace and prepares a candidate change. You run the checks on compute and send the updated version through GitHub review before accepting it."
+    },
+    "added": [
+      "agents"
+    ],
+    "protocols": [
+      "edge-isolated->code",
+      "edge-isolated->workspace",
+      "edge-isolated->provider",
+      "edge-isolated->tools",
+      "edge-tools->github"
+    ]
+  },
+  {
+    "title": "Memory",
+    "caption": "Add LangGraph to remember where a multi-step task has reached. Compute runs the checks, GitHub holds the changes, and saved checkpoints help the workflow pick up after an interruption.",
+    "pain": "Longer tasks are hard to resume when the next step lives only in someone\u2019s memory.",
+    "worksNow": "You describe the steps and decisions in a workflow. LangGraph saves progress in SQLite, so you can inspect what happened and work out where to continue.",
+    "delegatedResponsibility": "LangGraph carries the workflow state between steps. Compute still runs the code, AI workers prepare changes, and GitHub keeps the version that each result belongs to.",
+    "stateArtifact": "Saved checkpoints, workflow inputs and check results keep the task\u2019s progress visible.",
+    "remainingLimitation": "Remembering progress does not prove a change is correct. Review and acceptance checks still matter, and recovery must check what already happened before repeating work.",
+    "example": {
+      "title": "Pick up where a task stopped",
+      "body": "The CSV workflow has steps for preparing a sample, running tests and reviewing the output. If a run stops, LangGraph\u2019s checkpoint shows how far it got. You inspect the result, continue from the appropriate step and keep the GitHub review tied to the same change."
+    },
+    "added": [
+      "workflow"
+    ],
+    "protocols": [
+      "edge-runner->delivery",
+      "edge-delivery->langgraph",
+      "edge-langgraph->sqlite"
+    ]
+  },
+  {
+    "title": "Coordination",
+    "caption": "Add Sokolovski to coordinate AI coding around clear tasks. Linear holds the requirements, LangGraph keeps progress, compute supplies working capacity, and GitHub connects each attempt to its review.",
+    "pain": "As more AI work happens, keeping track of owners, attempts and feedback becomes a job of its own.",
+    "worksNow": "You give work a clear home in Linear. Sokolovski coordinates coding assignments and links attempts, review feedback and recorded outcomes so the next action has an owner.",
+    "delegatedResponsibility": "Sokolovski coordinates the coding effort against available capacity. Linear explains what success means; LangGraph preserves progress; compute runs the work; GitHub holds the proposed changes and review.",
+    "stateArtifact": "The task, assigned owner, coding attempt and activity history show how a request became a proposed change.",
+    "remainingLimitation": "Clear ownership keeps the loop understandable. Background execution, review and acceptance still have their own responsibilities in the design.",
+    "example": {
+      "title": "Keep a repair connected to its task",
+      "body": "The CSV request has a Linear task with clear acceptance criteria. Sokolovski connects the review feedback to a focused repair attempt. Compute supports the worker, LangGraph keeps progress, and GitHub shows the updated change ready for another review."
+    },
+    "added": [
+      "ownership"
+    ],
+    "protocols": [
+      "edge-stokowski->linear",
+      "edge-review->stokowski",
+      "edge-stokowski->supervisor",
+      "edge-supervisor->isolated",
+      "edge-stokowski->journal"
+    ]
+  },
+  {
+    "title": "Jobs",
+    "caption": "Windmill runs background checks and integration jobs. Sokolovski coordinates coding and follow-up, LangGraph tracks progress, compute runs the checks, and GitHub receives the reviewed changes through controlled integration.",
+    "pain": "Long-running checks need someone to start them, watch them and bring the result back to the task.",
+    "worksNow": "You submit a job to Windmill and come back to its status and result. A connector tracks the request, while the existing SSH bridge lets the job reach the compute that runs the checks.",
+    "delegatedResponsibility": "Windmill manages the background jobs. Compute executes the checks, LangGraph keeps the workflow moving between decisions, and Sokolovski coordinates any coding follow-up. Integration separately checks the reviewed GitHub change before it is accepted.",
+    "stateArtifact": "Job results, logs and the exact source version let you see what ran and how it affected the GitHub proposal.",
+    "remainingLimitation": "Checks and review guide integration. The integration step confirms the approved source version and records the GitHub outcome before the delivery loop moves on.",
+    "example": {
+      "title": "Run checks without watching a terminal",
+      "body": "Windmill runs the CSV checks on compute and keeps their result. LangGraph records the workflow step, and Sokolovski can coordinate a repair if a check fails. Once review and checks agree on the GitHub version, the integration owner decides whether it can advance. If a job\u2019s result is unclear, inspect that job before starting another."
+    },
+    "added": [
+      "execution"
+    ],
+    "protocols": [
+      "edge-stokowski->adapter",
+      "edge-adapter->windmill",
+      "edge-adapter->journal",
+      "edge-windmill->bridge",
+      "edge-bridge->runner",
+      "edge-windmill->integration",
+      "edge-integration->policy",
+      "edge-integration->journal"
+    ]
+  },
+  {
+    "title": "Automation",
+    "caption": "The complete delivery loop brings the layers together: Sokolovski coordinates AI work, LangGraph remembers progress, Windmill manages jobs, compute executes them, and GitHub records reviewed changes and releases.",
+    "pain": "Even with the tools connected, someone has to decide whether the work can safely move on.",
+    "worksNow": "The design brings task context, coding, checks and review into one loop. After an outcome is confirmed, the coordinator can consider the next eligible task when capacity and permissions allow.",
+    "delegatedResponsibility": "Sokolovski coordinates coding; LangGraph carries progress; Windmill manages execution jobs; compute supplies the working environment; GitHub keeps reviewed source and release history. Linear anchors the request and its acceptance criteria.",
+    "stateArtifact": "A connected record of the request, coding attempt, job results, workflow progress and accepted GitHub change makes the outcome explainable.",
+    "remainingLimitation": "The loop pauses when a result is unclear, a check fails, permission is missing or capacity is unavailable. Recovery resolves the issue before work continues.",
+    "example": {
+      "title": "Finish one task, then consider the next",
+      "body": "The CSV change passes its checks and review, and its GitHub outcome is confirmed. The coordinator then considers another eligible task using the saved context. If a Windmill result is unclear or a check fails, the loop pauses for recovery or a Sokolovski-coordinated repair before continuing."
+    },
+    "added": [
+      "autonomy"
+    ],
+    "protocols": [
+      "edge-threads->durable",
+      "edge-durable->stokowski",
+      "edge-durable->wm_mcp",
+      "edge-wm_mcp->windmill",
+      "edge-durable->linear",
+      "edge-durable->github"
+    ]
+  }
+]

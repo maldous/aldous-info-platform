@@ -1,0 +1,3 @@
+# Only needed to regenerate architecture diagrams or run image/geometry tests.
+Pillow==10.2.0
+lxml==5.2.1

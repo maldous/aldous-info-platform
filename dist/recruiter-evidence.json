@@ -1,0 +1,1759 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-11-10",
+  "limitations": [
+    "Self-published résumé evidence; not independent verification.",
+    "Listed skills do not establish recency, duration or proficiency.",
+    "English and Dutch are self-reported; no proficiency level or certification is asserted."
+  ],
+  "skills": [
+    {
+      "id": "aws",
+      "label": "AWS",
+      "aliases": [
+        "Amazon Web Services"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered DevOps and infrastructure across Azure, AWS, and Google Cloud.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "CitoPlus · Senior Engineer · 2024 to 2025",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-citoplus",
+          "contextLabel": "View CitoPlus in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "Cloud Platforms: AWS, Azure, Google Cloud, cPanel",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Cloud Platforms"
+    },
+    {
+      "id": "azure",
+      "label": "Azure",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered DevOps and infrastructure across Azure, AWS, and Google Cloud.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "CitoPlus · Senior Engineer · 2024 to 2025",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-citoplus",
+          "contextLabel": "View CitoPlus in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "Cloud Platforms: AWS, Azure, Google Cloud, cPanel",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Cloud Platforms"
+    },
+    {
+      "id": "gcp",
+      "label": "Google Cloud",
+      "aliases": [
+        "GCP"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered DevOps and infrastructure across Azure, AWS, and Google Cloud.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "CitoPlus · Senior Engineer · 2024 to 2025",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-citoplus",
+          "contextLabel": "View CitoPlus in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "Cloud Platforms: AWS, Azure, Google Cloud, cPanel",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Cloud Platforms"
+    },
+    {
+      "id": "cpanel",
+      "label": "cPanel",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Cloud Platforms: AWS, Azure, Google Cloud, cPanel",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Cloud Platforms"
+    },
+    {
+      "id": "kubernetes",
+      "label": "Kubernetes",
+      "aliases": [
+        "K8s"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered backend, identity, and release engineering across Laravel, Vue, TypeScript, and Kubernetes.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Paperly · Senior Engineer · 2025 to Present",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1",
+          "contextUrl": "#career-paperly",
+          "contextLabel": "View Paperly in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "Platform Engineering: Kubernetes, Docker, MicroK8s, EKS, release automation",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Platform Engineering"
+    },
+    {
+      "id": "docker",
+      "label": "Docker",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Platform Engineering: Kubernetes, Docker, MicroK8s, EKS, release automation",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Platform Engineering"
+    },
+    {
+      "id": "microk8s",
+      "label": "MicroK8s",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Platform Engineering: Kubernetes, Docker, MicroK8s, EKS, release automation",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Platform Engineering"
+    },
+    {
+      "id": "eks",
+      "label": "EKS",
+      "aliases": [
+        "Amazon EKS"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Platform Engineering: Kubernetes, Docker, MicroK8s, EKS, release automation",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Platform Engineering"
+    },
+    {
+      "id": "release-automation",
+      "label": "Release automation",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Platform Engineering: Kubernetes, Docker, MicroK8s, EKS, release automation",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Platform Engineering"
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered backend, identity, and release engineering across Laravel, Vue, TypeScript, and Kubernetes.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Paperly · Senior Engineer · 2025 to Present",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1",
+          "contextUrl": "#career-paperly",
+          "contextLabel": "View Paperly in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "Software Engineering: TypeScript, Python, PHP, Bash, SQL",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        },
+        {
+          "kind": "project",
+          "quote": "This TypeScript repository contains ANQR's next-generation product implementation and conformance tests.",
+          "section": "ANQR V3 · Implementation and tests",
+          "url": "https://github.com/maldous/anqr-v3/blob/1bc471ad5eacd09013bf91450e36b28104487b12/README.md",
+          "sourceTitle": "ANQR V3 public README",
+          "limitation": "This repository is a product implementation, not a standalone deployment of the ANQR web application.",
+          "contextUrl": "./#anqr",
+          "contextLabel": "View ANQR V3 in the portfolio"
+        },
+        {
+          "kind": "profile-listed",
+          "quote": "TypeScript",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ],
+      "category": "Software Engineering"
+    },
+    {
+      "id": "python",
+      "label": "Python",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Software Engineering: TypeScript, Python, PHP, Bash, SQL",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        },
+        {
+          "kind": "project",
+          "quote": "This repository brings together the local Python/SQLite tooling and the web application.",
+          "section": "OffMenu · Web application and local tools",
+          "url": "https://github.com/maldous/offmenu/blob/46425e533a0e2513d65dd9b76702a3b81b65821b/README.md",
+          "sourceTitle": "OffMenu public README",
+          "limitation": "Deployment availability does not establish that every ingestion or automation path has completed operational validation.",
+          "contextUrl": "./#offmenu",
+          "contextLabel": "View OffMenu in the portfolio"
+        },
+        {
+          "kind": "profile-listed",
+          "quote": "Python",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ],
+      "category": "Software Engineering"
+    },
+    {
+      "id": "php",
+      "label": "PHP",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Software Engineering: TypeScript, Python, PHP, Bash, SQL",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        },
+        {
+          "kind": "profile-listed",
+          "quote": "PHP",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ],
+      "category": "Software Engineering"
+    },
+    {
+      "id": "bash",
+      "label": "Bash",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Software Engineering: TypeScript, Python, PHP, Bash, SQL",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        },
+        {
+          "kind": "profile-listed",
+          "quote": "Bash",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ],
+      "category": "Software Engineering"
+    },
+    {
+      "id": "sql",
+      "label": "SQL",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Software Engineering: TypeScript, Python, PHP, Bash, SQL",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        },
+        {
+          "kind": "profile-listed",
+          "quote": "SQL",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ],
+      "category": "Software Engineering"
+    },
+    {
+      "id": "laravel",
+      "label": "Laravel",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered backend, identity, and release engineering across Laravel, Vue, TypeScript, and Kubernetes.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Paperly · Senior Engineer · 2025 to Present",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1",
+          "contextUrl": "#career-paperly",
+          "contextLabel": "View Paperly in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "Frameworks: Laravel, Vue.js, Node.js, Vite, Nx, React",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Frameworks"
+    },
+    {
+      "id": "vue",
+      "label": "Vue.js",
+      "aliases": [
+        "Vue"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered backend, identity, and release engineering across Laravel, Vue, TypeScript, and Kubernetes.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Paperly · Senior Engineer · 2025 to Present",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1",
+          "contextUrl": "#career-paperly",
+          "contextLabel": "View Paperly in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "Frameworks: Laravel, Vue.js, Node.js, Vite, Nx, React",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Frameworks"
+    },
+    {
+      "id": "node",
+      "label": "Node.js",
+      "aliases": [
+        "NodeJS",
+        "Node JS"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Frameworks: Laravel, Vue.js, Node.js, Vite, Nx, React",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Frameworks"
+    },
+    {
+      "id": "vite",
+      "label": "Vite",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Frameworks: Laravel, Vue.js, Node.js, Vite, Nx, React",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Frameworks"
+    },
+    {
+      "id": "nx",
+      "label": "Nx",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Frameworks: Laravel, Vue.js, Node.js, Vite, Nx, React",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Frameworks"
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Frameworks: Laravel, Vue.js, Node.js, Vite, Nx, React",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Frameworks"
+    },
+    {
+      "id": "openai",
+      "label": "OpenAI workflows",
+      "aliases": [
+        "OpenAI"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "AI and Automation: OpenAI workflows, TensorFlow, PyTorch, scikit-learn, automation tooling",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "AI and Automation"
+    },
+    {
+      "id": "tensorflow",
+      "label": "TensorFlow",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "AI and Automation: OpenAI workflows, TensorFlow, PyTorch, scikit-learn, automation tooling",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "AI and Automation"
+    },
+    {
+      "id": "pytorch",
+      "label": "PyTorch",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "AI and Automation: OpenAI workflows, TensorFlow, PyTorch, scikit-learn, automation tooling",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "AI and Automation"
+    },
+    {
+      "id": "scikit-learn",
+      "label": "scikit-learn",
+      "aliases": [
+        "sklearn"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "AI and Automation: OpenAI workflows, TensorFlow, PyTorch, scikit-learn, automation tooling",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "AI and Automation"
+    },
+    {
+      "id": "otel",
+      "label": "OpenTelemetry",
+      "aliases": [
+        "OTel"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Introduced and coded OpenTelemetry tooling to improve session logging and root cause analysis.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "CitoPlus · Senior Engineer · 2024 to 2025",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-citoplus",
+          "contextLabel": "View CitoPlus in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "Observability: OpenTelemetry, Grafana, Alloy, Sentry, structured logging",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Observability"
+    },
+    {
+      "id": "grafana",
+      "label": "Grafana",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Observability: OpenTelemetry, Grafana, Alloy, Sentry, structured logging",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Observability"
+    },
+    {
+      "id": "alloy",
+      "label": "Alloy",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Observability: OpenTelemetry, Grafana, Alloy, Sentry, structured logging",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Observability"
+    },
+    {
+      "id": "sentry",
+      "label": "Sentry",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Introduced observability, SSO, and diagnostics using Sentry, structured logging, and CI/CD tooling.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Paperly · Senior Engineer · 2025 to Present",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1",
+          "contextUrl": "#career-paperly",
+          "contextLabel": "View Paperly in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "Observability: OpenTelemetry, Grafana, Alloy, Sentry, structured logging",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Observability"
+    },
+    {
+      "id": "logging",
+      "label": "Structured logging",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Introduced observability, SSO, and diagnostics using Sentry, structured logging, and CI/CD tooling.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Paperly · Senior Engineer · 2025 to Present",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1",
+          "contextUrl": "#career-paperly",
+          "contextLabel": "View Paperly in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "Observability: OpenTelemetry, Grafana, Alloy, Sentry, structured logging",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Observability"
+    },
+    {
+      "id": "postgres",
+      "label": "PostgreSQL",
+      "aliases": [
+        "Postgres"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Data Engineering: PostgreSQL, SQL, NoSQL, ETL, data pipelines",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Data Engineering"
+    },
+    {
+      "id": "nosql",
+      "label": "NoSQL",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Data Engineering: PostgreSQL, SQL, NoSQL, ETL, data pipelines",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Data Engineering"
+    },
+    {
+      "id": "etl",
+      "label": "ETL",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Data Engineering: PostgreSQL, SQL, NoSQL, ETL, data pipelines",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Data Engineering"
+    },
+    {
+      "id": "pipelines",
+      "label": "Data pipelines",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "Data Engineering: PostgreSQL, SQL, NoSQL, ETL, data pipelines",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "Data Engineering"
+    },
+    {
+      "id": "devops",
+      "label": "DevOps",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered DevOps and infrastructure across Azure, AWS, and Google Cloud.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "CitoPlus · Senior Engineer · 2024 to 2025",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-citoplus",
+          "contextLabel": "View CitoPlus in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "DevOps and CI/CD: Azure DevOps, GitHub, pipelines, deployment automation",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "DevOps and CI/CD"
+    },
+    {
+      "id": "azure-devops",
+      "label": "Azure DevOps",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "DevOps and CI/CD: Azure DevOps, GitHub, pipelines, deployment automation",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "DevOps and CI/CD"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "DevOps and CI/CD: Azure DevOps, GitHub, pipelines, deployment automation",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "DevOps and CI/CD"
+    },
+    {
+      "id": "cicd",
+      "label": "CI/CD",
+      "aliases": [
+        "CI CD",
+        "CI/CD tooling",
+        "CI-CD",
+        "CI / CD"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Introduced observability, SSO, and diagnostics using Sentry, structured logging, and CI/CD tooling.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Paperly · Senior Engineer · 2025 to Present",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1",
+          "contextUrl": "#career-paperly",
+          "contextLabel": "View Paperly in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "DevOps and CI/CD: Azure DevOps, GitHub, pipelines, deployment automation",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "DevOps and CI/CD"
+    },
+    {
+      "id": "deployment",
+      "label": "Deployment automation",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "DevOps and CI/CD: Azure DevOps, GitHub, pipelines, deployment automation",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "DevOps and CI/CD"
+    },
+    {
+      "id": "rest",
+      "label": "REST",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "APIs and Identity: REST, GraphQL, OAuth2, OIDC, SSO, MCP",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "APIs and Identity"
+    },
+    {
+      "id": "graphql",
+      "label": "GraphQL",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "APIs and Identity: REST, GraphQL, OAuth2, OIDC, SSO, MCP",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "APIs and Identity"
+    },
+    {
+      "id": "oauth",
+      "label": "OAuth2",
+      "aliases": [
+        "OAuth 2.0",
+        "OAuth 2"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "APIs and Identity: REST, GraphQL, OAuth2, OIDC, SSO, MCP",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "APIs and Identity"
+    },
+    {
+      "id": "oidc",
+      "label": "OIDC",
+      "aliases": [
+        "OpenID Connect"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "APIs and Identity: REST, GraphQL, OAuth2, OIDC, SSO, MCP",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "APIs and Identity"
+    },
+    {
+      "id": "sso",
+      "label": "SSO",
+      "aliases": [
+        "Single sign-on"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Introduced observability, SSO, and diagnostics using Sentry, structured logging, and CI/CD tooling.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Paperly · Senior Engineer · 2025 to Present",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1",
+          "contextUrl": "#career-paperly",
+          "contextLabel": "View Paperly in the career timeline"
+        },
+        {
+          "kind": "cv-listed",
+          "quote": "APIs and Identity: REST, GraphQL, OAuth2, OIDC, SSO, MCP",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        }
+      ],
+      "category": "APIs and Identity"
+    },
+    {
+      "id": "mcp",
+      "label": "MCP",
+      "aliases": [
+        "Model Context Protocol"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-listed",
+          "quote": "APIs and Identity: REST, GraphQL, OAuth2, OIDC, SSO, MCP",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Core skills",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1"
+        },
+        {
+          "kind": "project",
+          "quote": "QR generation, styling and analysis, with web, HTTP API and MCP surfaces.",
+          "section": "ANQR · Archived monorepo",
+          "url": "https://github.com/maldous/anqr/blob/25e5632d1a788d9e879fb6d0bdfc8337a4012c54/README.md",
+          "sourceTitle": "ANQR public README",
+          "limitation": "This archived repository preserves the ANQR 1.0 monorepo and its engineering history.",
+          "contextUrl": "./#anqr",
+          "contextLabel": "View ANQR in the portfolio"
+        }
+      ],
+      "category": "APIs and Identity"
+    },
+    {
+      "id": "leadership",
+      "label": "Team leadership",
+      "aliases": [
+        "engineering leadership",
+        "team management"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Managed a 12-person offshore engineering team, reporting directly to C-suite stakeholders.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "LynkState · VC Consultancy, R&D Lead · 2021 to 2023",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-lynkstate",
+          "contextLabel": "View LynkState in the career timeline"
+        },
+        {
+          "kind": "cv-role",
+          "quote": "Managed a team of 7 onshore and offshore developers across cross-functional delivery streams.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Lexer · Solutions Director · 2023 to 2024",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-lexer",
+          "contextLabel": "View Lexer in the career timeline"
+        }
+      ],
+      "category": "Experience"
+    },
+    {
+      "id": "network",
+      "label": "Network engineering",
+      "aliases": [],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered network engineering solutions for high-performance gaming and media network services.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "SubSpace · 2020 to 2021",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-subspace",
+          "contextLabel": "View SubSpace in the career timeline"
+        }
+      ],
+      "category": "Experience"
+    },
+    {
+      "id": "architecture",
+      "label": "Architecture",
+      "aliases": [
+        "enterprise architecture"
+      ],
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered architecture, operations, platform, and network engineering initiatives.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Telstra · Senior Enterprise Architect · 2008 to 2020",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-telstra",
+          "contextLabel": "View Telstra in the career timeline"
+        }
+      ],
+      "category": "Experience"
+    },
+    {
+      "id": "paperly",
+      "label": "Paperly",
+      "aliases": [],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered backend, identity, and release engineering across Laravel, Vue, TypeScript, and Kubernetes.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Paperly · Senior Engineer · 2025 to Present",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1",
+          "contextUrl": "#career-paperly",
+          "contextLabel": "View Paperly in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "citoplus",
+      "label": "CitoPlus",
+      "aliases": [],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered DevOps and infrastructure across Azure, AWS, and Google Cloud.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "CitoPlus · Senior Engineer · 2024 to 2025",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-citoplus",
+          "contextLabel": "View CitoPlus in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "lexer",
+      "label": "Lexer",
+      "aliases": [],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Managed a team of 7 onshore and offshore developers across cross-functional delivery streams.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Lexer · Solutions Director · 2023 to 2024",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-lexer",
+          "contextLabel": "View Lexer in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "lynkstate",
+      "label": "LynkState",
+      "aliases": [],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Managed a 12-person offshore engineering team, reporting directly to C-suite stakeholders.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "LynkState · VC Consultancy, R&D Lead · 2021 to 2023",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-lynkstate",
+          "contextLabel": "View LynkState in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "subspace",
+      "label": "SubSpace",
+      "aliases": [],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Supported APAC network, CDN, and latency-sensitive delivery serving large-scale end-user traffic.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "SubSpace · VC Consultancy, Network Engineering · 2020 to 2021",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-subspace",
+          "contextLabel": "View SubSpace in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "telstra",
+      "label": "Telstra",
+      "aliases": [],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered architecture, operations, platform, and network engineering initiatives.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Telstra · Senior Enterprise Architect · 2008 to 2020",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-telstra",
+          "contextLabel": "View Telstra in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "fintech",
+      "label": "FinTech",
+      "aliases": [
+        "financial technology",
+        "financial services"
+      ],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Supported secure platform delivery across regulated FinTech environments.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "CitoPlus · Senior Engineer · 2024 to 2025",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-citoplus",
+          "contextLabel": "View CitoPlus in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "label": "Education platforms",
+      "aliases": [
+        "EdTech",
+        "school administration"
+      ],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Supported secure, reliable delivery across school-facing, multi-tenant education environments.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Paperly · Senior Engineer · 2025 to Present",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1",
+          "contextUrl": "#career-paperly",
+          "contextLabel": "View Paperly in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "multitenant",
+      "label": "Multi-tenant",
+      "aliases": [
+        "multitenant",
+        "multi tenancy"
+      ],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Supported secure, reliable delivery across school-facing, multi-tenant education environments.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Paperly · Senior Engineer · 2025 to Present",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1",
+          "contextUrl": "#career-paperly",
+          "contextLabel": "View Paperly in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "cdn",
+      "label": "CDN",
+      "aliases": [
+        "content delivery network"
+      ],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Supported APAC network, CDN, and latency-sensitive delivery serving large-scale end-user traffic.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "SubSpace · VC Consultancy, Network Engineering · 2020 to 2021",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-subspace",
+          "contextLabel": "View SubSpace in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "customer-data",
+      "label": "Customer data",
+      "aliases": [
+        "data activation"
+      ],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Directed technical delivery for enterprise customer solutions and data activation programs.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Lexer · Solutions Director · 2023 to 2024",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-lexer",
+          "contextLabel": "View Lexer in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "release-governance",
+      "label": "Release governance",
+      "aliases": [
+        "release methodology"
+      ],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Delivered company-wide release methodology improvements and formalised KPI reporting practices.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "CitoPlus · Senior Engineer · 2024 to 2025",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2",
+          "contextUrl": "#career-citoplus",
+          "contextLabel": "View CitoPlus in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "observability",
+      "label": "Observability",
+      "aliases": [
+        "diagnostics"
+      ],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "cv-role",
+          "quote": "Introduced observability, SSO, and diagnostics using Sentry, structured logging, and CI/CD tooling.",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Paperly · Senior Engineer · 2025 to Present",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=1",
+          "contextUrl": "#career-paperly",
+          "contextLabel": "View Paperly in the career timeline"
+        }
+      ]
+    },
+    {
+      "id": "software-engineering-degree",
+      "label": "Software engineering degree",
+      "aliases": [
+        "Bachelor of Software Engineering",
+        "University of Melbourne"
+      ],
+      "category": "Experience",
+      "evidence": [
+        {
+          "kind": "education",
+          "quote": "Bachelor of Software Engineering (Honours) - University of Melbourne",
+          "sourceTitle": "Matthew Aldous résumé (2026)",
+          "section": "Education",
+          "url": "https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "anqr",
+      "label": "ANQR",
+      "aliases": [
+        "QR",
+        "QR codes"
+      ],
+      "category": "Public projects",
+      "evidence": [
+        {
+          "kind": "project",
+          "quote": "QR generation, styling and analysis, with web, HTTP API and MCP surfaces.",
+          "section": "ANQR · Archived monorepo",
+          "url": "https://github.com/maldous/anqr/blob/25e5632d1a788d9e879fb6d0bdfc8337a4012c54/README.md",
+          "sourceTitle": "ANQR public README",
+          "limitation": "This archived repository preserves the ANQR 1.0 monorepo and its engineering history.",
+          "contextUrl": "./#anqr",
+          "contextLabel": "View ANQR in the portfolio"
+        }
+      ]
+    },
+    {
+      "id": "anqr-v3",
+      "label": "ANQR V3",
+      "aliases": [
+        "conformance tests",
+        "conformance testing"
+      ],
+      "category": "Public projects",
+      "evidence": [
+        {
+          "kind": "project",
+          "quote": "This TypeScript repository contains ANQR's next-generation product implementation and conformance tests.",
+          "section": "ANQR V3 · Implementation and tests",
+          "url": "https://github.com/maldous/anqr-v3/blob/1bc471ad5eacd09013bf91450e36b28104487b12/README.md",
+          "sourceTitle": "ANQR V3 public README",
+          "limitation": "This repository is a product implementation, not a standalone deployment of the ANQR web application.",
+          "contextUrl": "./#anqr",
+          "contextLabel": "View ANQR V3 in the portfolio"
+        }
+      ]
+    },
+    {
+      "id": "cix",
+      "label": "Colour Index Compression",
+      "aliases": [
+        "lossless compression",
+        "compression",
+        "reversible transforms",
+        "codec",
+        "streaming formats"
+      ],
+      "category": "Public projects",
+      "evidence": [
+        {
+          "kind": "project",
+          "quote": "An experimental codec research repository exploring reversible transforms, modelling and streaming formats.",
+          "section": "Colour / Index Compression · Research prototypes",
+          "url": "https://github.com/maldous/colour-index-compression/blob/7904a130fdea8e121f44381cfa0bad383af749d3/README.md",
+          "sourceTitle": "Colour Index Compression public README",
+          "limitation": "The repository contains prototypes and format experiments; it does not claim a production-ready codec or universal performance advantage.",
+          "contextUrl": "./#cix-benchmarks",
+          "contextLabel": "View Colour / Index Compression in the portfolio"
+        }
+      ]
+    },
+    {
+      "id": "usf",
+      "label": "USF V3",
+      "aliases": [
+        "USF",
+        "semantic requirements",
+        "deterministic checks",
+        "evidence management"
+      ],
+      "category": "Public projects",
+      "evidence": [
+        {
+          "kind": "project",
+          "quote": "USF connects versioned semantic requirements to bounded changes, deterministic checks and explicit evidence.",
+          "section": "USF V3 · Bootstrap foundation",
+          "url": "https://github.com/maldous/usf-v3/blob/9aa8f1a2af7edbb87010ec0c5a2565a82ec33f62/README.md",
+          "sourceTitle": "USF V3 public README",
+          "limitation": "The repository does not claim complete semantic denominator coverage, enterprise ANQR realisation, terminal proof, staging, production or production BAU.",
+          "contextUrl": "./#uif",
+          "contextLabel": "View USF V3 in the portfolio"
+        }
+      ]
+    },
+    {
+      "id": "offmenu",
+      "label": "OffMenu",
+      "aliases": [
+        "SQLite",
+        "barcode inventory",
+        "recipe discovery"
+      ],
+      "category": "Public projects",
+      "evidence": [
+        {
+          "kind": "project",
+          "quote": "This repository brings together the local Python/SQLite tooling and the web application.",
+          "section": "OffMenu · Web application and local tools",
+          "url": "https://github.com/maldous/offmenu/blob/46425e533a0e2513d65dd9b76702a3b81b65821b/README.md",
+          "sourceTitle": "OffMenu public README",
+          "limitation": "Deployment availability does not establish that every ingestion or automation path has completed operational validation.",
+          "contextUrl": "./#offmenu",
+          "contextLabel": "View OffMenu in the portfolio"
+        }
+      ]
+    },
+    {
+      "id": "javascript",
+      "label": "JavaScript",
+      "aliases": [
+        "JS"
+      ],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "JavaScript",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "c",
+      "label": "C",
+      "aliases": [],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "C",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "cpp",
+      "label": "C++",
+      "aliases": [],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "C++",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "perl",
+      "label": "Perl",
+      "aliases": [],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "Perl",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "label": "Go",
+      "aliases": [
+        "Golang"
+      ],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "Go",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "shell-scripting",
+      "label": "Shell scripting",
+      "aliases": [
+        "shell script"
+      ],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "Shell scripting",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "powershell",
+      "label": "PowerShell",
+      "aliases": [],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "PowerShell",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "java",
+      "label": "Java",
+      "aliases": [],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "Java",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "basic",
+      "label": "BASIC",
+      "aliases": [
+        "BASIC programming"
+      ],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "BASIC",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "pascal",
+      "label": "Pascal",
+      "aliases": [],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "Pascal",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "assembly",
+      "label": "Assembly (ASM)",
+      "aliases": [
+        "Assembly",
+        "ASM"
+      ],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "Assembly (ASM)",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "pike",
+      "label": "Pike",
+      "aliases": [],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "Pike",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "prolog",
+      "label": "Prolog",
+      "aliases": [],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "Prolog",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "plsql",
+      "label": "PL/SQL",
+      "aliases": [
+        "PLSQL"
+      ],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "PL/SQL",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "vbscript",
+      "label": "VBScript",
+      "aliases": [],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "VBScript",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "visual-basic",
+      "label": "Visual Basic",
+      "aliases": [],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "Visual Basic",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "swift",
+      "label": "Swift",
+      "aliases": [],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "Swift",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "kotlin",
+      "label": "Kotlin",
+      "aliases": [],
+      "category": "Languages and scripting",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "Kotlin",
+          "section": "GitHub profile · Languages and scripting",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "html",
+      "label": "HTML",
+      "aliases": [],
+      "category": "Markup and transformations",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "HTML",
+          "section": "GitHub profile · Markup and transformations",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "css",
+      "label": "CSS",
+      "aliases": [],
+      "category": "Markup and transformations",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "CSS",
+          "section": "GitHub profile · Markup and transformations",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "xml",
+      "label": "XML",
+      "aliases": [],
+      "category": "Markup and transformations",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "XML",
+          "section": "GitHub profile · Markup and transformations",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "xsl",
+      "label": "XSL",
+      "aliases": [],
+      "category": "Markup and transformations",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "XSL",
+          "section": "GitHub profile · Markup and transformations",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "xslt",
+      "label": "XSLT",
+      "aliases": [],
+      "category": "Markup and transformations",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "XSLT",
+          "section": "GitHub profile · Markup and transformations",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "xsl-fo",
+      "label": "XSL-FO",
+      "aliases": [],
+      "category": "Markup and transformations",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "XSL-FO",
+          "section": "GitHub profile · Markup and transformations",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "wml",
+      "label": "WML",
+      "aliases": [],
+      "category": "Markup and transformations",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "WML",
+          "section": "GitHub profile · Markup and transformations",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "xul",
+      "label": "XUL",
+      "aliases": [],
+      "category": "Markup and transformations",
+      "evidence": [
+        {
+          "kind": "profile-listed",
+          "quote": "XUL",
+          "section": "GitHub profile · Markup and transformations",
+          "url": "https://github.com/maldous/maldous/blob/b588b6bfabd0df548ba6a463ba4814f8df80dc74/README.md",
+          "sourceTitle": "Matthew Aldous GitHub profile"
+        }
+      ]
+    },
+    {
+      "id": "english",
+      "label": "English",
+      "aliases": [],
+      "category": "Spoken languages",
+      "evidence": [
+        {
+          "kind": "self-reported",
+          "quote": "I speak Dutch and English.",
+          "section": "Spoken languages · confirmed by Matthew",
+          "url": "https://aldous.info/recruiters.html#languages",
+          "sourceTitle": "Matthew Aldous",
+          "contextUrl": "#languages",
+          "contextLabel": "View spoken languages"
+        }
+      ]
+    },
+    {
+      "id": "dutch",
+      "label": "Dutch",
+      "aliases": [
+        "Nederlands"
+      ],
+      "category": "Spoken languages",
+      "evidence": [
+        {
+          "kind": "self-reported",
+          "quote": "I speak Dutch and English.",
+          "section": "Spoken languages · confirmed by Matthew",
+          "url": "https://aldous.info/recruiters.html#languages",
+          "sourceTitle": "Matthew Aldous",
+          "contextUrl": "#languages",
+          "contextLabel": "View spoken languages"
+        }
+      ]
+    }
+  ]
+}

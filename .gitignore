@@ -1,0 +1,11 @@
+build/
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+qa/
+.env
+.env.*
+!.env.example
+.openai/
+!.openai/hosting.example.json

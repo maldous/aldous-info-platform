@@ -1,0 +1,22 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.35", nodesep="0.4", ranksep="0.6", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="Roboto", fontsize=20, margin="0.22,0.17", color="#637366", fillcolor="#fffdf7", fontcolor="#214638", penwidth=1.5];
+edge [fontname="Roboto", fontsize=14, color="#637366", fontcolor="#637366", arrowsize=0.8, penwidth=1.5];
+"node-runner" [id="node-runner",label="Compute runner"];
+"node-code" [id="node-code",label="Application /\nworker code"];
+"node-workspace" [id="node-workspace",label="Git workspace"];
+"node-github" [id="node-github",label="GitHub"];
+"node-pr" [id="node-pr",label="GitHub PR"];
+"node-review" [id="node-review",label="GitHub Codex review"];
+"node-policy" [id="node-policy",label="Trusted policy /\nevidence"];
+"node-isolated" [id="node-isolated",label="Codex / Claude workers",color="#b34c31",penwidth="2.5"];
+"node-provider" [id="node-provider",label="ChatGPT /\nClaude sessions",color="#b34c31",penwidth="2.5"];
+"node-runner" -> "node-code" [id="edge-runner->code",label="Local subprocess"];
+"node-workspace" -> "node-github" [id="edge-workspace->github",label="Git / SSH"];
+"node-github" -> "node-pr" [id="edge-github->pr",label="HTTPS API"];
+"node-pr" -> "node-review" [id="edge-pr->review",label="HTTPS API"];
+"node-review" -> "node-policy" [id="edge-review->policy",label="HTTPS API"];
+"node-isolated" -> "node-code" [id="edge-isolated->code",label="Local files"];
+"node-isolated" -> "node-workspace" [id="edge-isolated->workspace",label="Local files"];
+"node-isolated" -> "node-provider" [id="edge-isolated->provider",label="HTTPS"];
+}

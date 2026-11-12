@@ -1,0 +1,1200 @@
+{
+  "schema": "offmenu-engineering-catalog-v1",
+  "activityHeaders": [
+    "Workflow",
+    "Coding coordination",
+    "Job execution",
+    "Source and review",
+    "Requests and access"
+  ],
+  "resources": [
+    {
+      "id": "node-isolated",
+      "name": "AI coding workers",
+      "bullets": [
+        "Provider-backed coding sessions",
+        "Isolated feature / bugfix work",
+        "Works on application / worker code through local files"
+      ],
+      "group": "Compute",
+      "groupId": "group-compute-execution-band",
+      "activity": "Job execution",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-runner",
+      "name": "Local compute",
+      "bullets": [
+        "Bounded deterministic execution",
+        "Up to 64 subprocesses per job",
+        "Resource admission and cleanup"
+      ],
+      "group": "Compute",
+      "groupId": "group-compute-execution-band",
+      "activity": "Job execution",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Resource admission and cleanup belong to bounded deterministic execution.",
+        "Cleanup details and failure guarantees are not specified by this metadata."
+      ]
+    },
+    {
+      "id": "node-code",
+      "name": "Application code",
+      "bullets": [
+        "Product and worker logic",
+        "Build, test and processing",
+        "Accepted implementation outputs"
+      ],
+      "group": "Compute",
+      "groupId": "group-compute-execution-band",
+      "activity": "Job execution",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-windmill",
+      "name": "Windmill",
+      "bullets": [
+        "16 service workers",
+        "32 resource-admitted jobs",
+        "SEND jobs / RECEIVE receipts"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Coding coordination",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-stokowski",
+      "name": "Sokolovski",
+      "bullets": [
+        "Issue-driven coding orchestration",
+        "8 concurrent coding agents",
+        "Admission and repair handoffs"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Coding coordination",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Admission and repair handoffs belong to issue-driven coding orchestration.",
+        "The source does not establish unlimited retries or current autonomous readiness."
+      ]
+    },
+    {
+      "id": "node-supervisor",
+      "name": "Worker supervisor",
+      "bullets": [
+        "Bounded coding attempts",
+        "Process lifecycle and cancellation",
+        "Isolated session ownership"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Coding coordination",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "The source assigns process lifecycle and cancellation to the supervisor.",
+        "Retry limits and failure handling details beyond bounded attempts are not specified."
+      ]
+    },
+    {
+      "id": "node-workspace",
+      "name": "Git workspace",
+      "bullets": [
+        "Feature and bugfix branches",
+        "Pinned base and source revision",
+        "Disjoint write ownership"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Source and review",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-bridge",
+      "name": "SSH connection",
+      "bullets": [
+        "Pinned host connection",
+        "Remote command handoff",
+        "Bounded transport"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Job execution",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-delivery",
+      "name": "Delivery workflow",
+      "bullets": [
+        "Discover, execute and verify",
+        "Exact inputs and policy",
+        "Accept qualified outputs"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Workflow",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-langgraph",
+      "name": "LangGraph",
+      "bullets": [
+        "Workflow state and decisions",
+        "LangChain core integrations",
+        "Checkpointed execution"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Workflow",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "The source describes checkpointed workflow execution.",
+        "Checkpoint persistence is a separate relationship to SQLite checkpoints."
+      ]
+    },
+    {
+      "id": "node-sqlite",
+      "name": "Saved checkpoints",
+      "bullets": [
+        "Worker checkpoints",
+        "Persistent local state",
+        "Save, restore and resume"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Workflow",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Worker checkpoints provide persistent local state for save, restore and resume.",
+        "A restored checkpoint is not evidence of successful verification or acceptance."
+      ]
+    },
+    {
+      "id": "node-journal",
+      "name": "Work history",
+      "bullets": [
+        "Issue → run → operation",
+        "Job → attempt → commit",
+        "Leases, idempotency and receipts"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Workflow",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "The journal records operation and attempt identities, leases, idempotency and receipts.",
+        "These responsibilities support reconciliation; no specific retry algorithm is supplied."
+      ]
+    },
+    {
+      "id": "node-adapter",
+      "name": "Job connector",
+      "bullets": [
+        "Typed operation handoffs",
+        "Submit, inspect and cancel",
+        "Reconcile without duplicate work"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Coding coordination",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Submit, inspect and cancel are explicit adapter operations.",
+        "The source describes reconciliation without duplicate work; its live correctness is not established here."
+      ]
+    },
+    {
+      "id": "node-integration",
+      "name": "Change integration",
+      "bullets": [
+        "Serialized integration owner",
+        "Validate reviewed revisions",
+        "Merge and record outcomes"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Coding coordination",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-wm_mcp",
+      "name": "Windmill tools",
+      "bullets": [
+        "MCP tool interface",
+        "Submit, inspect and reconcile",
+        "Existing Windmill backend"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Requests and access",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "The interface provides submit, inspect and reconcile against the existing Windmill backend.",
+        "No independent recovery guarantee or separate execution backend is asserted."
+      ]
+    },
+    {
+      "id": "node-tools",
+      "name": "Tool access",
+      "bullets": [
+        "Task-scoped capabilities",
+        "Explicit API and MCP access",
+        "Least-privilege operations"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Requests and access",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-policy",
+      "name": "Acceptance rules",
+      "bullets": [
+        "Versioned acceptance rules",
+        "Exact revision evidence",
+        "Qualified output hashes"
+      ],
+      "group": "Orchestration",
+      "groupId": "group-orchestration-control-plane",
+      "activity": "Workflow",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-durable",
+      "name": "Task memory",
+      "bullets": [
+        "Cloud reasoning and coordination",
+        "Session capacity is separate",
+        "Connector-mediated operations"
+      ],
+      "group": "Cloud",
+      "groupId": "group-cloud-control",
+      "activity": "Requests and access",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-threads",
+      "name": "Request routing",
+      "bullets": [
+        "Durable task routing",
+        "Owner communication",
+        "Session lifecycle"
+      ],
+      "group": "Cloud",
+      "groupId": "group-cloud-control",
+      "activity": "Requests and access",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-linear",
+      "name": "Linear",
+      "bullets": [
+        "Requirements and dependencies",
+        "Work ownership and acceptance",
+        "Durable delivery status"
+      ],
+      "group": "External",
+      "groupId": "group-external-platforms",
+      "activity": "Requests and access",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-github",
+      "name": "GitHub",
+      "bullets": [
+        "Source, standards and ADRs",
+        "Pull requests and review",
+        "Versioned evidence"
+      ],
+      "group": "External",
+      "groupId": "group-external-platforms",
+      "activity": "Source and review",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-provider",
+      "name": "AI model sessions",
+      "bullets": [
+        "Existing session entitlement",
+        "Provider authentication context",
+        "Quota and availability"
+      ],
+      "group": "Engineering",
+      "groupId": "group-ai-development-review",
+      "activity": "Requests and access",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-review",
+      "name": "AI code review",
+      "bullets": [
+        "Independent exact-head review",
+        "Findings and repair feedback",
+        "Evidence tied to revision"
+      ],
+      "group": "Engineering",
+      "groupId": "group-ai-development-review",
+      "activity": "Source and review",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    },
+    {
+      "id": "node-pr",
+      "name": "Pull request",
+      "bullets": [
+        "Source integration proposal",
+        "Head and base identities",
+        "Review and merge record"
+      ],
+      "group": "Engineering",
+      "groupId": "group-ai-development-review",
+      "activity": "Source and review",
+      "contractNotes": [
+        "Responsibilities and capacity annotations describe the supplied architecture, not verified live operation."
+      ],
+      "recoveryNotes": [
+        "Recovery behavior is not specified by the supplied component metadata."
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "edge-isolated->code",
+      "source": "node-isolated",
+      "target": "node-code",
+      "protocol": "Local files",
+      "explanation": "Coding workers interact with application / worker code through local files; this is not a remote deployment connection.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Application or worker source files used by an isolated coding attempt. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Coding workers interact with application / worker code through local files; this is not a remote deployment connection.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-runner->code",
+      "source": "node-runner",
+      "target": "node-code",
+      "protocol": "Local subprocess",
+      "explanation": "The runner invokes application or worker code as a local subprocess; the execution boundary is distinct from the code being executed.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Local subprocess/process groups. Deterministic build/test/processing execution"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: A local invocation of application or worker code for build, test or processing work. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "The runner invokes application or worker code as a local subprocess; the execution boundary is distinct from the code being executed.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-windmill->bridge",
+      "source": "node-windmill",
+      "target": "node-bridge",
+      "protocol": "SSH",
+      "explanation": "SSH is the remote transport from Windmill to a pinned-host bridge; it does not replace execution admission.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Deployed worker SDK/Paramiko SSH. Existing pinned-key jailed bridge"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: A remote command handoff directed at the pinned host. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "SSH is the remote transport from Windmill to a pinned-host bridge; it does not replace execution admission.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-windmill->integration",
+      "source": "node-windmill",
+      "target": "node-integration",
+      "protocol": "Windmill job API",
+      "explanation": "Windmill job API dispatches the serialized integration job.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: A service job request for the serialized integration owner. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Windmill job API dispatches the serialized integration job.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-windmill->tools",
+      "source": "node-windmill",
+      "target": "node-tools",
+      "protocol": "MCP",
+      "explanation": "MCP connects Windmill to the explicit task-scoped tool boundary.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Requests for explicitly scoped tool capabilities. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "MCP connects Windmill to the explicit task-scoped tool boundary.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-stokowski->supervisor",
+      "source": "node-stokowski",
+      "target": "node-supervisor",
+      "protocol": "Local IPC",
+      "explanation": "Local IPC hands coding work from orchestration to the process-lifecycle supervisor.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Local subprocess/private request and receipt. Finite admitted coding attempt"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: A bounded coding-attempt handoff to the process owner. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Local IPC hands coding work from orchestration to the process-lifecycle supervisor.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-stokowski->journal",
+      "source": "node-stokowski",
+      "target": "node-journal",
+      "protocol": "Local IPC",
+      "explanation": "Local IPC records orchestration identity and progress in the operation journal.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: unspecified. Durable stage/run and operation identity binding"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Operation and attempt identity together with orchestration progress or outcome records. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Local IPC records orchestration identity and progress in the operation journal.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-stokowski->adapter",
+      "source": "node-stokowski",
+      "target": "node-adapter",
+      "protocol": "MCP",
+      "explanation": "MCP exposes typed asynchronous operation handoffs to the coding orchestrator.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: A typed asynchronous operation request, with submit, inspect or cancel intent. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "MCP exposes typed asynchronous operation handoffs to the coding orchestrator.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-delivery->langgraph",
+      "source": "node-delivery",
+      "target": "node-langgraph",
+      "protocol": "In-process call",
+      "explanation": "An in-process call joins the delivery workflow to workflow state and decisions in LangGraph.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Python SDK. Finite decisions and recovery"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: An in-process workflow invocation involving state and decisions. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "An in-process call joins the delivery workflow to workflow state and decisions in LangGraph.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-delivery->policy",
+      "source": "node-delivery",
+      "target": "node-policy",
+      "protocol": "Local files",
+      "explanation": "Local files give delivery access to versioned acceptance rules and exact-revision evidence.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Versioned acceptance rules and exact-revision evidence used to qualify delivery outputs. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Local files give delivery access to versioned acceptance rules and exact-revision evidence.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-langgraph->sqlite",
+      "source": "node-langgraph",
+      "target": "node-sqlite",
+      "protocol": "SQLite • worker checkpoints",
+      "explanation": "SQLite • worker checkpoints identifies the local persistence boundary for workflow checkpoint state.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Local SQLite. Worker checkpoints; same retained mount"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Worker checkpoint state to save, restore or resume. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "SQLite • worker checkpoints identifies the local persistence boundary for workflow checkpoint state.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-journal->langgraph",
+      "source": "node-journal",
+      "target": "node-langgraph",
+      "protocol": "No label in source",
+      "explanation": "The native diagram draws this relationship without a protocol label. It connects operation identity to workflow state; no transport is asserted here.",
+      "contractNotes": [
+        "The source supplies no protocol label for this relationship; transport remains unspecified."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: The intended association between operation identity and workflow state; transport is also unspecified. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "The native diagram draws this relationship without a protocol label. It connects operation identity to workflow state; no transport is asserted here.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-adapter->windmill",
+      "source": "node-adapter",
+      "target": "node-windmill",
+      "protocol": "HTTPS API",
+      "explanation": "HTTPS API is the boundary from typed asynchronous operation requests to the Windmill service backend.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Design interface: Windmill-side asynchronous SDK for submitting, inspecting and cancelling workflow jobs"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Asynchronous service-operation requests and inspection or cancellation interactions. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "HTTPS API is the boundary from typed asynchronous operation requests to the Windmill service backend.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-adapter->journal",
+      "source": "node-adapter",
+      "target": "node-journal",
+      "protocol": "Local IPC",
+      "explanation": "Local IPC connects asynchronous handoffs to the journal used for identity, receipts and reconciliation.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: unspecified. Single owner, lease, idempotency and reconciled receipt state"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Operation identity and handoff or receipt records used for reconciliation. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Local IPC connects asynchronous handoffs to the journal used for identity, receipts and reconciliation.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-integration->delivery",
+      "source": "node-integration",
+      "target": "node-delivery",
+      "protocol": "Python CLI",
+      "explanation": "Python CLI links integration to the discover, execute and verify delivery workflow.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: A delivery-workflow invocation for discovery, execution and verification of the candidate. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Python CLI links integration to the discover, execute and verify delivery workflow.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-integration->journal",
+      "source": "node-integration",
+      "target": "node-journal",
+      "protocol": "Local IPC",
+      "explanation": "Local IPC records integration outcomes against operation and attempt identities.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: unspecified. Durable merge intent, fencing and outcome reconciliation"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Integration-attempt identities and outcome records. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Local IPC records integration outcomes against operation and attempt identities.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-integration->policy",
+      "source": "node-integration",
+      "target": "node-policy",
+      "protocol": "Local files",
+      "explanation": "Local files connect integration to the rules and evidence required for qualified acceptance.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Acceptance rules and candidate-specific evidence needed for qualification. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Local files connect integration to the rules and evidence required for qualified acceptance.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-wm_mcp->windmill",
+      "source": "node-wm_mcp",
+      "target": "node-windmill",
+      "protocol": "HTTPS API",
+      "explanation": "HTTPS API connects the MCP interface to the existing Windmill backend.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Windmill MCP API. Same existing Windmill service backend"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Requests to submit, inspect and reconcile through the existing service backend. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "HTTPS API connects the MCP interface to the existing Windmill backend.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-tools->wm_mcp",
+      "source": "node-tools",
+      "target": "node-wm_mcp",
+      "protocol": "MCP",
+      "explanation": "MCP links the scoped tool surface to the Windmill MCP interface.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Scoped requests to the Windmill MCP capability interface. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "MCP links the scoped tool surface to the Windmill MCP interface.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-threads->durable",
+      "source": "node-threads",
+      "target": "node-durable",
+      "protocol": "Platform API",
+      "explanation": "Platform API routing associates durable work with its cloud worker and session lifecycle.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Authenticated platform thread routing. Morgan/dedicated-task coordination"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Durable task-routing, owner-communication and session-lifecycle context. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Platform API routing associates durable work with its cloud worker and session lifecycle.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-pr->review",
+      "source": "node-pr",
+      "target": "node-review",
+      "protocol": "HTTPS API",
+      "explanation": "The pull-request relationship to independent review is labelled HTTPS API; review evidence is tied to the exact head revision.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Configured GitHub Codex review. Exact-head independent review and PR findings; fresh head requires fresh evidence"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: A revision-specific pull-request proposal for independent review. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "The pull-request relationship to independent review is labelled HTTPS API; review evidence is tied to the exact head revision.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-durable->linear",
+      "source": "node-durable",
+      "target": "node-linear",
+      "protocol": "MCP",
+      "explanation": "The cloud worker uses an MCP connector boundary to interact with requirements, ownership and delivery status in Linear.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: MCP. Issue/dependency/acceptance operations and readback"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Connector-mediated requirements, work ownership, acceptance and delivery-status operations. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "The cloud worker uses an MCP connector boundary to interact with requirements, ownership and delivery status in Linear.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-durable->github",
+      "source": "node-durable",
+      "target": "node-github",
+      "protocol": "MCP",
+      "explanation": "The cloud worker uses an MCP connector boundary for GitHub rather than a direct local filesystem relationship.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: MCP. PR/review/publication metadata operations and readback"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Connector-mediated source, pull-request and versioned-evidence operations. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "The cloud worker uses an MCP connector boundary for GitHub rather than a direct local filesystem relationship.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-durable->stokowski",
+      "source": "node-durable",
+      "target": "node-stokowski",
+      "protocol": "Platform API",
+      "explanation": "The Platform API connects cloud coordination to issue-driven coding orchestration, not directly to an unbounded agent loop.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: A cloud-to-orchestrator request for issue-driven coding or repair work. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "The Platform API connects cloud coordination to issue-driven coding orchestration, not directly to an unbounded agent loop.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-durable->runner",
+      "source": "node-durable",
+      "target": "node-runner",
+      "protocol": "Platform API",
+      "explanation": "Cloud coordination reaches bounded local execution through the Platform API boundary shown in the source diagram.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Selected-environment execution tools. Bounded native execution; underlying platform transport unspecified"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: A cloud-to-platform request for bounded execution. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Cloud coordination reaches bounded local execution through the Platform API boundary shown in the source diagram.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-durable->wm_mcp",
+      "source": "node-durable",
+      "target": "node-wm_mcp",
+      "protocol": "MCP",
+      "explanation": "MCP lets durable cloud coordination submit, inspect and reconcile through the Windmill tool interface.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: MCP. Job submission, inspection and reconciliation"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Cloud-coordination requests to submit, inspect or reconcile service work. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "MCP lets durable cloud coordination submit, inspect and reconcile through the Windmill tool interface.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-github->pr",
+      "source": "node-github",
+      "target": "node-pr",
+      "protocol": "HTTPS API",
+      "explanation": "GitHub exposes the pull-request integration proposal through its HTTPS API.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: GitHub repository/PR API. Canonical PR and head identities"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Pull-request proposal information, including the identified head and base. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "GitHub exposes the pull-request integration proposal through its HTTPS API.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-github->policy",
+      "source": "node-github",
+      "target": "node-policy",
+      "protocol": "Git / SSH",
+      "explanation": "Git / SSH connects versioned source and standards to the trusted policy / evidence boundary.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Versioned source, standards and acceptance-related material. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Git / SSH connects versioned source and standards to the trusted policy / evidence boundary.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-windmill->linear",
+      "source": "node-windmill",
+      "target": "node-linear",
+      "protocol": "HTTPS GraphQL",
+      "explanation": "HTTPS GraphQL connects service execution to Linear requirements and delivery status.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: API or MCP capability. Not configured/proven: fresh metadata query found no Linear resources/variables"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Service-side operations concerning requirements and durable delivery status. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "HTTPS GraphQL connects service execution to Linear requirements and delivery status.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-windmill->github",
+      "source": "node-windmill",
+      "target": "node-github",
+      "protocol": "HTTPS API",
+      "explanation": "HTTPS API connects service execution to GitHub source, pull requests and evidence.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: API or MCP capability. No repository API credential proven; disabled GitHub Models candidate is not repo access"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Service-side operations concerning source, pull requests and evidence. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "HTTPS API connects service execution to GitHub source, pull requests and evidence.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-stokowski->linear",
+      "source": "node-stokowski",
+      "target": "node-linear",
+      "protocol": "HTTPS GraphQL",
+      "explanation": "HTTPS GraphQL gives the coding orchestrator an explicit relationship to issue requirements and ownership.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: HTTPS GraphQL. Coordinator polling/status/comments; credential coordinator-only"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Issue requirements, dependencies, ownership and acceptance context for coding or repair. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "HTTPS GraphQL gives the coding orchestrator an explicit relationship to issue requirements and ownership.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-supervisor->isolated",
+      "source": "node-supervisor",
+      "target": "node-isolated",
+      "protocol": "CLI / JSONL",
+      "explanation": "CLI / JSONL is the process interface between supervision and isolated provider-backed coding workers.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: codex exec --json, JSONL. Bounded isolated worker execution"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Coding-attempt process interaction through the CLI / JSONL interface. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "CLI / JSONL is the process interface between supervision and isolated provider-backed coding workers.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-isolated->provider",
+      "source": "node-isolated",
+      "target": "node-provider",
+      "protocol": "HTTPS",
+      "explanation": "Coding workers use HTTPS to reach provider-backed sessions, whose authentication, quota and availability remain separate concerns.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Existing ChatGPT login. Model execution, no new API key"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Provider-session interactions supporting the isolated coding attempt. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Coding workers use HTTPS to reach provider-backed sessions, whose authentication, quota and availability remain separate concerns.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-isolated->workspace",
+      "source": "node-isolated",
+      "target": "node-workspace",
+      "protocol": "Local files",
+      "explanation": "Local files connect isolated coding work to a branch workspace with a pinned base and explicit write ownership.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Local filesystem. Edit isolated source workspace"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Source-file reads and changes within the owned workspace and branch context. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Local files connect isolated coding work to a branch workspace with a pinned base and explicit write ownership.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-isolated->tools",
+      "source": "node-isolated",
+      "target": "node-tools",
+      "protocol": "MCP",
+      "explanation": "MCP gives coding workers access to scoped capabilities rather than treating the entire environment as an unrestricted tool.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Task-scoped requests for API or MCP capabilities. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "MCP gives coding workers access to scoped capabilities rather than treating the entire environment as an unrestricted tool.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-workspace->github",
+      "source": "node-workspace",
+      "target": "node-github",
+      "protocol": "Git / SSH",
+      "explanation": "Git / SSH transports versioned workspace changes to GitHub; it is distinct from the HTTPS API links.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Git over SSH. Source fetch/publication by the authorized execution identity; not inherited PR API credentials"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Versioned workspace source exchanged with the external repository. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Git / SSH transports versioned workspace changes to GitHub; it is distinct from the HTTPS API links.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-bridge->runner",
+      "source": "node-bridge",
+      "target": "node-runner",
+      "protocol": "JSON / stdin",
+      "explanation": "JSON / stdin carries the remote command handoff into the bounded compute runner.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Typed offmenu-exec-v1 command/receipt. Bounded remote command and results"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: The remote command handoff into bounded execution through JSON / stdin. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "JSON / stdin carries the remote command handoff into the bounded compute runner.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-runner->delivery",
+      "source": "node-runner",
+      "target": "node-delivery",
+      "protocol": "Python CLI",
+      "explanation": "Python CLI invokes the delivery workflow from the compute runner.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: Local Python CLI. Reviewed immutable delivery task"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: A Python CLI invocation of the delivery workflow. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "Python CLI invokes the delivery workflow from the compute runner.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-review->stokowski",
+      "source": "node-review",
+      "target": "node-stokowski",
+      "protocol": "HTTPS API",
+      "explanation": "HTTPS API review feedback enters the coding orchestrator as revision-specific findings and repair input.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: unspecified. Automatic finding-to-repair routing and fresh review loop"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Exact-head review findings and repair feedback. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "HTTPS API review feedback enters the coding orchestrator as revision-specific findings and repair input.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-review->policy",
+      "source": "node-review",
+      "target": "node-policy",
+      "protocol": "HTTPS API",
+      "explanation": "HTTPS API connects independent exact-head review to the evidence considered for acceptance.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Independent review evidence tied to the examined revision. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "HTTPS API connects independent exact-head review to the evidence considered for acceptance.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-integration->linear",
+      "source": "node-integration",
+      "target": "node-linear",
+      "protocol": "HTTPS GraphQL",
+      "explanation": "HTTPS GraphQL connects integration outcomes to durable delivery status in Linear.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: unspecified. Accepted evidence/outcome update; no repeat merge on metadata failure"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Integration outcomes associated with durable work status. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "HTTPS GraphQL connects integration outcomes to durable delivery status in Linear.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-integration->github",
+      "source": "node-integration",
+      "target": "node-github",
+      "protocol": "HTTPS API",
+      "explanation": "HTTPS API connects the integration owner to GitHub revisions, pull requests and recorded outcomes.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture.",
+        "Retained topology interface: unspecified. Expected-head merge, protection checks and outcome readback"
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Integration-related revision, pull-request and outcome operations. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "HTTPS API connects the integration owner to GitHub revisions, pull requests and recorded outcomes.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-tools->linear",
+      "source": "node-tools",
+      "target": "node-linear",
+      "protocol": "HTTPS GraphQL",
+      "explanation": "HTTPS GraphQL is the scoped tool route to Linear.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Task-scoped operations on requirements, ownership and delivery status. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "HTTPS GraphQL is the scoped tool route to Linear.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    },
+    {
+      "id": "edge-tools->github",
+      "source": "node-tools",
+      "target": "node-github",
+      "protocol": "HTTPS API",
+      "explanation": "HTTPS API is the scoped tool route to GitHub.",
+      "contractNotes": [
+        "The protocol name is preserved exactly from the source architecture."
+      ],
+      "recoveryNotes": [
+        "Retries, delivery guarantees and live health are not established by this relationship label."
+      ],
+      "payload": "Intended exchange: Task-scoped operations on source, pull requests and versioned evidence. Exact wire fields and response schema are not specified by the source metadata.",
+      "purpose": "HTTPS API is the scoped tool route to GitHub.",
+      "evidenceStatus": "Connection in the complete end-state design."
+    }
+  ],
+  "notes": [
+    "A searchable engineering catalog for the guided story, not a graphical architecture map.",
+    "Activity headings are functional reading categories, not deployment boundaries or additional relationships.",
+    "The original component groups remain in group/groupId. Functional activity assignments do not alter native membership.",
+    "Actual runtime behavior, deployment status and business-as-usual readiness are not certified by this catalog.",
+    "Codex / Claude workers has two native component bullets; its third explanation is grounded in the existing Local files relationship to application / worker code."
+  ],
+  "provenance": {
+    "objects": "provenance/legacy-v9/objects.json",
+    "narrativeMetadata": "provenance/legacy-v9/authored-story.json",
+    "nativeSourceSha256": "18cea8300dc8e4718b7aa295e1c93474b0ddec227f20aac9cb11f10296a8a359",
+    "geometryIncluded": false
+  }
+}

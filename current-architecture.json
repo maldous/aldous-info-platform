@@ -1,0 +1,888 @@
+{
+  "schema": "offmenu-end-state-architecture-v1",
+  "title": "End-state architecture",
+  "summary": "Follow a request from Linear through Sokolovski and AI coding, then use LangGraph, Windmill and compute to validate it. Review and integrate the change in GitHub, qualify a release and return the accepted outcome.",
+  "nodes": [
+    {
+      "id": "request",
+      "name": "User request",
+      "purpose": "Define the desired result",
+      "status": "Start here",
+      "detail": "A person describes the result they need. The request becomes a task with an owner, dependencies and acceptance criteria in Linear.",
+      "cell": [
+        0,
+        0
+      ],
+      "primary": false,
+      "chapter": 4
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "purpose": "Tasks and acceptance",
+      "status": "Work authority",
+      "cell": [
+        1,
+        0
+      ],
+      "detail": "Linear defines the work, its owner, dependencies and acceptance criteria. Sokolovski uses that shared context to select eligible tasks and records the outcome when a unit of work is accepted.",
+      "primary": true,
+      "chapter": 4
+    },
+    {
+      "id": "coordinator",
+      "name": "Sokolovski",
+      "purpose": "Assigns and follows up AI work",
+      "status": "AI work coordination",
+      "cell": [
+        3,
+        0
+      ],
+      "detail": "Sokolovski coordinates AI coding from request to reviewed result. It selects eligible tasks, checks shared capacity, assigns focused coding work and brings review feedback back into the delivery loop.",
+      "primary": true,
+      "chapter": 4
+    },
+    {
+      "id": "pool",
+      "name": "Worker capacity",
+      "purpose": "Shares available worker slots",
+      "status": "Capacity and admission",
+      "cell": [
+        3,
+        1
+      ],
+      "detail": "Sokolovski manages shared worker capacity and keeps the resource and lease records in SQLite. This lets it assign work within the available limits and release capacity when an attempt ends or needs recovery.",
+      "primary": false,
+      "chapter": 4
+    },
+    {
+      "id": "tools",
+      "name": "Tool access",
+      "purpose": "Provides scoped capabilities",
+      "status": "API and MCP access",
+      "detail": "AI coding workers use task-scoped API and MCP capabilities. These are permissions for the assigned work, separate from execution capacity and release acceptance.",
+      "cell": [
+        2,
+        1
+      ],
+      "primary": false,
+      "chapter": 2
+    },
+    {
+      "id": "models",
+      "name": "AI model sessions",
+      "purpose": "Supply coding intelligence",
+      "status": "AI assistance",
+      "detail": "Coding workers use their admitted model session to reason about the task and propose code. Model availability and session limits remain separate from local compute capacity.",
+      "cell": [
+        0,
+        1
+      ],
+      "primary": false,
+      "chapter": 2
+    },
+    {
+      "id": "supervisor",
+      "name": "Worker supervisor",
+      "purpose": "Starts and manages coding",
+      "status": "Coding lifecycle",
+      "detail": "The supervisor starts a bounded coding attempt, owns its process lifecycle and cancellation, and returns its result to Sokolovski. It keeps one attempt scoped to its assigned workspace.",
+      "cell": [
+        4,
+        1
+      ],
+      "primary": false,
+      "chapter": 4
+    },
+    {
+      "id": "code",
+      "name": "Application code",
+      "purpose": "The code being changed",
+      "status": "Work artifact",
+      "detail": "Coding workers edit the application or worker code in their private workspace. Compute executes the selected version for checks; proposed changes remain separate from accepted releases.",
+      "cell": [
+        0,
+        2
+      ],
+      "primary": false,
+      "chapter": 0
+    },
+    {
+      "id": "workspace",
+      "name": "Private workspaces",
+      "purpose": "Keeps coding tasks separate",
+      "status": "Private working area",
+      "cell": [
+        1,
+        2
+      ],
+      "detail": "Private workspaces hold the code and outputs for each coding attempt. They keep work isolated while supplying a known candidate to the workflow, compute checks and reviewers.",
+      "primary": false,
+      "chapter": 1
+    },
+    {
+      "id": "coding",
+      "name": "AI coding workers",
+      "purpose": "Builds proposed code changes",
+      "status": "AI implementation",
+      "cell": [
+        1,
+        1
+      ],
+      "detail": "Native Codex workers turn scoped assignments into proposed changes. Each worker uses a private workspace, checks its work and returns a candidate for independent review and validation.",
+      "primary": false,
+      "chapter": 2
+    },
+    {
+      "id": "delivery",
+      "name": "Delivery workflow",
+      "purpose": "Moves a candidate through checks",
+      "status": "Delivery decisions",
+      "detail": "The delivery workflow captures a coding result, dispatches bounded validation and gathers the review and publication decisions for that exact source version. LangGraph carries its recoverable state.",
+      "cell": [
+        4,
+        3
+      ],
+      "primary": false,
+      "chapter": 3
+    },
+    {
+      "id": "workflow",
+      "name": "LangGraph",
+      "purpose": "Remembers workflow decisions",
+      "status": "Progress and recovery",
+      "cell": [
+        4,
+        2
+      ],
+      "detail": "LangGraph supplies the finite workflow state and decisions used by the delivery workflow. SQLite checkpoints and work history preserve progress and operation identity for recovery.",
+      "primary": true,
+      "chapter": 3
+    },
+    {
+      "id": "journal",
+      "name": "Work history",
+      "purpose": "Records attempts and results",
+      "status": "Reconciliation",
+      "detail": "The journal links each task, attempt, operation and result. The workflow and job connector use that history to inspect uncertain effects before repeating work.",
+      "cell": [
+        3,
+        3
+      ],
+      "primary": false,
+      "chapter": 4
+    },
+    {
+      "id": "checkpoints",
+      "name": "Saved checkpoints",
+      "purpose": "Saves workflow progress",
+      "status": "Recovery",
+      "detail": "SQLite checkpoints preserve LangGraph state so the workflow can resume from a known decision. Restoring state does not itself establish that a check or review passed.",
+      "cell": [
+        3,
+        2
+      ],
+      "primary": false,
+      "chapter": 3
+    },
+    {
+      "id": "adapter",
+      "name": "Job connector",
+      "purpose": "Submits and follows up jobs",
+      "status": "Typed asynchronous handoff",
+      "detail": "The typed asynchronous adapter submits, inspects and cancels bounded operations through Windmill. It records the original operation and reconciles job receipts with work history.",
+      "cell": [
+        1,
+        3
+      ],
+      "primary": false,
+      "chapter": 5
+    },
+    {
+      "id": "windmill",
+      "name": "Windmill",
+      "purpose": "Runs and tracks background jobs",
+      "status": "Background execution",
+      "cell": [
+        0,
+        3
+      ],
+      "detail": "Windmill manages background validation and integration jobs. It dispatches work to compute, tracks each job and returns the result to the delivery workflow within the Community Edition\u2019s capabilities.",
+      "primary": true,
+      "chapter": 5
+    },
+    {
+      "id": "policy",
+      "name": "Acceptance rules",
+      "purpose": "Defines what must pass",
+      "status": "Quality criteria",
+      "detail": "Versioned acceptance rules define the required checks and evidence for the exact candidate. Review and validation use those criteria before a change advances.",
+      "cell": [
+        3,
+        4
+      ],
+      "primary": false,
+      "chapter": 1
+    },
+    {
+      "id": "review",
+      "name": "Change review",
+      "purpose": "Checks code and results",
+      "status": "Quality and acceptance",
+      "cell": [
+        2,
+        4
+      ],
+      "detail": "Independent review and validation assess the same source version. Together they determine whether the candidate meets its acceptance criteria and is ready for publication.",
+      "primary": false,
+      "chapter": 1
+    },
+    {
+      "id": "engine",
+      "name": "Compute",
+      "purpose": "Runs bounded code and checks",
+      "status": "Compute and validation",
+      "cell": [
+        1,
+        4
+      ],
+      "detail": "Compute executes bounded jobs against the selected application or worker source. The existing runner returns logs and validation receipts through the SSH bridge and Windmill to the delivery workflow and independent review.",
+      "primary": true,
+      "chapter": 0
+    },
+    {
+      "id": "bridge",
+      "name": "SSH bridge",
+      "purpose": "Connects jobs to compute",
+      "status": "Remote execution",
+      "detail": "The existing SSH bridge carries a bounded command to the compute runner and returns its receipt. It is the transport between Windmill jobs and compute execution.",
+      "cell": [
+        0,
+        4
+      ],
+      "primary": false,
+      "chapter": 5
+    },
+    {
+      "id": "pr",
+      "name": "Pull request",
+      "purpose": "Presents a reviewed candidate",
+      "status": "Proposed GitHub change",
+      "detail": "The protected publisher creates or reconciles the pull request for the qualified source version. The integration owner checks its expected head and required protections before merging.",
+      "cell": [
+        3,
+        5
+      ],
+      "primary": false,
+      "chapter": 1
+    },
+    {
+      "id": "publisher",
+      "name": "Change publishing",
+      "purpose": "Publishes accepted changes",
+      "status": "Controlled publication",
+      "cell": [
+        4,
+        5
+      ],
+      "detail": "The protected publisher uses a confined GitHub App to publish and integrate accepted changes. It checks the source version and records the outcome so recovery can inspect what happened before repeating an operation.",
+      "primary": false,
+      "chapter": 1
+    },
+    {
+      "id": "integration",
+      "name": "Change integration",
+      "purpose": "Owns the accepted merge",
+      "status": "Single integration owner",
+      "detail": "One integration owner combines qualified source, review and validation. It checks the expected head and base, merges through the protected publication path and reads back the accepted GitHub result.",
+      "cell": [
+        2,
+        5
+      ],
+      "primary": false,
+      "chapter": 5
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "purpose": "Combines reviewed code",
+      "status": "Continuous integration",
+      "cell": [
+        1,
+        5
+      ],
+      "detail": "GitHub keeps source history, pull requests, review and accepted merge results together. Develop collects reviewed changes while a separate frozen candidate moves through release checks.",
+      "primary": true,
+      "chapter": 1
+    },
+    {
+      "id": "release",
+      "name": "Release candidate",
+      "purpose": "Holds one version for release",
+      "status": "Release qualification",
+      "cell": [
+        0,
+        6
+      ],
+      "detail": "A release cut freezes one accepted source version and its artifacts. That candidate goes through release checks while new reviewed work continues into develop.",
+      "primary": false,
+      "chapter": 6
+    },
+    {
+      "id": "releasechecks",
+      "name": "Release checks",
+      "purpose": "Tests the frozen candidate",
+      "status": "Release qualification",
+      "detail": "Required profiles and artifact checks run against the frozen release candidate while develop can continue. Only the qualified candidate advances to the approved release and immutable tag.",
+      "cell": [
+        1,
+        6
+      ],
+      "primary": false,
+      "chapter": 6
+    },
+    {
+      "id": "outcome",
+      "name": "Accepted outcome",
+      "purpose": "Returns status and release references",
+      "status": "Result for the user",
+      "detail": "The user receives the accepted task outcome and, where a release is made, its source version and release reference. Released source is ready for a separately authorized product deployment; it is not itself a deployment or proof of routine autonomous operation.",
+      "cell": [
+        4,
+        6
+      ],
+      "primary": false,
+      "chapter": 6
+    },
+    {
+      "id": "main",
+      "name": "GitHub releases",
+      "purpose": "Stores approved releases",
+      "status": "Approved releases",
+      "cell": [
+        3,
+        6
+      ],
+      "detail": "GitHub main holds accepted releases. A qualified frozen candidate is promoted and tagged, providing a stable release history while develop continues to receive reviewed changes.",
+      "primary": false,
+      "chapter": 6
+    },
+    {
+      "id": "selection",
+      "name": "Task selection",
+      "purpose": "Check dependencies and acceptance",
+      "status": "Expanded flow step",
+      "primary": false,
+      "step": true,
+      "cell": [
+        2,
+        0
+      ],
+      "chapter": 4,
+      "detail": "Check the task owner, dependencies and acceptance criteria before selecting eligible work. This is a delivery handoff, not a separate service or an ownership decision."
+    },
+    {
+      "id": "admission-step",
+      "name": "Coding admission",
+      "purpose": "Check provider and resource limits",
+      "status": "Expanded flow step",
+      "primary": false,
+      "step": true,
+      "cell": [
+        4,
+        0
+      ],
+      "chapter": 4,
+      "detail": "Check available worker capacity and the admitted model session before starting one scoped coding attempt. Capacity does not itself grant task or publication authority."
+    },
+    {
+      "id": "capture",
+      "name": "Candidate capture",
+      "purpose": "Pin source and outputs",
+      "status": "Expanded flow step",
+      "primary": false,
+      "step": true,
+      "cell": [
+        2,
+        2
+      ],
+      "chapter": 2,
+      "detail": "Capture the coding result with its exact source version and bounded outputs. Subsequent validation and review refer to that same candidate."
+    },
+    {
+      "id": "profiles",
+      "name": "Validation profiles",
+      "purpose": "Choose the required checks",
+      "status": "Expanded flow step",
+      "primary": false,
+      "step": true,
+      "cell": [
+        2,
+        3
+      ],
+      "chapter": 5,
+      "detail": "Select the required validation profiles for the exact candidate and acceptance criteria, then submit the bounded operation through the typed job connector."
+    },
+    {
+      "id": "evidence",
+      "name": "Validation evidence",
+      "purpose": "Keep exact-source receipts",
+      "status": "Expanded flow step",
+      "primary": false,
+      "step": true,
+      "cell": [
+        4,
+        4
+      ],
+      "chapter": 5,
+      "detail": "Retain the original validation receipt and its source identity. The delivery workflow and independent review use that evidence to decide whether the candidate can advance."
+    },
+    {
+      "id": "readback-step",
+      "name": "Merge confirmation",
+      "purpose": "Verify accepted source identity",
+      "status": "Expanded flow step",
+      "primary": false,
+      "step": true,
+      "cell": [
+        0,
+        5
+      ],
+      "chapter": 6,
+      "detail": "Confirm the accepted GitHub source and merge result before recording the task outcome or selecting more work. Reconcile an uncertain effect before repeating it."
+    },
+    {
+      "id": "tag",
+      "name": "Release tag",
+      "purpose": "Verify the immutable version",
+      "status": "Expanded flow step",
+      "primary": false,
+      "step": true,
+      "cell": [
+        2,
+        6
+      ],
+      "chapter": 6,
+      "detail": "Verify the immutable release tag and its accepted source identity as part of the qualified release. Released source remains separate from product deployment."
+    }
+  ],
+  "edges": [
+    {
+      "id": "request-intake",
+      "source": "request",
+      "target": "linear",
+      "label": "Define task",
+      "detail": "The requested result becomes a task with an owner and acceptance criteria.",
+      "kind": "design",
+      "chapter": 4
+    },
+    {
+      "id": "admission",
+      "source": "coordinator",
+      "target": "pool",
+      "label": "Worker capacity",
+      "detail": "The coordinator checks and reconciles shared resource and lease capacity.",
+      "kind": "design",
+      "direction": "both",
+      "chapter": 4
+    },
+    {
+      "id": "capacity",
+      "source": "pool",
+      "target": "coding",
+      "label": "Admit attempt",
+      "detail": "The shared capacity record admits the bounded native coding attempt.",
+      "kind": "design",
+      "chapter": 4
+    },
+    {
+      "id": "supervised-coding",
+      "source": "supervisor",
+      "target": "coding",
+      "label": "Start / result",
+      "detail": "The supervisor manages the bounded coding process and captures its result.",
+      "kind": "design",
+      "direction": "both",
+      "chapter": 4
+    },
+    {
+      "id": "model-session",
+      "source": "coding",
+      "target": "models",
+      "label": "Model session",
+      "detail": "Coding workers use their admitted provider-backed model session.",
+      "kind": "design",
+      "chapter": 2
+    },
+    {
+      "id": "scoped-tools",
+      "source": "coding",
+      "target": "tools",
+      "label": "Scoped tools",
+      "detail": "Coding workers access only the API and MCP capabilities supplied for the task.",
+      "kind": "design",
+      "chapter": 2
+    },
+    {
+      "id": "source-output",
+      "source": "coding",
+      "target": "workspace",
+      "label": "Private files",
+      "detail": "The coding attempt reads and changes source in its isolated workspace.",
+      "kind": "design",
+      "chapter": 2
+    },
+    {
+      "id": "candidate-code",
+      "source": "workspace",
+      "target": "code",
+      "label": "Source files",
+      "detail": "The workspace holds the application or worker source being changed.",
+      "kind": "design",
+      "chapter": 1
+    },
+    {
+      "id": "workflow-state",
+      "source": "delivery",
+      "target": "workflow",
+      "label": "State / decisions",
+      "detail": "The delivery workflow uses LangGraph for finite state and decisions.",
+      "kind": "design",
+      "direction": "both",
+      "chapter": 3
+    },
+    {
+      "id": "saved-progress",
+      "source": "workflow",
+      "target": "checkpoints",
+      "label": "Save / resume",
+      "detail": "SQLite checkpoints preserve the workflow state for recovery.",
+      "kind": "design",
+      "direction": "both",
+      "chapter": 3
+    },
+    {
+      "id": "operation-history",
+      "source": "delivery",
+      "target": "journal",
+      "label": "Record results",
+      "detail": "The workflow records operation identities, decisions and results in work history.",
+      "kind": "design",
+      "direction": "both",
+      "chapter": 4
+    },
+    {
+      "id": "adapter-history",
+      "source": "adapter",
+      "target": "journal",
+      "label": "Reconcile job",
+      "detail": "The adapter records and reconciles the original operation and job receipt.",
+      "kind": "design",
+      "direction": "both",
+      "chapter": 5
+    },
+    {
+      "id": "job-dispatch",
+      "source": "adapter",
+      "target": "windmill",
+      "label": "Job API",
+      "detail": "The typed adapter submits a Windmill job and inspects its original receipt.",
+      "kind": "design",
+      "direction": "both",
+      "chapter": 5
+    },
+    {
+      "id": "remote-execution",
+      "source": "windmill",
+      "target": "bridge",
+      "label": "SSH command",
+      "detail": "Windmill sends the bounded compute command through the existing SSH bridge.",
+      "kind": "design",
+      "direction": "both",
+      "chapter": 5
+    },
+    {
+      "id": "engine-execution",
+      "source": "bridge",
+      "target": "engine",
+      "label": "Command / receipt",
+      "detail": "The bridge exchanges the bounded command and execution receipt with compute.",
+      "kind": "design",
+      "direction": "both",
+      "chapter": 5
+    },
+    {
+      "id": "execute-source",
+      "source": "engine",
+      "target": "code",
+      "label": "Execute source",
+      "detail": "Compute runs code and checks against the selected application or worker source.",
+      "kind": "design",
+      "chapter": 0
+    },
+    {
+      "id": "source-review",
+      "source": "workspace",
+      "target": "review",
+      "label": "Exact source",
+      "detail": "Independent review examines the captured candidate source.",
+      "kind": "design",
+      "chapter": 1
+    },
+    {
+      "id": "validation-evidence",
+      "source": "engine",
+      "target": "review",
+      "label": "Check results",
+      "detail": "Compute validation receipts support review of the same source version.",
+      "kind": "design",
+      "chapter": 1
+    },
+    {
+      "id": "acceptance-criteria",
+      "source": "policy",
+      "target": "review",
+      "label": "Required evidence",
+      "detail": "Review evaluates the candidate against its versioned acceptance rules.",
+      "kind": "design",
+      "chapter": 1
+    },
+    {
+      "id": "review-repair",
+      "source": "review",
+      "target": "coordinator",
+      "label": "Repair feedback",
+      "detail": "Revision-specific findings return to the coordinator for a new bounded coding attempt; the repaired candidate is checked again.",
+      "kind": "design",
+      "chapter": 4
+    },
+    {
+      "id": "qualified-publication",
+      "source": "review",
+      "target": "publisher",
+      "label": "Accept candidate",
+      "detail": "Independent review and validation qualify the exact source for protected publication.",
+      "kind": "design",
+      "chapter": 1
+    },
+    {
+      "id": "publication-control",
+      "source": "delivery",
+      "target": "publisher",
+      "label": "Authorize stage",
+      "detail": "Finite workflow decisions authorize the protected publication stage.",
+      "kind": "design",
+      "chapter": 3
+    },
+    {
+      "id": "github-app",
+      "source": "publisher",
+      "target": "pr",
+      "label": "Publish PR",
+      "detail": "The confined publisher creates or reconciles the candidate pull request.",
+      "kind": "design",
+      "chapter": 1
+    },
+    {
+      "id": "integration-handoff",
+      "source": "pr",
+      "target": "integration",
+      "label": "Reviewed change",
+      "detail": "The integration owner checks the candidate head, base and required protections.",
+      "kind": "design",
+      "chapter": 5
+    },
+    {
+      "id": "accepted-merge",
+      "source": "integration",
+      "target": "github",
+      "label": "Merge / readback",
+      "detail": "The single integration owner merges the qualified change and verifies the accepted source in GitHub.",
+      "kind": "design",
+      "chapter": 5
+    },
+    {
+      "id": "release-freeze",
+      "source": "github",
+      "target": "release",
+      "label": "Freeze source",
+      "detail": "A release cut freezes accepted source, policy, required profiles and artifact identities.",
+      "kind": "design",
+      "chapter": 6
+    },
+    {
+      "id": "release-validation",
+      "source": "release",
+      "target": "releasechecks",
+      "label": "Required profiles",
+      "detail": "Release checks run against the frozen candidate while ongoing integration continues.",
+      "kind": "design",
+      "chapter": 6
+    },
+    {
+      "id": "release-outcome",
+      "source": "main",
+      "target": "outcome",
+      "label": "Release reference",
+      "detail": "The user can identify the accepted released source; product deployment is a separate action.",
+      "kind": "design",
+      "chapter": 6
+    },
+    {
+      "id": "task-outcome",
+      "source": "linear",
+      "target": "outcome",
+      "label": "Accepted status",
+      "detail": "The user sees the task outcome and its supporting source or release references.",
+      "kind": "design",
+      "chapter": 6
+    },
+    {
+      "id": "work-outcome-a",
+      "source": "linear",
+      "target": "selection",
+      "label": "Task",
+      "kind": "design",
+      "chapter": 4,
+      "detail": "Linear \u2192 Task selection: Task. Check the task owner, dependencies and acceptance criteria before selecting eligible work. This is a delivery handoff, not a separate service or an ownership decision."
+    },
+    {
+      "id": "work-outcome-b",
+      "source": "selection",
+      "target": "coordinator",
+      "label": "Eligible task",
+      "kind": "design",
+      "chapter": 4,
+      "detail": "Task selection \u2192 Sokolovski: Eligible task. Check the task owner, dependencies and acceptance criteria before selecting eligible work. This is a delivery handoff, not a separate service or an ownership decision."
+    },
+    {
+      "id": "outcome-return",
+      "source": "coordinator",
+      "target": "linear",
+      "label": "Outcome",
+      "kind": "design",
+      "chapter": 4,
+      "detail": "Sokolovski \u2192 Linear: Outcome. This handoff links the same task and exact-source result through the delivery flow."
+    },
+    {
+      "id": "coding-dispatch-a",
+      "source": "coordinator",
+      "target": "admission-step",
+      "label": "Assign coding",
+      "kind": "design",
+      "chapter": 4,
+      "detail": "Sokolovski \u2192 Coding admission: Assign coding. Check available worker capacity and the admitted model session before starting one scoped coding attempt. Capacity does not itself grant task or publication authority."
+    },
+    {
+      "id": "coding-dispatch-b",
+      "source": "admission-step",
+      "target": "supervisor",
+      "label": "Admitted attempt",
+      "kind": "design",
+      "chapter": 4,
+      "detail": "Coding admission \u2192 Worker supervisor: Admitted attempt. Check available worker capacity and the admitted model session before starting one scoped coding attempt. Capacity does not itself grant task or publication authority."
+    },
+    {
+      "id": "candidate-handoff-a",
+      "source": "workspace",
+      "target": "capture",
+      "label": "Capture candidate",
+      "kind": "design",
+      "chapter": 2,
+      "detail": "Private workspaces \u2192 Candidate capture: Capture candidate. Capture the coding result with its exact source version and bounded outputs. Subsequent validation and review refer to that same candidate."
+    },
+    {
+      "id": "candidate-handoff-b",
+      "source": "capture",
+      "target": "delivery",
+      "label": "Pinned candidate",
+      "kind": "design",
+      "chapter": 3,
+      "detail": "Candidate capture \u2192 Delivery workflow: Pinned candidate. Capture the coding result with its exact source version and bounded outputs. Subsequent validation and review refer to that same candidate."
+    },
+    {
+      "id": "bounded-job-a",
+      "source": "delivery",
+      "target": "profiles",
+      "label": "Submit / inspect",
+      "kind": "design",
+      "chapter": 5,
+      "detail": "Delivery workflow \u2192 Validation profiles: Submit / inspect. Select the required validation profiles for the exact candidate and acceptance criteria, then submit the bounded operation through the typed job connector."
+    },
+    {
+      "id": "bounded-job-b",
+      "source": "profiles",
+      "target": "adapter",
+      "label": "Required checks",
+      "direction": "both",
+      "kind": "design",
+      "chapter": 5,
+      "detail": "Validation profiles \u2192 Job connector: Required checks. Select the required validation profiles for the exact candidate and acceptance criteria, then submit the bounded operation through the typed job connector."
+    },
+    {
+      "id": "validation-return-a",
+      "source": "windmill",
+      "target": "evidence",
+      "label": "Validation result",
+      "kind": "design",
+      "chapter": 5,
+      "detail": "Windmill \u2192 Validation evidence: Validation result. Retain the original validation receipt and its source identity. The delivery workflow and independent review use that evidence to decide whether the candidate can advance."
+    },
+    {
+      "id": "validation-return-b",
+      "source": "evidence",
+      "target": "delivery",
+      "label": "Result receipt",
+      "kind": "design",
+      "chapter": 5,
+      "detail": "Validation evidence \u2192 Delivery workflow: Result receipt. Retain the original validation receipt and its source identity. The delivery workflow and independent review use that evidence to decide whether the candidate can advance."
+    },
+    {
+      "id": "readback-a",
+      "source": "github",
+      "target": "readback-step",
+      "label": "Accepted merge",
+      "kind": "design",
+      "chapter": 6,
+      "detail": "GitHub \u2192 Merge confirmation: Accepted merge. Confirm the accepted GitHub source and merge result before recording the task outcome or selecting more work. Reconcile an uncertain effect before repeating it."
+    },
+    {
+      "id": "readback-b",
+      "source": "readback-step",
+      "target": "coordinator",
+      "label": "Confirmed merge",
+      "kind": "design",
+      "chapter": 6,
+      "detail": "Merge confirmation \u2192 Sokolovski: Confirmed merge. Confirm the accepted GitHub source and merge result before recording the task outcome or selecting more work. Reconcile an uncertain effect before repeating it."
+    },
+    {
+      "id": "release-promotion-a",
+      "source": "releasechecks",
+      "target": "tag",
+      "label": "Promote / tag",
+      "kind": "design",
+      "chapter": 6,
+      "detail": "Release checks \u2192 Release tag: Promote / tag. Verify the immutable release tag and its accepted source identity as part of the qualified release. Released source remains separate from product deployment."
+    },
+    {
+      "id": "release-promotion-b",
+      "source": "tag",
+      "target": "main",
+      "label": "Verified release",
+      "kind": "design",
+      "chapter": 6,
+      "detail": "Release tag \u2192 GitHub releases: Verified release. Verify the immutable release tag and its accepted source identity as part of the qualified release. Released source remains separate from product deployment."
+    },
+    {
+      "id": "workspace-github",
+      "source": "workspace",
+      "target": "github",
+      "label": "Versioned source",
+      "detail": "Private workspaces exchange versioned source with GitHub over Git / SSH. Source synchronisation, pull-request publication and accepted integration have separate responsibilities.",
+      "kind": "design",
+      "chapter": 1,
+      "sourceRelationship": "edge-workspace->github"
+    }
+  ],
+  "designNote": "The ownership split between LangChain, LangGraph and Sokolovski is not settled. It will be determined after BAU validation establishes the behavior of the current system. This map shows the component flow and does not decide that ownership boundary."
+}

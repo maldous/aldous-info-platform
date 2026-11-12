@@ -1,0 +1,245 @@
+{
+  "schema": "fixed-mesh-layout-v1",
+  "rows": 10,
+  "columns": 5,
+  "nodeWidth": 400,
+  "nodeHeight": 200,
+  "gutter": 200,
+  "margin": 200,
+  "portPermutation": 17,
+  "walkthroughCells": {
+    "node-threads": [
+      0,
+      7
+    ],
+    "node-durable": [
+      0,
+      8
+    ],
+    "node-tools": [
+      4,
+      0
+    ],
+    "node-stokowski": [
+      2,
+      0
+    ],
+    "node-wm_mcp": [
+      4,
+      7
+    ],
+    "node-journal": [
+      3,
+      3
+    ],
+    "node-linear": [
+      1,
+      0
+    ],
+    "node-supervisor": [
+      2,
+      1
+    ],
+    "node-adapter": [
+      3,
+      4
+    ],
+    "node-isolated": [
+      2,
+      2
+    ],
+    "node-windmill": [
+      4,
+      4
+    ],
+    "node-provider": [
+      1,
+      1
+    ],
+    "node-workspace": [
+      1,
+      2
+    ],
+    "node-bridge": [
+      4,
+      5
+    ],
+    "node-integration": [
+      3,
+      6
+    ],
+    "node-github": [
+      2,
+      7
+    ],
+    "node-runner": [
+      3,
+      5
+    ],
+    "node-pr": [
+      1,
+      6
+    ],
+    "node-code": [
+      0,
+      2
+    ],
+    "node-delivery": [
+      3,
+      2
+    ],
+    "node-review": [
+      2,
+      5
+    ],
+    "node-langgraph": [
+      4,
+      2
+    ],
+    "node-policy": [
+      1,
+      5
+    ],
+    "node-sqlite": [
+      4,
+      3
+    ]
+  },
+  "fullMapCells": {
+    "request": [
+      0,
+      0
+    ],
+    "linear": [
+      1,
+      0
+    ],
+    "coordinator": [
+      2,
+      0
+    ],
+    "pool": [
+      3,
+      0
+    ],
+    "tools": [
+      4,
+      0
+    ],
+    "models": [
+      1,
+      1
+    ],
+    "supervisor": [
+      2,
+      1
+    ],
+    "code": [
+      0,
+      2
+    ],
+    "workspace": [
+      1,
+      2
+    ],
+    "coding": [
+      2,
+      2
+    ],
+    "delivery": [
+      3,
+      2
+    ],
+    "workflow": [
+      4,
+      2
+    ],
+    "journal": [
+      3,
+      3
+    ],
+    "checkpoints": [
+      4,
+      3
+    ],
+    "adapter": [
+      3,
+      4
+    ],
+    "windmill": [
+      4,
+      4
+    ],
+    "policy": [
+      1,
+      5
+    ],
+    "review": [
+      2,
+      5
+    ],
+    "engine": [
+      3,
+      5
+    ],
+    "bridge": [
+      4,
+      5
+    ],
+    "pr": [
+      1,
+      6
+    ],
+    "publisher": [
+      2,
+      6
+    ],
+    "integration": [
+      3,
+      6
+    ],
+    "github": [
+      2,
+      7
+    ],
+    "release": [
+      2,
+      8
+    ],
+    "releasechecks": [
+      3,
+      8
+    ],
+    "outcome": [
+      1,
+      9
+    ],
+    "main": [
+      2,
+      9
+    ]
+  },
+  "sharedComponents": {
+    "linear": "node-linear",
+    "coordinator": "node-stokowski",
+    "coding": "node-isolated",
+    "github": "node-github",
+    "windmill": "node-windmill",
+    "workflow": "node-langgraph",
+    "supervisor": "node-supervisor",
+    "workspace": "node-workspace",
+    "code": "node-code",
+    "delivery": "node-delivery",
+    "journal": "node-journal",
+    "checkpoints": "node-sqlite",
+    "adapter": "node-adapter",
+    "bridge": "node-bridge",
+    "policy": "node-policy",
+    "pr": "node-pr",
+    "integration": "node-integration",
+    "tools": "node-tools",
+    "models": "node-provider",
+    "engine": "node-runner",
+    "review": "node-review"
+  }
+}
