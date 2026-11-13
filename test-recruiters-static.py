@@ -16,7 +16,7 @@ assert len(p.ids)==len(set(p.ids))
 for href in p.links:
  if href.startswith('#'):assert href[1:] in p.ids or href=='#results-heading',href
 for asset in p.assets:assert (root/asset.split('?')[0].split('#')[0]).exists(),asset
-assert p.scripts==['theme-init.js','recruiters.mjs?v=45']
+assert p.scripts==['theme-init.js','recruiters.mjs?v=57']
 assert len(re.findall('class="recruiter-skill"',s))==94
 assert len(re.findall('class="career-group"',s))==5
 for company in ['paperly','citoplus','lexer','lynkstate','subspace','telstra']:

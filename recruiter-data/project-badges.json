@@ -264,8 +264,8 @@
     ]
   },
   {
-    "id": "uif",
-    "name": "UIF / USF",
+    "id": "ai-delivery",
+    "name": "AI delivery platform",
     "badges": [
       {
         "name": "Shell scripting",
