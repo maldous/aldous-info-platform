@@ -297,39 +297,6 @@
     ]
   },
   {
-    "id": "lixit",
-    "name": "Lixit",
-    "badges": [
-      {
-        "name": "React",
-        "url": "https://img.shields.io/badge/React-149ECA?style=flat-square&logo=react&logoColor=white",
-        "evidence": {
-          "url": "https://github.com/maldous/lixit/blob/main/docs/content/architecture.md",
-          "reason": "Public architecture guide lists React in the active web application.",
-          "source_blob_sha": "390187d0eff24ff6ba7e159fb00ca8d073994e6c"
-        }
-      },
-      {
-        "name": "PostgreSQL",
-        "url": "https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white",
-        "evidence": {
-          "url": "https://github.com/maldous/lixit/blob/main/docs/content/architecture.md",
-          "reason": "Public architecture guide lists PostgreSQL as primary database.",
-          "source_blob_sha": "390187d0eff24ff6ba7e159fb00ca8d073994e6c"
-        }
-      },
-      {
-        "name": "GraphQL",
-        "url": "https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white",
-        "evidence": {
-          "url": "https://github.com/maldous/lixit/blob/main/docs/content/architecture.md",
-          "reason": "Public architecture guide lists Hasura/PostGraphile GraphQL interfaces. All describe the archived prototype, not validated production lending integrations.",
-          "source_blob_sha": "390187d0eff24ff6ba7e159fb00ca8d073994e6c"
-        }
-      }
-    ]
-  },
-  {
     "id": "cadle",
     "name": "CADLE",
     "badges": [

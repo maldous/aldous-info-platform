@@ -18,7 +18,7 @@ for asset in p.assets:
  path=asset.split('?')[0].split('#')[0]
  assert (root/path).exists(),path
 text=root.joinpath('index.html').read_text()
-for subject in ['OffMenu','ANQR','AI delivery platform','Morgan','Circular Quay','Lixit','Colour Index','CADLE','NEEG','Bayesian Bot','GANN','ANNYWAY','MILC','Solution Leaflet']:assert subject in text,subject
+for subject in ['OffMenu','ANQR','AI delivery platform','Morgan','Circular Quay','Colour Index','CADLE','NEEG','Bayesian Bot','GANN','ANNYWAY','MILC','Solution Leaflet']:assert subject in text,subject
 assert 'Sample dashboard view · values shown are illustrative.' not in text
 assert 'Decorative Morgan project diagram, not live monitoring data.' not in text
 assert text.count('Morgan compact native-workstream snapshot captured')==1
@@ -28,7 +28,7 @@ assert 'Interface concept' not in text
 assert len(re.findall('class="career-group"',text))==5
 assert len(re.findall('<time>',text))==12
 assert 'career-rail' not in text and 'data-scroll' not in text
-assert len(re.findall('class="feature"',text))==11
+assert len(re.findall('class="feature"',text))==10
 assert 'Engineering ideas.' not in text
 assert 'Ideas with a longer history.' not in text
 assert 'Original archival illustrations from my historical CV' not in text
@@ -101,8 +101,8 @@ for project in projects:
     assert article.index('project-badges') > article.index('</p>')
     if 'class="text-link"' in article:
         assert article.index('project-badges') < article.index('class="text-link"')
-assert len(projects)==18
-print('PASS complete 273-badge profile wall and three source-backed badges for all 18 projects.')
+assert len(projects)==17
+print('PASS complete 273-badge profile wall and three source-backed badges for all 17 projects.')
 # Generic badges must be coloured individually, not merge into one grey text field.
 assert all(b['color'].lower() != '#475569' for b in profile)
 assert '-475569?' not in footer
@@ -137,3 +137,5 @@ assert "ip-geolocation-map.jpg" in feature
 assert "ip-network-embeddings.jpg" in article
 assert "ip-network-embeddings.jpg" not in feature
 assert (root/"portfolio-assets/ip-geolocation-map.jpg").read_bytes() != (root/"portfolio-assets/ip-network-embeddings.jpg").read_bytes()
+
+assert all('lixit' not in p.read_text().lower() for p in root.rglob('*') if p.suffix in {'.html','.js','.json'})
