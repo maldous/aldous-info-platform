@@ -15,7 +15,7 @@ for(const forbidden of ['morgan-signals','morgan-cix-glow','morgan-red-a','morga
 }
 assert(!html.includes('morgan-signals.js'));
 assert(html.includes('platform engineering, cloud delivery, release processes and production reliability'));
-assert(section.includes('Monitoring interface · In development'));
+assert(!section.includes('In development')); // Published project card intentionally omits the retired status label.
 assert(!section.includes('<details'));
 assert.equal((html.match(/id="morgan-project"/g)||[]).length,1);
 assert(html.includes('href="https://morgan.aldous.info/">Explore monitoring'));

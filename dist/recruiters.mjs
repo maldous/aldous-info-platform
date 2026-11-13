@@ -1,7 +1,11 @@
 import {initTheme} from './theme.js';
 import {compile,searchRequirements} from './recruiter-matcher.mjs?v=45';
-const theme=initTheme(), select=document.querySelector('#portfolio-theme');
-select.value=theme.preference;select.addEventListener('change',()=>theme.setPreference(select.value));
+const theme=initTheme();
+const select=document.querySelector('#portfolio-theme');
+function updateToggle(){const dark=document.documentElement.dataset.theme==='dark';select.setAttribute('aria-checked',String(dark));select.title=`Switch to ${dark?'light':'dark'} theme`;}
+updateToggle();
+select.addEventListener('click',()=>{theme.setPreference(document.documentElement.dataset.theme==='dark'?'light':'dark');updateToggle();});
+new MutationObserver(updateToggle).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 const menu=document.querySelector('#menu-toggle'),nav=document.querySelector('#primary-nav');
 function closeMenu(){menu.setAttribute('aria-expanded','false');nav.classList.remove('open');}
 menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);});
@@ -10,7 +14,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.getAttribute('
 const input=document.querySelector('#requirements'),results=document.querySelector('#recruiter-results'),status=document.querySelector('#recruiter-status'),submit=document.querySelector('#recruiter-submit');
 let catalog;
 try{
- const response=await fetch('./recruiter-evidence.json?v=45');
+ const response=await fetch('./recruiter-evidence.json?v=57');
  if(!response.ok)throw new Error('Evidence unavailable');
  catalog=compile(await response.json());submit.disabled=false;input.disabled=false;
  status.textContent='Search a skill or paste requirements to begin.';

@@ -16,7 +16,7 @@ assert len(p.ids)==len(set(p.ids))
 for href in p.links:
  if href.startswith('#'):assert href[1:] in p.ids or href=='#results-heading',href
 for asset in p.assets:assert (root/asset.split('?')[0].split('#')[0]).exists(),asset
-assert p.scripts==['theme-init.js','recruiters.mjs?v=45']
+assert p.scripts==['theme-init.js','recruiters.mjs?v=57']
 assert len(re.findall('class="recruiter-skill"',s))==94
 assert len(re.findall('class="career-group"',s))==5
 for company in ['paperly','citoplus','lexer','lynkstate','subspace','telstra']:
@@ -30,7 +30,7 @@ for skill in c['skills']:
   assert evidence['url'].startswith(('https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=','https://github.com/maldous/','https://aldous.info/recruiters.html#languages'))
   if evidence['kind']=='project':assert re.search('/blob/[a-f0-9]{40}/README.md$',evidence['url']) and evidence['limitation']
 script=(root/'recruiters.mjs').read_text()
-assert script.count('fetch(')==1 and "fetch('./recruiter-evidence.json?v=45')" in script
+assert script.count('fetch(')==1 and "fetch('./recruiter-evidence.json?v=57')" in script
 for bad in ['innerHTML','outerHTML','insertAdjacentHTML','sendBeacon','localStorage','sessionStorage','XMLHttpRequest','WebSocket','location.search','pushState','replaceState']:
  assert bad not in script,bad
 assert 'textContent=text' in script

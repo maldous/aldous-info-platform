@@ -16,13 +16,14 @@ class E{
 async function harness(fail=false){
  const elements={};for(const id of ['portfolio-theme','menu-toggle','primary-nav','requirements','recruiter-results','recruiter-status','recruiter-submit','recruiter-search','recruiter-clear','jump-results'])elements[id]=new E();
  const example=new E('button');example.dataset.example='Kubernetes, AWS and release automation';
- const doc={querySelector:s=>elements[s.slice(1)],querySelectorAll:()=>[example],createElement:t=>new E(t),addEventListener(){},getElementById:id=>elements[id]||elements['recruiter-results'].all(e=>e.id===id)[0]};
+ const doc={documentElement:{dataset:{theme:'light'}},querySelector:s=>elements[s.slice(1)],querySelectorAll:()=>[example],createElement:t=>new E(t),addEventListener(){},getElementById:id=>elements[id]||elements['recruiter-results'].all(e=>e.id===id)[0]};
  const requests=[];const source=fs.readFileSync('dist/recruiters.mjs','utf8').replace(/^import .*;\n/gm,'');
- const context=vm.createContext({document:doc,window:{addEventListener(){}},location:{hash:''},initTheme:()=>({preference:'system',setPreference(){}}),compile,searchRequirements,fetch:async url=>{requests.push(url);if(fail)throw Error('blocked');return{ok:true,json:async()=>corpus};}});
+ const context=vm.createContext({document:doc,window:{addEventListener(){}},location:{hash:''},MutationObserver:class{observe(){}},initTheme:()=>({preference:'system',setPreference(value){doc.documentElement.dataset.theme=value;}}),compile,searchRequirements,fetch:async url=>{requests.push(url);if(fail)throw Error('blocked');return{ok:true,json:async()=>corpus};}});
  await vm.runInContext('(async()=>{'+source+'})()',context);
  return {elements,example,requests};
 }
 const {elements:e,example,requests}=await harness();
+assert.equal(e['portfolio-theme'].getAttribute('aria-checked'),'false');e['portfolio-theme'].events.click();assert.equal(e['portfolio-theme'].getAttribute('aria-checked'),'true');e['portfolio-theme'].events.click();assert.equal(e['portfolio-theme'].getAttribute('aria-checked'),'false');
 assert(!e['requirements'].disabled);assert(!e['recruiter-submit'].disabled);
 const run=()=>e['recruiter-search'].events.submit({preventDefault(){}});
 const rows=()=>e['recruiter-results'].all(x=>x.className==='recruiter-result');
@@ -33,6 +34,6 @@ example.events.click();assert.equal(rows().length,1);example.events.click();asse
 e.requirements.value=Array.from({length:121},(_,i)=>`Python requirement ${i}`).join('\n');run();assert.equal(rows().length,50);const more=e['recruiter-results'].children.at(-1);assert(!more.hidden);more.events.click();assert.equal(rows().length,100);more.events.click();assert.equal(rows().length,121);assert(more.hidden);assert.equal(focused,rows().at(-1));assert(rows().at(-1).textContent.includes('Requirement 121'));
 e.requirements.value='TypeScript';run();assert(e['recruiter-results'].textContent.includes('not a standalone deployment'));assert(e['recruiter-results'].all(x=>x.href==='./#anqr').length);
 e.requirements.value='Kubernetes';run();assert(e['recruiter-results'].all(x=>x.href==='#career-paperly').length);
-assert.deepEqual(requests,['./recruiter-evidence.json?v=45']);
+assert.deepEqual(requests,['./recruiter-evidence.json?v=57']);
 const failed=await harness(true);assert(failed.elements.requirements.disabled);assert(failed.elements['recruiter-status'].textContent.includes('could not load'));
 console.log('PASS DOM harness: initialization, search, unknown terms, safe text, clear/focus, examples, all 121 paginated results, citations, internal project/company links, single static fetch, load failure. Not browser/layout verification.');
