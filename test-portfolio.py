@@ -35,8 +35,8 @@ assert 'Original archival illustrations from my historical CV' not in text
 assert '<h2>Other</h2>' in text
 assert 'I’m Matthew, a Melbourne-based engineer. I connect architecture with practical delivery and am available for fully remote work.' in text
 assert text.count('matthew.aldous@gmail.com</a></h')==2
-assert 'aria-label="Colour theme"' not in text # label is provided as a real label
-assert '<label class="sr-only" for="portfolio-theme">Colour theme</label>' in text
+assert 'role="switch"' in text
+assert 'aria-label="Dark theme"' in text
 assert 'id="scene"' in root.joinpath('architecture.html').read_text()
 assert not re.search(r'/home/|/workspace/|libfile_|file_0000|sk_live|BEGIN PRIVATE KEY',text)
 print('PASS portfolio anchors, unique IDs, all local assets, project/archive coverage, career timeline, theme label, retained architecture and public-content hygiene.')
@@ -57,8 +57,9 @@ for destination in ['#work', 'recruiters.html', '#about', 'recruiters.html#techn
 assert header.count('<nav ') == 1
 assert 'Matthew Aldous<span>.</span>' not in header
 assert 'class="theme-icon"' in header
-assert 'title="Colour theme"' in header
-for choice in ['system', 'light', 'dark']: assert f'value="{choice}"' in header
+assert 'title="Switch to dark theme"' in header
+assert '<select id="portfolio-theme"' not in header
+assert 'aria-checked="false"' in header
 
 assert "<h2>Projects</h2>" in text
 assert '<h3>Robox Gaming</h3>' in text
@@ -117,7 +118,8 @@ print('PASS individually coloured generic badges with white-text contrast >=4.5:
 article=re.search(r'<article[^>]+id="navigating-digital-pathways".*?</article>',text,re.S).group()
 assert 'data-category="research"' in article
 assert 'https://www.linkedin.com/pulse/navigating-digital-pathways-illuminating-network-ai-nlp-aldous' in article
-assert 'AI research &amp; development' in article
+assert 'AI research &amp; development' not in article
+assert 'Published article' not in article
 assert len(re.sub(r"<[^>]+>", "", article).split()) < 110
 
 assert article.count('class="feature-image"') == 1

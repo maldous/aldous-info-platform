@@ -1,16 +1,16 @@
 # aldous.info platform
 
-The complete static application behind [aldous.info](https://aldous.info): Matthew Aldous's portfolio, browser-local recruiter evidence search, and interactive architecture explorer. This is a new, independently reproducible public repository, not a change to the existing live deployment.
+The complete static application behind [aldous.info](https://aldous.info): Matthew Aldous's portfolio, browser-local recruiter evidence search, and interactive architecture explorer. This public repository supports independent recreation of the current static application.
 
 ## What is included
 
 - Homepage, all project cards and filters, career history, technical experience, themes and responsive navigation.
 - Recruiter search over 94 cited skills, literal/alias matching, per-line evidence, safe rendering and paginated results.
 - Architecture explorer with chapter navigation, pan/zoom, component and connection detail views, and its diagram-generation inputs.
-- All 52 application files from published version 55, including fonts, images, résumé PDF, styles, JavaScript and JSON.
+- All 52 application files, updated to published version 56, including fonts, images, résumé PDF, styles, JavaScript and JSON.
 - Current generators, focused tests, clean-build scripts and a per-file SHA-256 snapshot manifest.
 
-The source baseline is published version **55**, source commit `14f65250890867d5981cb5054cc9f596189f666e`. See [export scope](docs/EXPORT_SCOPE.md) and [asset hashes](docs/published-assets.sha256.json).
+The current runtime baseline is published version **56**, Sites source commit `03997393bb021ee7bd58b8f77a512120e41bd8f2`, synchronized into this repository at `f0700c824123cbe6c16c6bea6bc3399c76b67b83`. It adds the fixed world-map background, an Australia-focused mobile crop, the light/dark toggle and consistent project cards. The toggle follows the system preference until an explicit selection is saved. The original version-55 export remains historical evidence. See [export scope](docs/EXPORT_SCOPE.md) and [asset hashes](docs/published-assets.sha256.json).
 
 ## Quick start
 
@@ -41,7 +41,7 @@ This is a **buildless static web application**, not a hosted AI search service. 
 | Area | Source | Responsibility |
 | --- | --- | --- |
 | Portfolio | `dist/index.html`, `portfolio.css`, `portfolio.js` | Content, project filtering, responsive navigation and visual presentation |
-| Themes | `dist/theme-init.js`, `theme.js` | Apply and switch the light/dark/system preference |
+| Themes | `dist/theme-init.js`, `theme.js` | Follow system preference initially; persist explicit light/dark selection |
 | Search UI | `dist/recruiters.html`, `recruiters.css`, `recruiters.mjs` | Load the local corpus, render citations safely, clear input and paginate results |
 | Search engine | `dist/recruiter-matcher.mjs` | Pure `compile(corpus)` and `searchRequirements(input, compiled)` functions |
 | Search content | `recruiter-data/evidence.json`, `technical-experience.html` | Maintained evidence and generated recruiter-page content |
@@ -80,13 +80,15 @@ npm run build
 
 ## Tests
 
+Current known issue: the v56 Recruiters-page theme control is rendered as a switch, but its JavaScript still listens for the former selector event. The updated browser regression check exposes this failure. See `VALIDATION.md`; historical v55 passing checks do not establish a complete v56 pass.
+
 ```sh
 npm test                       # source/static checks, 24 search tests and DOM behavior tests
 # With requirements-dev.txt installed:
 npm run test:architecture       # geometry, navigation and captured-image checks
 ```
 
-`scripts/check-export.py` verifies all 52 runtime files against the published baseline and checks local asset/module links. When intentionally changing the application, review the changes and update `docs/published-assets.sha256.json` for the new documented baseline. Do not describe altered bytes as version-55 parity.
+`scripts/check-export.py` verifies all 52 runtime files against the published baseline and checks local asset/module links. When intentionally changing the application, review the changes and update `docs/published-assets.sha256.json` for the new documented baseline. The original version-55 hashes remain in `docs/published-assets.v55.sha256.json`; do not describe altered bytes as version-55 parity.
 
 For real browser checks:
 
@@ -119,10 +121,10 @@ There are no application environment variables or secrets. The local server port
 - Public links open separate project sites, GitHub, LinkedIn and articles. This repository does not recreate those other products or their private backends.
 - The Morgan image is an explicitly dated captured screenshot, not a live monitoring feed.
 - The live host may inject Cloudflare challenge/security scripts. Those host-managed scripts, DNS/TLS and provider configuration are not application source and are not reproduced here.
-- Content and evidence are the version-55 snapshot, not an automatic ongoing sync of the live site, résumé or GitHub.
+- Current runtime files are synchronized to version 56; the search corpus and supporting evidence retain their original snapshot dates. There is no automatic ongoing sync of the live site, résumé or GitHub.
 
 ## Rights and public-export boundary
 
 See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Publication of this repository does **not** grant a blanket license over photographs, logos, résumé content or third-party artwork. Existing notices and public attributions are retained; the Roboto font license remains in `dist/fonts/Roboto-OFL.txt`. No new broad license has been imposed.
 
-Internal working history, private provenance links, editor credentials, repository history and unrelated historical experiments are excluded. All current published application files and the inputs needed for the included current regeneration commands are retained. No live service, account, domain or permission was changed by this export.
+Internal working history, private provenance links, editor credentials, repository history and unrelated historical experiments are excluded. All current published application files and the inputs needed for the included current regeneration commands are retained. The original export changed no live service, account, domain or permission. Version 56 was subsequently published under separate explicit approval; documentation and test maintenance do not redeploy the live site.

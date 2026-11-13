@@ -34,8 +34,37 @@ try {
   assert.equal(await page.locator('.recruiter-result').count(),50);await page.getByRole('button',{name:'Show next 50 requirements'}).click();
   assert.equal(await page.locator('.recruiter-result').count(),100);await page.getByRole('button',{name:'Show next 21 requirements'}).click();
   assert.equal(await page.locator('.recruiter-result').count(),121);
-  await page.locator('#portfolio-theme').selectOption('dark');assert.equal(await page.locator('html').getAttribute('data-theme'),'dark');
+  // Fresh origins follow the OS, including changes, until a user persists a choice.
+  for(const initial of ['light','dark']){
+    const themeContext=await browser.newContext({colorScheme:initial,viewport:{width:390,height:844},reducedMotion:'reduce'});
+    try{
+      const themePage=await themeContext.newPage();
+      const ready=()=>themePage.waitForFunction(()=>document.querySelector('#portfolio-theme').title==='Switch to '+(document.documentElement.dataset.theme==='dark'?'light':'dark')+' theme');
+      await themePage.goto(base);await ready();
+      assert.equal(await themePage.locator('html').getAttribute('data-theme'),initial);
+      assert.equal(await themePage.locator('#portfolio-theme').getAttribute('role'),'switch');
+      assert.equal(await themePage.evaluate(()=>localStorage.getItem('offmenu-color-theme')),null);
+      const changed=initial==='light'?'dark':'light';
+      await themePage.emulateMedia({colorScheme:changed});
+      await themePage.waitForFunction(expected=>document.documentElement.dataset.theme===expected,changed);
+      await themePage.locator('#portfolio-theme').click();
+      const selected=initial;
+      assert.equal(await themePage.locator('html').getAttribute('data-theme'),selected);
+      assert.equal(await themePage.locator('#portfolio-theme').getAttribute('aria-checked'),String(selected==='dark'));
+      assert.equal(await themePage.evaluate(()=>localStorage.getItem('offmenu-color-theme')),selected);
+      await themePage.reload();
+      assert.equal(await themePage.locator('html').getAttribute('data-theme'),selected);
+      await themePage.goto(base+'recruiters.html');await ready();
+      assert.equal(await themePage.locator('html').getAttribute('data-theme'),selected);
+      await themePage.locator('#portfolio-theme').click();
+      assert.equal(await themePage.locator('html').getAttribute('data-theme'),changed);
+      await themePage.reload();
+      assert.equal(await themePage.locator('html').getAttribute('data-theme'),changed);
+      await themePage.goto(base);
+      assert.equal(await themePage.locator('html').getAttribute('data-theme'),changed);
+    }finally{await themeContext.close();}
+  }
   await page.goto(base+'architecture.html');await page.waitForSelector('#scene');
   assert.deepEqual(errors,[]);
-  console.log(JSON.stringify({result:'PASS',browser:browser.version(),pages:3,widths:[320,390,768,1440],projectCards:11,evidenceSkills:94,paginationRows:121,searchNetworkRequests:0,checks:['project filters','responsive layout','search','unknown input','XSS-safe text','clear','pagination','theme','architecture load']}));
+  console.log(JSON.stringify({result:'PASS',browser:browser.version(),pages:3,widths:[320,390,768,1440],projectCards:11,evidenceSkills:94,paginationRows:121,searchNetworkRequests:0,checks:['project filters','responsive layout','search','unknown input','XSS-safe text','clear','pagination','initial system light/dark','system theme changes','persistent accessible theme switches on both pages','architecture load']}));
 } finally {if(browser)await browser.close();server.kill();}
