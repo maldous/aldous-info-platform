@@ -1,8 +1,10 @@
 import {initTheme} from './theme.js';
 const theme=initTheme();
 const select=document.querySelector('#portfolio-theme');
-select.value=theme.preference;
-select.addEventListener('change',()=>theme.setPreference(select.value));
+function updateToggle(){const dark=document.documentElement.dataset.theme==='dark';select.setAttribute('aria-checked',String(dark));select.title=`Switch to ${dark?'light':'dark'} theme`;}
+updateToggle();
+select.addEventListener('click',()=>{theme.setPreference(document.documentElement.dataset.theme==='dark'?'light':'dark');updateToggle();});
+new MutationObserver(updateToggle).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 const filters=[...document.querySelectorAll('[data-filter]')];
 const projects=[...document.querySelectorAll('[data-category]')];
 const count=document.querySelector('#project-count');
