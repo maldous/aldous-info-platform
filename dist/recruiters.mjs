@@ -14,7 +14,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.getAttribute('
 const input=document.querySelector('#requirements'),results=document.querySelector('#recruiter-results'),status=document.querySelector('#recruiter-status'),submit=document.querySelector('#recruiter-submit');
 let catalog;
 try{
- const response=await fetch('./recruiter-evidence.json?v=45');
+ const response=await fetch('./recruiter-evidence.json?v=57');
  if(!response.ok)throw new Error('Evidence unavailable');
  catalog=compile(await response.json());submit.disabled=false;input.disabled=false;
  status.textContent='Search a skill or paste requirements to begin.';

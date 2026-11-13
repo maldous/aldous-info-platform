@@ -30,7 +30,7 @@ for skill in c['skills']:
   assert evidence['url'].startswith(('https://aldous.info/Matthew-Aldous-Resume-2026.pdf#page=','https://github.com/maldous/','https://aldous.info/recruiters.html#languages'))
   if evidence['kind']=='project':assert re.search('/blob/[a-f0-9]{40}/README.md$',evidence['url']) and evidence['limitation']
 script=(root/'recruiters.mjs').read_text()
-assert script.count('fetch(')==1 and "fetch('./recruiter-evidence.json?v=45')" in script
+assert script.count('fetch(')==1 and "fetch('./recruiter-evidence.json?v=57')" in script
 for bad in ['innerHTML','outerHTML','insertAdjacentHTML','sendBeacon','localStorage','sessionStorage','XMLHttpRequest','WebSocket','location.search','pushState','replaceState']:
  assert bad not in script,bad
 assert 'textContent=text' in script

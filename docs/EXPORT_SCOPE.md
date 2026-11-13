@@ -5,7 +5,7 @@
 - Published Sites source: `03997393bb021ee7bd58b8f77a512120e41bd8f2`.
 - Public repository runtime synchronization: `f0700c824123cbe6c16c6bea6bc3399c76b67b83`.
 - Version 56 published successfully on 13 November 2026 at 04:07:50 UTC (15:07:50 AEDT).
-- All 52 runtime files are represented by `published-assets.sha256.json`. Exactly four files changed from v55: `index.html`, `portfolio.css`, `portfolio.js` and `recruiters.html`. The original v55 hashes remain in the original export commit’s asset manifest.
+- All 52 runtime files are represented by `published-assets.sha256.json`. Exactly four files changed from v55: `index.html`, `portfolio.css`, `portfolio.js` and `recruiters.html`. The original v55 hashes remain in the [original export commit’s asset manifest](https://github.com/maldous/aldous-info-platform/blob/a8f2451e66bb9cdda7be2386873a0a2a92d2611a/docs/published-assets.sha256.json).
 - The update reuses the existing world-map image with fixed positioning and Australia-focused mobile cropping, replaces the homepage/recruiter theme selector with a persistent light/dark switch, and aligns project card content.
 - Search implementation, evidence corpus, architecture runtime, assets and third-party notices are unchanged.
 - This follow-through updates documentation, hashes and tests only; it changes no runtime bytes and performs no deployment.
@@ -15,7 +15,7 @@
 - Original published Site version: 55.
 - Source commit: `14f65250890867d5981cb5054cc9f596189f666e`.
 - Live origin: `https://aldous.info`.
-- Application payload: 52 static files in `dist/`, recorded individually in `published-assets.sha256.json`. The hosting deployment archive has one additional hosting-manifest file; that owner-specific binding is not included.
+- Application payload: 52 static files in `dist/`, recorded individually in the [historical version-55 manifest](https://github.com/maldous/aldous-info-platform/blob/a8f2451e66bb9cdda7be2386873a0a2a92d2611a/docs/published-assets.sha256.json). The hosting deployment archive has one additional hosting-manifest file; that owner-specific binding is not included.
 
 The original full tracked source was obtained from the original editor's retained, clean source checkout through a private artifact handoff. It was not reconstructed from browser screenshots or an obsolete GitHub/Netlify copy.
 

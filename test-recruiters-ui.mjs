@@ -34,6 +34,6 @@ example.events.click();assert.equal(rows().length,1);example.events.click();asse
 e.requirements.value=Array.from({length:121},(_,i)=>`Python requirement ${i}`).join('\n');run();assert.equal(rows().length,50);const more=e['recruiter-results'].children.at(-1);assert(!more.hidden);more.events.click();assert.equal(rows().length,100);more.events.click();assert.equal(rows().length,121);assert(more.hidden);assert.equal(focused,rows().at(-1));assert(rows().at(-1).textContent.includes('Requirement 121'));
 e.requirements.value='TypeScript';run();assert(e['recruiter-results'].textContent.includes('not a standalone deployment'));assert(e['recruiter-results'].all(x=>x.href==='./#anqr').length);
 e.requirements.value='Kubernetes';run();assert(e['recruiter-results'].all(x=>x.href==='#career-paperly').length);
-assert.deepEqual(requests,['./recruiter-evidence.json?v=45']);
+assert.deepEqual(requests,['./recruiter-evidence.json?v=57']);
 const failed=await harness(true);assert(failed.elements.requirements.disabled);assert(failed.elements['recruiter-status'].textContent.includes('could not load'));
 console.log('PASS DOM harness: initialization, search, unknown terms, safe text, clear/focus, examples, all 121 paginated results, citations, internal project/company links, single static fetch, load failure. Not browser/layout verification.');
