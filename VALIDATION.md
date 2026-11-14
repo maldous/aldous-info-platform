@@ -1,5 +1,9 @@
 # Validation of the public application
 
+## Current published baseline — version 58
+
+The accepted publication at `https://aldous.info` is version 58, Sites source `bb8d422dddfdbe7e1a83dd7f700cd35081a9ee03`, synchronized to repository commit `9b891db22df38cc436db4ab3df2859e505e798dc`. This version removes the Lixit listing and retains the 52-file application. The dated validation records below describe their original source revisions; they do not claim a fresh version-58 browser run.
+
 ## Later product-source correction (13 November 2026)
 
 This source revision removes maintenance-environment names from current product labels, anchors, local asset names and evidence context links. It fixes the Recruiters-page switch to use click handling, accessible checked state and system/preference synchronization, and updates the generator to retain that markup and script version.
@@ -11,15 +15,15 @@ Verified against this corrected source:
 - Real Chromium 157.0.8103.38 passes across all 3 pages and widths 320,390,768,1440: filters, search,94 evidence skills,121-row pagination, safe text, initial system light/dark, system changes and persistent accessible switches on both pages. Search-time network requests: 0.
 - Recruiter-page regeneration reproduces the corrected HTML exactly.
 
-This is repository-source validation. The last separately verified live publication remains version 56; no newer Site publication is established by these checks. The dated regression result below describes the earlier source and is retained as history.
+This is repository-source validation. At that source-only review, the last separately verified live publication was version 56. Later accepted publication is recorded above. The dated regression result below describes the earlier source and is retained as history.
 
-## Current version-56 follow-through (13 November 2026)
+## Historical version-56 follow-through (13 November 2026)
 
 The runtime baseline is Sites source `03997393bb021ee7bd58b8f77a512120e41bd8f2`, synchronized into this repository at `f0700c824123cbe6c16c6bea6bc3399c76b67b83`. Version 56 publication succeeded at 04:07:50 UTC (15:07:50 AEDT). This documentation/test follow-through changes no application bytes and does not redeploy the site.
 
 - `node test-portfolio.mjs`: passed the updated light/dark switch harness and existing portfolio interactions.
 - `python3 test-portfolio.py`: passed after updating obsolete selector/preheading assertions to the actual v56 markup.
-- `python3 scripts/check-export.py`: passed all 52 runtime hashes and asset/module references. The current manifest differs from v55 only for the four intended runtime files; the original manifest is retained in the [version-55 export commit](https://github.com/maldous/aldous-info-platform/blob/a8f2451e66bb9cdda7be2386873a0a2a92d2611a/docs/published-assets.sha256.json).
+- `python3 scripts/check-export.py`: passed all 52 runtime hashes and asset/module references. At that version-56 check, the manifest differed from v55 only for the four intended runtime files; the original manifest is retained in the [version-55 export commit](https://github.com/maldous/aldous-info-platform/blob/a8f2451e66bb9cdda7be2386873a0a2a92d2611a/docs/published-assets.sha256.json).
 - `npm run build`: passed, producing 52 static files.
 - `npm ci --ignore-scripts`: succeeded with the existing lockfile unchanged.
 - `CHROMIUM_PATH=/snap/bin/chromium npm run test:browser`: **failed** on the added Recruiters-page switch assertion (`light` remained `light` after a click expected to select `dark`). Homepage system-preference changes, explicit selection, reload persistence and navigation persistence passed before that assertion. The existing responsive/search checks also ran before it. No complete v56 browser pass is claimed.
