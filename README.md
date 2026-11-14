@@ -7,10 +7,10 @@ The complete static application behind [aldous.info](https://aldous.info): Matth
 - Homepage, all project cards and filters, career history, technical experience, themes and responsive navigation.
 - Recruiter search over 94 cited skills, literal/alias matching, per-line evidence, safe rendering and paginated results.
 - Architecture explorer with chapter navigation, pan/zoom, component and connection detail views, and its diagram-generation inputs.
-- All 52 application files, updated to published version 56, including fonts, images, résumé PDF, styles, JavaScript and JSON.
+- All 52 application files, updated to published version 58, including fonts, images, résumé PDF, styles, JavaScript and JSON.
 - Current generators, focused tests, clean-build scripts and a per-file SHA-256 snapshot manifest.
 
-The current runtime baseline is published version **56**, Sites source commit `03997393bb021ee7bd58b8f77a512120e41bd8f2`, synchronized into this repository at `f0700c824123cbe6c16c6bea6bc3399c76b67b83`. It adds the fixed world-map background, an Australia-focused mobile crop, the light/dark toggle and consistent project cards. The toggle follows the system preference until an explicit selection is saved. The original version-55 export remains historical evidence. See [export scope](docs/EXPORT_SCOPE.md) and [asset hashes](docs/published-assets.sha256.json).
+The current runtime baseline is published version **58**, Sites source commit `bb8d422dddfdbe7e1a83dd7f700cd35081a9ee03`, synchronized into this repository at `9b891db22df38cc436db4ab3df2859e505e798dc`. It retains the fixed world-map background, Australia-focused mobile crop, persistent light/dark switches and neutral AI-delivery labels. Version 58 removes the Lixit listing. Historical export and validation evidence retains its original version scope. See [export scope](docs/EXPORT_SCOPE.md) and [asset hashes](docs/published-assets.sha256.json).
 
 ## Quick start
 
@@ -80,7 +80,7 @@ npm run build
 
 ## Tests
 
-This repository includes a later product-source correction for the Recruiters-page theme switch and neutral AI-delivery project labels/asset names. The last accepted live deployment is version56; repository source changes do not themselves establish a newer live deployment. See `VALIDATION.md` for checks against the corrected source.
+The current source includes the corrected Recruiters-page theme switch and neutral AI-delivery labels and asset names. The accepted live deployment is version 58. See `VALIDATION.md` for the scope and dates of recorded checks.
 
 ```sh
 npm test                       # source/static checks, 24 search tests and DOM behavior tests
@@ -121,7 +121,7 @@ There are no application environment variables or secrets. The local server port
 - Public links open separate project sites, GitHub, LinkedIn and articles. This repository does not recreate those other products or their private backends.
 - The Morgan image is an explicitly dated captured screenshot, not a live monitoring feed.
 - The live host may inject Cloudflare challenge/security scripts. Those host-managed scripts, DNS/TLS and provider configuration are not application source and are not reproduced here.
-- Current runtime files are synchronized to version 56; the search corpus and supporting evidence retain their original snapshot dates. There is no automatic ongoing sync of the live site, résumé or GitHub.
+- Current runtime files are synchronized to version 58; the search corpus and supporting evidence retain their original snapshot dates. There is no automatic ongoing sync of the live site, résumé or GitHub.
 
 ## Rights and public-export boundary
 
