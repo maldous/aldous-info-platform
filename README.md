@@ -111,6 +111,8 @@ The browser test starts and stops its own loopback server. It covers the homepag
 
 ## Deployment and configuration
 
+For owner updates to the existing aldous.info and source-bound MCP execution, see [source checks and controlled publication](docs/PUBLICATION.md). Keep that existing-publisher workflow distinct from the generic independent-fork instructions below.
+
 Run `npm run build` and publish **only `build/`** to any static host, for example GitHub Pages, Cloudflare Pages, Netlify, an object-store website or an ordinary web server. Build command: `npm run build`; publish directory: `build`. Ensure `.mjs` is served as JavaScript and `.json` as JSON. No SPA fallback is necessary: the three pages have real `.html` paths.
 
 For Sites, use your own Site identity and a hosting manifest whose `static.directory` is `build`. This export deliberately omits the original owner's hosting identity, credentials and deployment bindings. Creating or deploying your own Site is a separate operation; none of these commands alter the existing aldous.info deployment.
