@@ -83,6 +83,8 @@ npm run build
 The current source includes the corrected Recruiters-page theme switch and neutral AI-delivery labels and asset names. The accepted live deployment is version 58. See `VALIDATION.md` for the scope and dates of recorded checks.
 
 ```sh
+npm run lint                   # tracked JavaScript/Python/JSON syntax only; no dependencies
+npm run test:lint              # synthetic lint checker contracts
 npm test                       # source/static checks, 24 search tests and DOM behavior tests
 # With requirements-dev.txt installed:
 npm run test:architecture       # geometry, navigation and captured-image checks
