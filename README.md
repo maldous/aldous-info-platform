@@ -37,6 +37,7 @@ Use HTTP rather than opening files directly: the search page loads its bundled e
 ## Architecture and languages
 
 See the [public source and interface map](docs/SOURCE_MAP.md) for named module/data boundaries, maintenance entrypoints and scoped verification.
+See the [documentation inventory and upkeep guide](docs/DOCUMENTATION.md) for canonical references, audiences and how to keep them aligned with source changes.
 
 This is a **buildless static web application**, not a hosted AI search service. The historical directory name `dist/` contains the editable, unminified application source. `scripts/build.py` stages an identical copy in ignored `build/`; it performs no code transformation or remote download.
 
